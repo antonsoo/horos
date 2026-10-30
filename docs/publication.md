@@ -1,48 +1,56 @@
-# Publication handoff
+# Public edition review
 
-This repository is local and has not been pushed, tagged, or deployed.
-The showcase house standards reserve those actions for the publication review.
-No live-demo or CI-success badge has been added.
+Reviewed 2026-10-29 in America/Los_Angeles (2026-10-30 UTC).
+- [Workshop](https://antonsoo.github.io/horos/)
+- [Public source](https://github.com/antonsoo/horos)
+- [Horse-and-stone investigation](https://antonsoo.github.io/horos/?investigation=two-worlds#workshop)
+- [Instance-taking investigation](https://antonsoo.github.io/horos/?investigation=inhabitant#workshop)
+- [Officina discovery](https://antonsoo.github.io/officina/?q=ekthesis#catalogue)
 
-Suggested GitHub description:
+The public build comes from source commit
+`c614f494177bda02d2818c1eeb7bbe75cf1b7459`. It includes the
+[scan-level correction and notebook audit](audit.md), not just the first edition's
+byte checks. Subsequent receipt and documentation changes do not affect build inputs.
 
-> Build Aristotle's counterexamples, read the Greek, and carry the reasoning in an offline notebook.
+## Separate evidence
 
-Suggested topics: `aristotle`, `logic`, `ancient-greek`, `latin`,
-`interactive-learning`, `philosophy`, `offline-first`.
+| Boundary                           | Result                                                                                                                                                    | Receipt                                                                            |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Clean source build                 | Fresh archive, Node 24.22.1, `npm ci`, `npm run check`; 14 tests and source checks pass                                                                   | [Clean build](assets/clean-build.json)                                             |
+| Canonical hosted files             | All 17 files, 4,439,121 bytes, match the clean build; root and explicit index checked before and after                                                    | [Before](assets/public-bytes-before.json), [after](assets/public-bytes-after.json) |
+| Real public browsers               | Chromium and Firefox at 1440px and 375px; four investigations, witness construction, five passage locators, keyboard controls, source bytes and downloads | [Browser receipt](assets/public/browser-review.json)                               |
+| Offline behavior                   | Reload, source reading, passage location and illustrated export after the current worker controls the page; browser network disabled                      | [Browser receipt](assets/public/browser-review.json)                               |
+| Portable notebook                  | HTML opens through `file://`, no HTTP asset requests, all images/fonts verified, native JSON reopens; online/offline exports match                        | [Notebook](../examples/two-worlds.html.gz), [PDF](../examples/two-worlds.pdf)      |
+| Public pinned source and artifacts | Eight raw files match their Git blobs, including Greek readings, audit, JSON, SVG, HTML gzip, PDF and source notices                                      | [Source receipt](assets/public-source.json)                                        |
+| Pages deployment                   | `gh-pages` at `/`; deployment commit `ad4e1076ca3458c0f5be20af490526921ae47701`; Pages reports built                                                      | [Publication state](assets/publication-state.json)                                 |
+| Source CI                          | The reviewed run reported failure with no executed steps. It supplies no passing-check evidence                                                           | [Publication state](assets/publication-state.json)                                 |
 
-The intended repository is `https://github.com/antonsoo/horos`; the intended
-site is `https://antonsoo.github.io/horos/`. These destinations are metadata,
-not verified public resources.
+The independently downloaded public notebook is **5,833,588 bytes**, SHA-256
+`070e44a0a57e25d163d42b7f1174a54cbe9cae182c622f6f0dada976684746ad`.
+All four browser journeys produced the same bytes. Its printed example has
+25 tagged A4 pages and no JavaScript; physical printing and Firefox PDF output
+were not verified.
 
-Build with Node 24 or later:
+Public screenshots were compared with the local visual review. Byte-identical
+images reuse the retained local files; differing captures were opened separately.
+[Screenshot identities](assets/public/screenshot-identities.json) records both
+paths and hashes. There were no page errors, horizontal document overflows, or
+automatically reported accessibility violations in the operated journeys. These
+checks are not a screen-reader certification or independent scholarly review.
+
+## Reproduce the public browser review
 
 ```sh
 npm ci
-npm run check
+npm run build
+REVIEW_BASE=https://antonsoo.github.io/horos/ REVIEW_OUTPUT=test-results/public node scripts/browser.mjs
 ```
 
-`npm run build` is included in the check and produces **`dist/`** with base
-**`/horos/`**. The Pages workflow builds that directory and prepares a
-`gh-pages` branch deployment. The CI workflow is configured to run the checks
-and both browser journeys. Neither workflow has been run remotely for this
-new repository.
+The public mode uses the real site and its real downloads. Its controlled fault
+contexts deliberately hold or corrupt selected responses to test refusal and
+recovery; ordinary learner journeys do not substitute a local response. Public
+mode does not overwrite the retained example notebook or PDF.
 
-Before presenting it as a published showcase, review the source, deploy the
-tested bytes, and independently compare the complete hosted output to the
-retained production inventory. Then operate the public desktop/phone and
-offline journeys. Source publication, hosted-file equality, browser behavior,
-and CI execution need separate evidence.
-
-For Officina, use the title **Horos**, group **Ancient world**, and description:
-
-> Construct Aristotle's horse-and-stone counterexamples, expose an existence
-> assumption, and read the Greek beside complete source pages. Keep both worlds
-> in a portable illustrated notebook.
-
-Useful search terms are `Aristotle`, `Prior Analytics`, `Analytica priora`,
-`Ἀναλυτικὰ πρότερα`, `ὅρος`, `syllogism`, `counterexample`, `ekthesis`,
-`ἔκθεσις`, `conversion`, `existential import`, `horse and stone`, and
-`Greek Latin philosophy`. Add the catalogue entry after the actual site and
-a commit-pinned review exist; the live catalogue has not been changed to point
-at an unpublished site.
+`npm run build` produces `dist/` with base `/horos/`. The CI and Pages workflows
+remain configured. The recorded local checks, hosted-file comparison, browser
+operation, source identity, and actual Pages deployment are separate claims.

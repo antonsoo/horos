@@ -1,0 +1,54 @@
+{
+  "date": "2026-10-30T01:24:25.021Z",
+  "commit": "c614f494177bda02d2818c1eeb7bbe75cf1b7459",
+  "files": [
+    {
+      "path": "src/readings.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/c614f494177bda02d2818c1eeb7bbe75cf1b7459/src/readings.ts",
+      "bytes": 13073,
+      "sha256": "4c01168b14839a2a29ef024d67ff2b905aff8492b03c5fcc810372e7e0aa4eaf"
+    },
+    {
+      "path": "docs/audit.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/c614f494177bda02d2818c1eeb7bbe75cf1b7459/docs/audit.md",
+      "bytes": 8260,
+      "sha256": "ccd6d230e9b97e41e6b81bcfc58ed00d206dcda611b6b37f5f6604a7e32a39eb"
+    },
+    {
+      "path": "examples/two-worlds.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/c614f494177bda02d2818c1eeb7bbe75cf1b7459/examples/two-worlds.json",
+      "bytes": 590,
+      "sha256": "ec16e032db923dcb2b0755bf013c48de73f24179ef2bbca0dec426aefd61f639"
+    },
+    {
+      "path": "examples/two-worlds.svg",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/c614f494177bda02d2818c1eeb7bbe75cf1b7459/examples/two-worlds.svg",
+      "bytes": 1207,
+      "sha256": "f095dfb02fe3cde903d214bb5122b290f4908122544e658f293323f8e733194a"
+    },
+    {
+      "path": "examples/two-worlds.html.gz",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/c614f494177bda02d2818c1eeb7bbe75cf1b7459/examples/two-worlds.html.gz",
+      "bytes": 4348835,
+      "sha256": "6fd125631ad3f6339c01e352012d8941dde3225f3070d8b2a4909d4bb8a1b624"
+    },
+    {
+      "path": "examples/two-worlds.pdf",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/c614f494177bda02d2818c1eeb7bbe75cf1b7459/examples/two-worlds.pdf",
+      "bytes": 4447873,
+      "sha256": "686d8360189980fc67c5c2d5c7605fcc7bb9d11587cdb402abea5996b6db093c"
+    },
+    {
+      "path": "public/sources/manifest.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/c614f494177bda02d2818c1eeb7bbe75cf1b7459/public/sources/manifest.json",
+      "bytes": 2665,
+      "sha256": "25292b65c94822417f51e729eefb8e13a61d5de9b6ab4edf377d3a748cd0c3a9"
+    },
+    {
+      "path": "public/sources/NOTICE.txt",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/c614f494177bda02d2818c1eeb7bbe75cf1b7459/public/sources/NOTICE.txt",
+      "bytes": 1728,
+      "sha256": "e39cd4c53d4e35677c53566582541916572b2b799983f0bf8259712cfc2a768a"
+    }
+  ]
+}

@@ -206,7 +206,7 @@ deployment is claimed for this local edition.
 
 The primary witness is Immanuel Bekker’s **1831** edition of _Aristotelis opera_,
 volume I, [retained at Internet Archive](https://archive.org/details/Bekker1831).
-The source selections cover 24b18–20, 25a7–9, 25b37–40, 26a2–9, and 28a23–26.
+The source selections cover 24b18–20, 25a7–9, 25b37–40, 26a2–9, and 28a22–26.
 The [Jenkinson translation](https://classics.mit.edu/Aristotle/prior.1.i.html)
 was consulted for comparison; the workshop’s English is new. See the
 [source notice](public/sources/NOTICE.txt) and [file manifest](public/sources/manifest.json).

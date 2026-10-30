@@ -1,8 +1,8 @@
 # Local edition review
 
 Reviewed 2026-10-29 in America/Los_Angeles (the machine-readable receipt uses
-UTC on 2026-10-30). This is local evidence. No GitHub, hosted-byte, remote-CI,
-or deployment result is asserted.
+UTC on 2026-10-30). This page records local evidence. [Publication review](publication.md) separately
+records GitHub source, hosted bytes, public browsers, deployment, and CI status.
 
 ## Operated browser journeys
 

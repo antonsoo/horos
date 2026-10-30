@@ -1,0 +1,166 @@
+{
+  "date": "2026-10-30T01:26:10.661293+00:00",
+  "sourceHead": "620239aa275d565c1f02727d2fe359757e3804fb",
+  "buildSource": "c614f494177bda02d2818c1eeb7bbe75cf1b7459",
+  "deploymentCommit": "ad4e1076ca3458c0f5be20af490526921ae47701",
+  "pages": {
+    "html_url": "https://antonsoo.github.io/horos/",
+    "status": "built",
+    "build_type": "legacy",
+    "source": {
+      "branch": "gh-pages",
+      "path": "/"
+    }
+  },
+  "runs": [
+    {
+      "run": {
+        "conclusion": "success",
+        "databaseId": 40985227270,
+        "headSha": "ad4e1076ca3458c0f5be20af490526921ae47701",
+        "name": "pages build and deployment",
+        "startedAt": "2026-10-30T01:20:11Z",
+        "status": "completed",
+        "updatedAt": "2026-10-30T01:20:58Z"
+      },
+      "jobs": [
+        {
+          "name": "build",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-30T01:20:15Z",
+          "completed_at": "2026-10-30T01:20:23Z",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-10-30T01:20:16Z",
+              "completed_at": "2026-10-30T01:20:17Z"
+            },
+            {
+              "name": "Checkout",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-10-30T01:20:17Z",
+              "completed_at": "2026-10-30T01:20:19Z"
+            },
+            {
+              "name": "Upload artifact",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-10-30T01:20:19Z",
+              "completed_at": "2026-10-30T01:20:21Z"
+            },
+            {
+              "name": "Post Checkout",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 6,
+              "started_at": "2026-10-30T01:20:21Z",
+              "completed_at": "2026-10-30T01:20:21Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 7,
+              "started_at": "2026-10-30T01:20:21Z",
+              "completed_at": "2026-10-30T01:20:21Z"
+            }
+          ]
+        },
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-30T01:20:26Z",
+          "completed_at": "2026-10-30T01:20:57Z",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-10-30T01:20:27Z",
+              "completed_at": "2026-10-30T01:20:28Z"
+            },
+            {
+              "name": "Deploy to GitHub Pages",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-10-30T01:20:28Z",
+              "completed_at": "2026-10-30T01:20:55Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-10-30T01:20:55Z",
+              "completed_at": "2026-10-30T01:20:55Z"
+            }
+          ]
+        },
+        {
+          "name": "report-build-status",
+          "status": "completed",
+          "conclusion": "success",
+          "started_at": "2026-10-30T01:20:25Z",
+          "completed_at": "2026-10-30T01:20:30Z",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 1,
+              "started_at": "2026-10-30T01:20:26Z",
+              "completed_at": "2026-10-30T01:20:26Z"
+            },
+            {
+              "name": "Report Build Status",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 2,
+              "started_at": "2026-10-30T01:20:27Z",
+              "completed_at": "2026-10-30T01:20:28Z"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success",
+              "number": 3,
+              "started_at": "2026-10-30T01:20:28Z",
+              "completed_at": "2026-10-30T01:20:28Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "run": {
+        "conclusion": "failure",
+        "databaseId": 40985218025,
+        "headSha": "620239aa275d565c1f02727d2fe359757e3804fb",
+        "name": "CI",
+        "startedAt": "2026-10-30T01:20:06Z",
+        "status": "completed",
+        "updatedAt": "2026-10-30T01:20:09Z"
+      },
+      "jobs": [
+        {
+          "name": "check",
+          "status": "completed",
+          "conclusion": "failure",
+          "started_at": "2026-10-30T01:20:07Z",
+          "completed_at": "2026-10-30T01:20:09Z",
+          "steps": []
+        }
+      ]
+    }
+  ]
+}
