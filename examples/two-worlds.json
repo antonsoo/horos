@@ -1,0 +1,21 @@
+{
+  "format": "horos",
+  "version": 1,
+  "current": {
+    "lesson": "two-worlds",
+    "kind": "all",
+    "existence": 7,
+    "world": 24
+  },
+  "pinned": {
+    "lesson": "two-worlds",
+    "kind": "all",
+    "existence": 7,
+    "world": 40
+  },
+  "note": "Object 5 is C but not A. Every B is A and no C is B still hold.\nAristotle’s horse & stone substitutions preserve the premise forms while changing the conclusion. The two worlds therefore refute the proposed inference, even though its conclusion is true in the first world.",
+  "citations": [
+    "two-worlds",
+    "deduction"
+  ]
+}
