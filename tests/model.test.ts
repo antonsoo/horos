@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { counterexampleTrace } from "../src/core/constraints";
 import {
   type Argument,
   assess,
@@ -81,6 +82,17 @@ test("all three source figures and every proposition form match an independent c
             };
             const result = enumerate(argument, exists);
             const key = JSON.stringify({ argument, exists });
+            const trace = counterexampleTrace(argument, exists);
+            assert.equal(trace.verdict, result.verdict, key);
+            if (trace.base.witness !== null)
+              assert.ok(assess(argument, trace.base.witness, exists).admissible, key);
+            if (trace.attempt.witness !== null)
+              assert.equal(
+                assess(argument, trace.attempt.witness, exists).status,
+                "counterexample",
+                key,
+              );
+            else assert.ok(trace.attempt.impossible.length, key);
             assert.equal(
               result.admissible.length,
               countByInclusionExclusion(argument.premises, exists),
@@ -173,4 +185,26 @@ test("all lesson variants match the oracle, including conversion with one premis
           countByInclusionExclusion([...a.premises, negate(a.conclusion)], exists),
         );
       }
+});
+
+test("the explanation locates the blocked witness, including inconsistent premises", () => {
+  const inhabitant = counterexampleTrace(argumentFor("inhabitant", "some"), 4);
+  assert.equal(inhabitant.attempt.witness, null);
+  assert.deepEqual(
+    inhabitant.attempt.impossible.map((c) => c.label),
+    ["C must have an inhabitant"],
+  );
+  const empty = counterexampleTrace(argumentFor("inhabitant", "some"), 0);
+  assert.equal(empty.attempt.witness, 1);
+  const chain = counterexampleTrace(argumentFor("chain", "all"), 0);
+  assert.equal(chain.attempt.impossible[0]?.label, "To make the conclusion false: Some C is not A");
+  const impossible = counterexampleTrace(
+    {
+      premises: [{ kind: "none", subject: 0, predicate: 0 }],
+      conclusion: { kind: "all", subject: 0, predicate: 1 },
+    },
+    1,
+  );
+  assert.equal(impossible.verdict, "inconsistent");
+  assert.equal(impossible.base.witness, null);
 });

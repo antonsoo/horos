@@ -60,6 +60,22 @@ If the premises have no permitted world, the core reports “inconsistent”
 separately. It does not present absence of counterexamples in an inconsistent
 premise set as an ordinary valid deduction with satisfiable premises.
 
+## Construct a counterexample without searching
+
+The live explanation in `src/core/constraints.ts` keeps the premises true and
+adds the contradictory of the conclusion. Universals forbid regions; particulars,
+class-existence conditions, and nonempty U demand witnesses. If a requirement
+has no region left after all exclusions, this attempted counterexample is
+impossible. Otherwise one allowed representative per requirement constructs a
+world. A representative may satisfy several requirements; the construction is
+not guaranteed to use the fewest possible objects.
+
+No incompatibility can arise between the chosen representatives: these
+propositions impose no upper bounds or relations between objects. This is a
+second decision procedure for the specified model. The app displays the
+exclusions and the remaining candidate positions, including the exact blocked
+requirement when one exists. See [the audit](audit.md) for the complete reasoning.
+
 ## Independent counting oracle
 
 The unit suite counts without evaluating occupancy masks. Universals forbid

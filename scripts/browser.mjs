@@ -53,7 +53,7 @@ const server = createServer(async (req, res) => {
   }
 });
 await new Promise((r) => server.listen(0, "127.0.0.1", r));
-const base = `http://127.0.0.1:${server.address().port}/horos/`;
+const base = process.env.REVIEW_BASE || `http://127.0.0.1:${server.address().port}/horos/`;
 async function inventory(directory, prefix = "") {
   const entries = [];
   for (const entry of (await readdir(directory, { withFileTypes: true })).sort((a, b) =>
@@ -72,6 +72,7 @@ async function inventory(directory, prefix = "") {
 const report = {
   date: new Date().toISOString(),
   node: process.version,
+  origin: process.env.REVIEW_BASE || "local production server",
   files: await inventory(root),
   journeys: [],
   faults: [],
@@ -175,6 +176,33 @@ try {
         await contains(page, "offline-status", "available offline");
         await contains(page, "scan-status", "Printed page 26");
         await status(page, "agreement");
+        assert.ok(await page.getByRole("group", { name: "Choose an investigation" }).isVisible());
+        await page.locator("#stone").click();
+        await contains(page, "preset-note", "C = stones");
+        await page.locator("#clear").click();
+        assert.equal(await page.locator("#preset-note").textContent(), "");
+        await page.locator("#undo").click();
+        await contains(page, "preset-note", "C = stones");
+        await page.locator("#reset").click();
+        for (const id of ["conversion", "inhabitant", "chain"]) {
+          const linked = await context.newPage();
+          await linked.goto(`${base}?investigation=${id}#workshop`);
+          assert.equal(
+            await linked.locator(`[data-lesson="${id}"]`).getAttribute("aria-pressed"),
+            "true",
+          );
+          assert.equal(await linked.locator("#reading").inputValue(), id);
+          assert.ok(
+            (await linked.locator("#investigation-link").getAttribute("href")).endsWith(
+              `?investigation=${id}#workshop`,
+            ),
+          );
+          await linked.close();
+        }
+        await page.goto(base);
+        await contains(page, "scan-status", "Printed page 26");
+        await contains(page, "offline-status", "available offline");
+        await page.evaluate(() => scrollTo(0, 0));
         await noOverflow(page);
         await page.screenshot({
           path: resolve(output, `workshop-${name}-${width}.png`),
@@ -197,6 +225,15 @@ try {
           "4",
           "8",
         ]);
+        await page.locator(".trace summary").click();
+        await contains(page, "constraint-trace", "Every required witness has an available region");
+        await page.locator("#load-trace").click();
+        await status(page, "counterexample");
+        await page.locator("#undo").click();
+        await page
+          .locator(".trace")
+          .screenshot({ path: resolve(output, `trace-${name}-${width}.png`) });
+        await noOverflow(page);
         await page.locator("#conclusion").selectOption("none");
         await status(page, "agreement");
         await contains(page, "comparison-note", "Different questions");
@@ -273,7 +310,7 @@ try {
         );
         const back = await download(standalone, 'a[download="horos-notebook.json"]');
         assert.deepEqual(JSON.parse(back.bytes), saved);
-        if (name === "chromium" && width === 1440) {
+        if (name === "chromium" && width === 1440 && !process.env.REVIEW_BASE) {
           await standalone.pdf({
             path: resolve("examples/two-worlds.pdf"),
             format: "A4",
@@ -305,6 +342,15 @@ try {
         await status(page, "empty");
         await page.locator("#region-0").click();
         await status(page, "existence");
+        await page.locator("#inspect").click();
+        await page.locator(".trace summary").click();
+        await contains(
+          page,
+          "constraint-trace",
+          "C must have an inhabitant has no available region",
+        );
+        assert.ok(await page.locator("#load-trace").isDisabled());
+        await page.locator("#inspect").click();
         await page.locator("#exists-c").uncheck();
         await status(page, "counterexample");
         await page.locator("#inspect").click();
@@ -400,6 +446,48 @@ try {
       await context.addInitScript(observeBlobs);
       const page = await context.newPage();
       await page.goto(base);
+      await contains(page, "scan-status", "Printed page 26");
+      await page.locator("#pin").click();
+      await page.locator("#note").fill("A reason worth keeping");
+      assert.equal(await page.locator("#undo").textContent(), "Undo explanation edit");
+      await page.locator("#undo").click();
+      assert.equal(await page.locator("#note").inputValue(), "");
+      await page.locator("#undo").click();
+      assert.ok(await page.locator("#restore").isHidden());
+      await page.locator("#redo").click();
+      await page.locator("#redo").click();
+      assert.equal(await page.locator("#note").inputValue(), "A reason worth keeping");
+      assert.ok(await page.locator("#restore").isVisible());
+      await page.evaluate(() => {
+        const original = File.prototype.text;
+        window.pendingFiles = new Map();
+        File.prototype.text = function () {
+          return new Promise((resolve, reject) => {
+            window.pendingFiles.set(this.name, () => original.call(this).then(resolve, reject));
+          });
+        };
+      });
+      const importFile = (name, note) =>
+        page.locator("#open-file").setInputFiles({
+          name,
+          mimeType: "application/json",
+          buffer: Buffer.from(JSON.stringify({ ...blank, note })),
+        });
+      await importFile("slow.json", "old import");
+      await page.locator("#note").fill("New reasoning while the file opens");
+      await page.evaluate(() => window.pendingFiles.get("slow.json")());
+      await contains(page, "file-status", "newer work is preserved");
+      assert.equal(await page.locator("#note").inputValue(), "New reasoning while the file opens");
+      await importFile("older.json", "older selection");
+      await importFile("newer.json", "newest selection");
+      await page.evaluate(() => window.pendingFiles.get("newer.json")());
+      await contains(page, "file-status", "Notebook reopened");
+      await page.evaluate(() => window.pendingFiles.get("older.json")());
+      assert.equal(await page.locator("#note").inputValue(), "newest selection");
+      await page.locator("#undo").click();
+      assert.equal(await page.locator("#note").inputValue(), "New reasoning while the file opens");
+      // Reset this context before the source and export fault scenarios.
+      await page.reload();
       await contains(page, "scan-status", "Printed page 26");
       let release;
       let entered;
@@ -557,6 +645,9 @@ try {
       report.faults.push({
         browser: name,
         lateSourceIgnored: true,
+        namedUndoRedo: true,
+        importPreservesNewerEdits: true,
+        newestImportWins: true,
         corruptScanRefused: true,
         corruptExportRefused: true,
         exportSnapshotFrozen: true,

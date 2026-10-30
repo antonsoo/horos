@@ -1,5 +1,7 @@
 import "./style.css";
 import { asset, verifiedBytes } from "./assets";
+import { counterexampleTrace } from "./core/constraints";
+import { NotebookHistory } from "./core/history";
 import {
   assess,
   enumerate,
@@ -16,9 +18,10 @@ import {
 import { blank, decode, encode, initial, type Notebook, parse } from "./core/record";
 import { circles, diagram, htmlEscape, positions } from "./drawing";
 import { notebookHtml, saveText } from "./export";
-import { argumentFor, type LessonId, lesson, lessons } from "./lessons";
+import { argumentFor, LESSON_IDS, type LessonId, lesson, lessons } from "./lessons";
 import { installOffline } from "./offline";
 import { edition, reading, readings, textPolicy } from "./readings";
+import { traceHtml } from "./trace";
 
 function el<T extends HTMLElement = HTMLElement>(id: string): T {
   const found = document.getElementById(id);
@@ -26,12 +29,27 @@ function el<T extends HTMLElement = HTMLElement>(id: string): T {
   return found as T;
 }
 let notebook: Notebook = blank();
-const history: Notebook[] = [];
+const requestedLesson = new URL(location.href).searchParams.get("investigation");
+if (LESSON_IDS.includes(requestedLesson as LessonId))
+  notebook.current = initial(requestedLesson as LessonId);
+const history = new NotebookHistory();
+let revision = 0;
+let importRequest = 0;
 let inspected = false;
-let selectedReading = "two-worlds";
-function remember(): void {
-  history.push(structuredClone(notebook));
-  if (history.length > 100) history.shift();
+let selectedReading = lesson(notebook.current.lesson).reading;
+function remember(label: string, prose = false): void {
+  history.remember(notebook, label, prose);
+  revision++;
+}
+function renderHistory(): void {
+  for (const [id, label] of [
+    ["undo", history.undoLabel],
+    ["redo", history.redoLabel],
+  ] as const) {
+    const button = el<HTMLButtonElement>(id);
+    button.disabled = !label;
+    button.textContent = `${id === "undo" ? "Undo" : "Redo"}${label ? ` ${label}` : ""}`;
+  }
 }
 function fileStatus(text: string): void {
   el("file-status").textContent = text;
@@ -42,12 +60,15 @@ function errorText(error: unknown): string {
     : "The operation did not finish. Your notebook is still here.";
 }
 
-el("lessons").innerHTML = lessons
-  .map(
-    (l) =>
-      `<button type="button" data-lesson="${l.id}" aria-pressed="false"><strong>${htmlEscape(l.title)}</strong><small>${htmlEscape(l.subtitle)}</small></button>`,
-  )
-  .join("");
+el("lessons").insertAdjacentHTML(
+  "beforeend",
+  lessons
+    .map(
+      (l) =>
+        `<button type="button" data-lesson="${l.id}" aria-pressed="false"><strong>${htmlEscape(l.title)}</strong><small>${htmlEscape(l.subtitle)}</small></button>`,
+    )
+    .join(""),
+);
 el("board").innerHTML =
   `<svg aria-hidden="true" viewBox="0 0 600 540">${circles()}</svg>${REGIONS.map((r) => {
     const [x, y] = positions[r] ?? [0, 0];
@@ -68,6 +89,10 @@ function render(): void {
     button.setAttribute("aria-pressed", String(button.dataset.lesson === s.lesson));
   el("case-title").textContent = l.question;
   el("source-ref").textContent = `Prior Analytics ${l.source}`;
+  const lessonUrl = new URL(location.pathname, location.origin);
+  lessonUrl.searchParams.set("investigation", l.id);
+  lessonUrl.hash = "workshop";
+  el<HTMLAnchorElement>("investigation-link").href = lessonUrl.href;
   el("instruction").textContent = l.instruction;
   el("premises").innerHTML = argument.premises
     .map((p, i) => {
@@ -133,9 +158,17 @@ function render(): void {
         .map((r) => `<li>Object ${r + 1}: ${regionLabel(r)}.</li>`)
         .join("")}</ul>`
     : "<p>No objects placed. Add one in any region, including outside all three circles.</p>";
-  el<HTMLButtonElement>("undo").disabled = !history.length;
+  renderHistory();
   el("steps").innerHTML = l.steps.map((step) => `<li>${htmlEscape(step)}</li>`).join("");
   el("substitutions").hidden = s.lesson !== "two-worlds";
+  el("preset-note").textContent =
+    s.lesson !== "two-worlds"
+      ? ""
+      : s.world === 40
+        ? "Possible term substitution: A = animals; B = humans; C = horses. Object 4 is a human animal; object 6 is a horse animal."
+        : s.world === 24
+          ? "Possible term substitution: A = animals; B = humans; C = stones. Object 4 is a human animal; object 5 is a stone outside both other classes."
+          : "";
   el("search-results").hidden = !inspected;
   el("inspect").setAttribute("aria-expanded", String(inspected));
   el("inspect").textContent = inspected
@@ -160,6 +193,9 @@ function renderSearch(): void {
     `<tr><th scope="row">Premises or existence requirements fail</th><td>${255 - result.admissible.length}</td></tr><tr><th scope="row">Premises hold; conclusion true</th><td>${result.agreeing.length}</td></tr><tr><th scope="row">Premises hold; conclusion false</th><td>${result.counterexamples.length}</td></tr>`;
   const select = el<HTMLSelectElement>("witness-choice");
   const previous = select.value;
+  el("constraint-trace").innerHTML = traceHtml(argumentFor(s.lesson, s.kind), s.existence);
+  el<HTMLButtonElement>("load-trace").disabled =
+    counterexampleTrace(argumentFor(s.lesson, s.kind), s.existence).attempt.witness === null;
   select.innerHTML = [
     ["Counterexamples", result.counterexamples],
     ["Agreeing worlds", result.agreeing],
@@ -293,59 +329,71 @@ async function showScan(page: number): Promise<void> {
 el("lessons").addEventListener("click", (event) => {
   const button = (event.target as HTMLElement).closest<HTMLButtonElement>("[data-lesson]");
   if (!button) return;
-  remember();
+  remember("investigation change");
   notebook.current = initial(button.dataset.lesson as LessonId);
   inspected = false;
-  el("preset-note").textContent = "";
   render();
   showReading(lesson(notebook.current.lesson).reading);
 });
 el("board").addEventListener("click", (event) => {
   const button = (event.target as HTMLElement).closest<HTMLButtonElement>("[data-region]");
   if (!button) return;
-  remember();
+  remember("object change");
   notebook.current.world ^= 1 << Number(button.dataset.region);
-  el("preset-note").textContent = "";
   render();
 });
 el("conclusion").addEventListener("change", () => {
-  remember();
+  remember("conclusion change");
   notebook.current.kind = el<HTMLSelectElement>("conclusion").value as Kind;
   render();
 });
 for (const [i, t] of ["a", "b", "c"].entries())
   el(`exists-${t}`).addEventListener("change", () => {
-    remember();
+    remember("existence change");
     notebook.current.existence ^= 1 << (i as Term);
     render();
   });
 el("pin").addEventListener("click", () => {
-  remember();
+  remember("pin world");
   notebook.pinned = { ...notebook.current };
   render();
   fileStatus("Pinned world saved. Change the live world to compare.");
 });
 el("restore").addEventListener("click", () => {
   if (!notebook.pinned) return;
-  remember();
+  remember("restore pinned world");
   notebook.current = { ...notebook.pinned };
   render();
   showReading(lesson(notebook.current.lesson).reading);
 });
-el("undo").addEventListener("click", () => {
-  const previous = history.pop();
-  if (!previous) return;
-  notebook = previous;
+for (const action of ["undo", "redo"] as const)
+  el(action).addEventListener("click", () => {
+    const label = action === "undo" ? history.undoLabel : history.redoLabel;
+    const next = history[action](notebook);
+    if (!next) return;
+    revision++;
+    notebook = next;
+    render();
+    showReading(lesson(notebook.current.lesson).reading);
+    fileStatus(`${action === "undo" ? "Undid" : "Redid"} ${label}.`);
+  });
+el("note").addEventListener("blur", () => history.endEdit());
+el("load-trace").addEventListener("click", () => {
+  const s = notebook.current;
+  const world = counterexampleTrace(argumentFor(s.lesson, s.kind), s.existence).attempt.witness;
+  if (world === null) return;
+  remember("witness construction");
+  notebook.current.world = world;
   render();
-  showReading(lesson(notebook.current.lesson).reading);
+  el("judgment").scrollIntoView({ block: "nearest" });
 });
 el("clear").addEventListener("click", () => {
-  remember();
+  remember("empty world");
   notebook.current.world = 0;
   render();
 });
 el("reset").addEventListener("click", () => {
-  remember();
+  remember("starting world");
   notebook.current = initial(notebook.current.lesson);
   render();
 });
@@ -354,7 +402,7 @@ for (const [id, world] of [
   ["stone", 24],
 ] as const)
   el(id).addEventListener("click", () => {
-    remember();
+    remember("term substitution");
     notebook.current = {
       ...initial("two-worlds"),
       kind: notebook.current.kind,
@@ -362,10 +410,6 @@ for (const [id, world] of [
       world,
     };
     render();
-    el("preset-note").textContent =
-      id === "horse"
-        ? "Illustration: A = animals; B = humans; C = horses. Object 4 is a human animal; object 6 is a horse animal."
-        : "Illustration: A = animals; B = humans; C = stones. Object 4 is a human animal; object 5 is a stone outside both other classes.";
   });
 el("inspect").addEventListener("click", () => {
   inspected = !inspected;
@@ -374,7 +418,7 @@ el("inspect").addEventListener("click", () => {
 el("load-witness").addEventListener("click", () => {
   const value = Number(el<HTMLSelectElement>("witness-choice").value);
   if (!Number.isInteger(value) || value < 1 || value > 255) return;
-  remember();
+  remember("pattern selection");
   notebook.current.world = value;
   render();
   el("judgment").scrollIntoView({ block: "nearest" });
@@ -419,22 +463,24 @@ el("scan-viewport").addEventListener("keydown", (event) => {
 });
 el("cite").addEventListener("click", () => {
   if (notebook.citations.includes(selectedReading)) return;
-  remember();
+  remember("add citation");
   notebook.citations.push(selectedReading);
   renderCitations();
-  el<HTMLButtonElement>("undo").disabled = false;
+  renderHistory();
   fileStatus(`Added ${reading(selectedReading).location} to your notebook.`);
 });
 el("citations").addEventListener("click", (event) => {
   const button = (event.target as HTMLElement).closest<HTMLButtonElement>("[data-remove-citation]");
   if (!button) return;
-  remember();
+  remember("remove citation");
   notebook.citations = notebook.citations.filter((id) => id !== button.dataset.removeCitation);
   render();
   el("cite").focus();
 });
 el("note").addEventListener("input", () => {
+  remember("explanation edit", true);
   notebook.note = el<HTMLTextAreaElement>("note").value;
+  renderHistory();
 });
 el("save-json").addEventListener("click", () => {
   saveText(`${JSON.stringify(notebook, null, 2)}\n`, "application/json", "horos-notebook.json");
@@ -495,7 +541,7 @@ el("copy-link").addEventListener("click", async () => {
 });
 function reopen(text: string): void {
   const next = parse(text);
-  remember();
+  remember("open notebook");
   notebook = next;
   inspected = false;
   render();
@@ -506,20 +552,31 @@ el("open-file").addEventListener("change", async () => {
   const input = el<HTMLInputElement>("open-file");
   const file = input.files?.[0];
   if (!file) return;
+  const request = ++importRequest;
+  const startedAt = revision;
+  fileStatus("Reading the editable notebook…");
   try {
     if (file.size > 64_000) throw new Error("This file is too large for a Horos notebook.");
-    reopen(await file.text());
+    const text = await file.text();
+    if (request !== importRequest) return;
+    if (startedAt !== revision) {
+      fileStatus(
+        "Your notebook changed while the file was opening. Your newer work is preserved; select the file again to replace it.",
+      );
+      return;
+    }
+    reopen(text);
   } catch (error) {
-    fileStatus(errorText(error));
+    if (request === importRequest) fileStatus(errorText(error));
   } finally {
-    input.value = "";
+    if (request === importRequest) input.value = "";
   }
 });
 function readHash(): void {
   if (!location.hash.startsWith("#notebook=")) return;
   try {
     const next = decode(location.hash);
-    remember();
+    remember("open shared notebook");
     notebook = next;
     inspected = false;
     render();

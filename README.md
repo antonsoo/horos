@@ -61,6 +61,12 @@ put any permitted pattern on the board. The result is accompanied by a
 completeness argument, not a claim that a large collection of examples is a proof.
 The first screen keeps that answer behind an explicit action.
 
+**Where could the counterexample's witness go?** explains the result without
+searching worlds: universals forbid object positions; particulars and existence
+assumptions need a witness. Inspect each exclusion, see exactly which requirement
+has nowhere to go, or build a world from the available witnesses. The same
+explanation is preserved in the illustrated notebook.
+
 ## Read the argument, not just the answer
 
 Five readings pair Greek with new close English and **20 contextual phrase
@@ -83,6 +89,11 @@ a late response cannot replace the selected page.
 | SVG                    | Current world, numbered objects, class membership, and an accessible description                                                                       |
 | Illustrated HTML       | Both arguments and diagrams, complete search results, all readings and word notes, four complete scans, fonts, licenses, and native JSON/SVG downloads |
 | PDF                    | Print the saved HTML; a browser-generated example is retained below                                                                                    |
+
+Undo and redo name the action they change. A continuous explanation edit is
+one action; importing a notebook is separately reversible. A slow file read
+cannot overwrite intervening edits or a newer file selection. Save before closing
+the tab: history is in memory, not an automatic disk backup.
 
 Save captures the record before asynchronous source work starts. The notebook
 verifies the length and SHA-256 of every embedded source, font, and license.
@@ -145,12 +156,13 @@ install a worker. Saving the standalone notebook is a separate offline path.
 
 ## Verification
 
-`npm run check` runs formatting/lint checks, strict TypeScript, **11 tests**,
+`npm run check` runs formatting/lint checks, strict TypeScript, **14 tests**,
 retained-source verification, and a production build. The main independent
 oracle turns universal propositions into forbidden regions and existential
 propositions into occupancy obligations, then counts worlds by
 inclusion–exclusion. It does not call the evaluator or enumerate its worlds.
-All **1,536** combinations of three syllogistic figures, four forms in each
+The constructive explanation also agrees with the enumerator, and each of its
+witness worlds is evaluated as a real counterexample. All **1,536** combinations of three syllogistic figures, four forms in each
 position, and eight existence settings agree with the engine’s counts.
 
 With Playwright Chromium and Firefox available:

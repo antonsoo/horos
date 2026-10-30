@@ -37,8 +37,8 @@ Each journey:
    reloads the document, reads a different source page, and exports again.
    The online and offline HTML downloads are byte-identical in all four runs.
 
-The illustrated HTML was **5,828,955 bytes**, SHA-256
-`6041b5857607dce0d565a60b194314b7acc8aef3d4df3270c4b84201ae06c729`
+The illustrated HTML was **5,833,360 bytes**, SHA-256
+`d7d166c99c737e9ef1db05c5fa1901dccb812526663697225c4da8fbd8a17cdf`
 in every journey. See [browser-review.json](assets/browser-review.json) for
 the full 17-file production inventory, browser versions, and fault receipts.
 Sixteen files belong to the cached edition; the generated worker is the
@@ -50,7 +50,11 @@ a claim of comprehensive accessibility conformance.
 
 ## Failures exercised deliberately
 
-Both browsers passed the following additional cases:
+Both browsers passed the following additional cases (including the [subsequent editing audit](audit.md)):
+- Named undo/redo recovers explanation edits separately from board actions.
+- A held file import cannot replace intervening edits or a newer file selection.
+- Direct investigation links select their own question and source reading.
+- Constructed witnesses produce a counterexample; an inhabited C blocks the empty-class example.
 - A delayed page 25 response cannot replace the newly selected page 28.
 - A same-length JPEG with one changed byte is refused by both reader and export.
 - While an export waits on a source request, the live world, explanation, and
@@ -64,6 +68,12 @@ Both browsers passed the following additional cases:
   recovers reading and readiness.
 
 ## Corrections made during review
+
+The [editing and explanation audit](audit.md) records the later correction of
+prose loss during undo, stale imports, stale substitution captions, and the lost
+investigation group label. Its constructive explanation and matching notebook
+section are included in the current browser receipt and artifacts.
+
 
 The enlarged source initially forced its grid column to its image width.
 Constraining the column's minimum width keeps the viewport on the page;
@@ -91,22 +101,23 @@ those controls. The source reader places Greek beside its scan on desktop,
 and in reading order on phones. No horizontal document overflow was observed
 at either tested width, including with an enlarged source.
 
-| View             | Desktop                                                                                        | Phone                                                                                        |
-| ---------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
-| Workshop opening | [Chromium](assets/workshop-chromium-1440.png), [Firefox](assets/workshop-firefox-1440.png)     | [Chromium](assets/workshop-chromium-375.png), [Firefox](assets/workshop-firefox-375.png)     |
-| Operable world   | [Chromium](assets/world-chromium-1440.png), [Firefox](assets/world-firefox-1440.png)           | [Chromium](assets/world-chromium-375.png), [Firefox](assets/world-firefox-375.png)           |
-| Paired worlds    | [Chromium](assets/comparison-chromium-1440.png), [Firefox](assets/comparison-firefox-1440.png) | [Chromium](assets/comparison-chromium-375.png), [Firefox](assets/comparison-firefox-375.png) |
-| Greek and source | [Chromium](assets/reader-chromium-1440.png), [Firefox](assets/reader-firefox-1440.png)         | [Chromium](assets/reader-chromium-375.png), [Firefox](assets/reader-firefox-375.png)         |
+| View                | Desktop                                                                                        | Phone                                                                                        |
+| ------------------- | ---------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------- |
+| Workshop opening    | [Chromium](assets/workshop-chromium-1440.png), [Firefox](assets/workshop-firefox-1440.png)     | [Chromium](assets/workshop-chromium-375.png), [Firefox](assets/workshop-firefox-375.png)     |
+| Operable world      | [Chromium](assets/world-chromium-1440.png), [Firefox](assets/world-firefox-1440.png)           | [Chromium](assets/world-chromium-375.png), [Firefox](assets/world-firefox-375.png)           |
+| Paired worlds       | [Chromium](assets/comparison-chromium-1440.png), [Firefox](assets/comparison-firefox-1440.png) | [Chromium](assets/comparison-chromium-375.png), [Firefox](assets/comparison-firefox-375.png) |
+| Witness explanation | [Chromium](assets/trace-chromium-1440.png), [Firefox](assets/trace-firefox-1440.png)           | [Chromium](assets/trace-chromium-375.png), [Firefox](assets/trace-firefox-375.png)           |
+| Greek and source    | [Chromium](assets/reader-chromium-1440.png), [Firefox](assets/reader-firefox-1440.png)         | [Chromium](assets/reader-chromium-375.png), [Firefox](assets/reader-firefox-375.png)         |
 
 The [retained PDF](../examples/two-worlds.pdf) was printed from the actual
-downloaded notebook in Chromium. `pdfinfo` reports 23 A4 pages, tagged output,
+downloaded notebook in Chromium. `pdfinfo` reports 25 A4 pages, tagged output,
 and no JavaScript. Diagram, Greek-reading, and scan pages were rendered for
 visual inspection. Print layout keeps the edition notes together. Browser
 print output can vary; no Firefox PDF or physical-print claim is made.
 
 ## Code and source checks
 
-`npm run check` passes lint/formatting, strict type checking, 11 tests,
+`npm run check` passes lint/formatting, strict type checking, 14 tests,
 verification of 11 retained source/font/license files, and the production
 build. The logic tests include a distinct inclusion–exclusion counting oracle
 across 1,536 argument configurations, separate checks of every lesson variant,
@@ -123,12 +134,12 @@ at 375px: source rendering and the stone counterexample worked, there was no
 horizontal overflow or page error, and no service worker registered on the
 development origin.
 
-A fresh archive of source commit `5f706f7fb8cdcac52254a43662b155f5b367d383`
+The pre-audit edition was reproduced from a fresh archive of source commit `5f706f7fb8cdcac52254a43662b155f5b367d383`
 was installed with `npm ci` and checked with `npm run check` on Node **24.22.1**.
 All checks passed. Every one of the **17 production files** was byte-identical
-to the Node 26.7.0 working build and the browser-reviewed inventory, including
-the generated worker. The complete output is **4,432,219 bytes**.
-[clean-build.json](assets/clean-build.json) records each file's length and hash.
+to its Node 26.7.0 working build and browser-reviewed inventory, including
+the generated worker. That earlier output was **4,432,219 bytes**.
+The current [clean-build receipt](assets/clean-build.json) records each file's length and hash.
 The documented `gzip -dk examples/two-worlds.html.gz` command also ran in that
 fresh checkout, and its output reopened in Chromium with all four source images.
 

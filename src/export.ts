@@ -4,6 +4,7 @@ import type { Notebook, Snapshot } from "./core/record";
 import { diagram, htmlEscape } from "./drawing";
 import { argumentFor, lesson } from "./lessons";
 import { edition, readings, textPolicy } from "./readings";
+import { traceHtml } from "./trace";
 
 export function saveBlob(blob: Blob, name: string): void {
   const url = URL.createObjectURL(blob);
@@ -36,7 +37,7 @@ export function snapshotHtml(snapshot: Snapshot, label: string): string {
     occupied(snapshot.world)
       .map((r) => `<li>Object ${r + 1}: ${htmlEscape(regionLabel(r))}.</li>`)
       .join("") || "<li>No objects. The draft has an empty universe.</li>"
-  }</ul><p>Exhaustive check under these assumptions: ${result.admissible.length} permitted patterns; ${result.agreeing.length} with a true conclusion; ${result.counterexamples.length} counterexamples. Inference: ${result.verdict} in this modern model.</p></section>`;
+  }</ul><p>Exhaustive check under these assumptions: ${result.admissible.length} permitted patterns; ${result.agreeing.length} with a true conclusion; ${result.counterexamples.length} counterexamples. Inference: ${result.verdict} in this modern model.</p><h3>Where could the counterexample’s witness go?</h3>${traceHtml(argument, snapshot.existence)}</section>`;
 }
 export async function notebookHtml(record: Notebook, signal: AbortSignal): Promise<string> {
   const retained = new Map<string, string>();

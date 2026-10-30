@@ -10,4 +10,8 @@
   verified source scans with native-width enlargement and keyboard panning.
 - Pinned worlds, editable notebooks, explicit shared links, SVG export, and
   standalone illustrated HTML with sources, fonts, licenses, and native downloads.
+- Constructive counterexample explanation: inspect forbidden regions and required
+  witnesses, build a witness world, and keep that reasoning in the notebook.
+- Named undo/redo, protection against stale file imports, and direct links to
+  each investigation and its source reading.
 - Complete offline production edition and real browser review drivers.

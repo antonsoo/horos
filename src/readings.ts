@@ -60,7 +60,7 @@ export const readings: Reading[] = [
     english:
       "If the first follows every middle, but the middle belongs to none of the last, there will be no deduction connecting the extremes. Nothing necessary follows because these things are so: the first can belong both to every last and to none. Thus neither a particular nor a universal result becomes necessary. With nothing necessary through these premises, there will be no deduction. Terms for belonging to every: animal, human, horse; for belonging to none: animal, human, stone.",
     latin:
-      "Si primum omni medio convenit, medium autem nulli extremo, syllogismus extremorum non erit. Nihil enim necessarium ex his sequitur. Termini ad omni convenire: animal, homo, equus; ad nulli convenire: animal, homo, lapis.",
+      "Si primum omni medio convenit, medium autem nulli extremo, syllogismus extremorum non erit. Nihil enim necessarium ex his sequitur. Termini, ubi primum omni extremo convenit: animal, homo, equus; ubi nulli: animal, homo, lapis.",
     note: "The Latin condenses the passage. In the two substitutions A = animal, B = human; C is first horse, then stone. The premise forms stay the same while the interpretation of C changes. Our buttons supply small illustrative membership worlds, not Aristotle's actual diagram or a complete inventory of animals. Starting with all three classes inhabited avoids an empty-class shortcut.",
     words: [
       {
