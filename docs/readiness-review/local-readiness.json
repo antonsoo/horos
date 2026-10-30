@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-30T06:55:35.543Z",
+  "editionA": "b650d6cb3018691f56a8",
+  "editionB": "8489cc149e5497960819",
+  "syntheticInventoryEvents": false,
+  "results": [
+    {
+      "browser": "chromium",
+      "page": "index.html",
+      "explicitFailureWithdrawsReadiness": true,
+      "otherEditionCopyNotUsed": true,
+      "nativeImageFailureWithRealOriginStopped": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignNotificationsIgnored": true,
+      "explanationPreserved": true
+    },
+    {
+      "browser": "chromium",
+      "oldEditionHeldWhileOpen": true,
+      "newEditionActivatedAfterClose": true
+    },
+    {
+      "browser": "firefox",
+      "page": "index.html",
+      "explicitFailureWithdrawsReadiness": true,
+      "otherEditionCopyNotUsed": true,
+      "nativeImageFailureWithRealOriginStopped": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignNotificationsIgnored": true,
+      "explanationPreserved": true
+    },
+    {
+      "browser": "firefox",
+      "oldEditionHeldWhileOpen": true,
+      "newEditionActivatedAfterClose": true
+    }
+  ]
+}

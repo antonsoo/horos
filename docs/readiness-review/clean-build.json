@@ -1,0 +1,28 @@
+{
+  "sourceCommit": "2e515698d08ff29fb98cf4b42c25d550113fd0d7",
+  "node": "24.22.2",
+  "freshArchive": true,
+  "commands": ["npm ci", "npm run check", "npm run test:browser", "npm run test:readiness"],
+  "focusedTests": 14,
+  "completeBuildFiles": 17,
+  "completeBuildBytes": 4440522,
+  "buildManifestSha256": "6042883bd32767e8c3273f950130e1292fd6d61f52b006f3d9583c5273108da4",
+  "byteIdenticalToReviewedNode26Build": true,
+  "unchangedActualNativeExamples": [
+    {
+      "path": "examples/two-worlds.json",
+      "bytes": 590,
+      "sha256": "ec16e032db923dcb2b0755bf013c48de73f24179ef2bbca0dec426aefd61f639"
+    },
+    {
+      "path": "examples/two-worlds.svg",
+      "bytes": 1207,
+      "sha256": "f095dfb02fe3cde903d214bb5122b290f4908122544e658f293323f8e733194a"
+    },
+    {
+      "path": "examples/two-worlds.html.gz",
+      "bytes": 4348835,
+      "sha256": "6fd125631ad3f6339c01e352012d8941dde3225f3070d8b2a4909d4bb8a1b624"
+    }
+  ]
+}

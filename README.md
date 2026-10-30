@@ -158,6 +158,11 @@ output inventory. Offline readiness requires a controlling worker, the matching
 edition ID, and byte-verified cached files. The development server does not
 install a worker. Saving the standalone notebook is a separate offline path.
 
+The [offline-readiness audit](docs/readiness-audit.md) reproduces and repairs
+stale availability claims after source loss, including another open page.
+Both failure and verified recovery update every controlled page. Run
+`npm run test:readiness` for the independent real-origin audit.
+
 ## Verification
 
 `npm run check` runs formatting/lint checks, strict TypeScript, **14 tests**,

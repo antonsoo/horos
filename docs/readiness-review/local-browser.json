@@ -1,0 +1,194 @@
+{
+  "date": "2026-10-30T06:54:21.108Z",
+  "node": "v24.22.2",
+  "origin": "local production server",
+  "files": [
+    {
+      "path": "assets/index-B58XCBBK.css",
+      "bytes": 11047,
+      "sha256": "f7bd242f372eb8a004adc8f39652d578c939e510b617a4ca9ea0c4f4ede0ccdf"
+    },
+    {
+      "path": "assets/index-DYmYizm1.js",
+      "bytes": 55292,
+      "sha256": "51d88a257865f514923882821035e6c99fb64fb706e4d5d1cfed9273bae30617"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 399,
+      "sha256": "b743fbd2d73b8cae622aa658af6176359bb4a5fdaf318784f75f189c68842add"
+    },
+    {
+      "path": "fonts/literata-OFL.txt",
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    },
+    {
+      "path": "fonts/literata.woff2",
+      "bytes": 396664,
+      "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+    },
+    {
+      "path": "fonts/provenance.json",
+      "bytes": 637,
+      "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2"
+    },
+    {
+      "path": "fonts/sourcesans3-OFL.txt",
+      "bytes": 4579,
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "path": "fonts/sourcesans3.woff2",
+      "bytes": 170188,
+      "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 12713,
+      "sha256": "a79db142e9b3ecad9bb95f43b1c11339ad9341685042dea4f4353f9902059ca2"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
+    },
+    {
+      "path": "sources/bekker-p24.jpg",
+      "bytes": 863245,
+      "sha256": "acb61feb74c9a7e5c532708ee1826fc6054d82e294aeef539a4a315fbe6f109a"
+    },
+    {
+      "path": "sources/bekker-p25.jpg",
+      "bytes": 974737,
+      "sha256": "7ee0106dc32eb37e32477d9e62f433b2ca14a64118a9fe3bfe1fffbf91f25d2d"
+    },
+    {
+      "path": "sources/bekker-p26.jpg",
+      "bytes": 935958,
+      "sha256": "13ce538bb4c850041e77f3672fe7228587a90cfbc1497c49190bd28f9e4d6048"
+    },
+    {
+      "path": "sources/bekker-p28.jpg",
+      "bytes": 999080,
+      "sha256": "a93760f9e0f3bc05114cc6e50e2e6dbd6b04d325baba2241cf0f2bd6801f4c9b"
+    },
+    {
+      "path": "sources/manifest.json",
+      "bytes": 2665,
+      "sha256": "25292b65c94822417f51e729eefb8e13a61d5de9b6ab4edf377d3a748cd0c3a9"
+    },
+    {
+      "path": "sources/NOTICE.txt",
+      "bytes": 1728,
+      "sha256": "e39cd4c53d4e35677c53566582541916572b2b799983f0bf8259712cfc2a768a"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 6130,
+      "sha256": "b58ee330269c432cf70b021a3723df16127bbc20cfb2fde8361d397cb3917d3b"
+    }
+  ],
+  "journeys": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "keyboard": true,
+      "sourcePages": 4,
+      "axeViolations": 0,
+      "standaloneRequests": 0,
+      "notebookBytes": 5833588,
+      "notebookSha256": "070e44a0a57e25d163d42b7f1174a54cbe9cae182c622f6f0dada976684746ad",
+      "offlineReload": true,
+      "offlineExportIdentical": true,
+      "shareRoundTrip": true,
+      "allInvestigations": true,
+      "allFivePassageLocators": true,
+      "offlineLocator": true
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "keyboard": true,
+      "sourcePages": 4,
+      "axeViolations": 0,
+      "standaloneRequests": 0,
+      "notebookBytes": 5833588,
+      "notebookSha256": "070e44a0a57e25d163d42b7f1174a54cbe9cae182c622f6f0dada976684746ad",
+      "offlineReload": true,
+      "offlineExportIdentical": true,
+      "shareRoundTrip": true,
+      "allInvestigations": true,
+      "allFivePassageLocators": true,
+      "offlineLocator": true
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "keyboard": true,
+      "sourcePages": 4,
+      "axeViolations": 0,
+      "standaloneRequests": 0,
+      "notebookBytes": 5833588,
+      "notebookSha256": "070e44a0a57e25d163d42b7f1174a54cbe9cae182c622f6f0dada976684746ad",
+      "offlineReload": true,
+      "offlineExportIdentical": true,
+      "shareRoundTrip": true,
+      "allInvestigations": true,
+      "allFivePassageLocators": true,
+      "offlineLocator": true
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "keyboard": true,
+      "sourcePages": 4,
+      "axeViolations": 0,
+      "standaloneRequests": 0,
+      "notebookBytes": 5833588,
+      "notebookSha256": "070e44a0a57e25d163d42b7f1174a54cbe9cae182c622f6f0dada976684746ad",
+      "offlineReload": true,
+      "offlineExportIdentical": true,
+      "shareRoundTrip": true,
+      "allInvestigations": true,
+      "allFivePassageLocators": true,
+      "offlineLocator": true
+    }
+  ],
+  "faults": [
+    {
+      "browser": "chromium",
+      "lateSourceIgnored": true,
+      "namedUndoRedo": true,
+      "importPreservesNewerEdits": true,
+      "newestImportWins": true,
+      "corruptScanRefused": true,
+      "corruptExportRefused": true,
+      "exportSnapshotFrozen": true,
+      "cancellation": true,
+      "damagedOfflineCacheRefused": true,
+      "discoveredFailureAutomaticallyWithdrawsReadiness": true,
+      "otherEditionCacheIgnored": true,
+      "restoredExactCacheRecovered": true
+    },
+    {
+      "browser": "firefox",
+      "lateSourceIgnored": true,
+      "namedUndoRedo": true,
+      "importPreservesNewerEdits": true,
+      "newestImportWins": true,
+      "corruptScanRefused": true,
+      "corruptExportRefused": true,
+      "exportSnapshotFrozen": true,
+      "cancellation": true,
+      "damagedOfflineCacheRefused": true,
+      "discoveredFailureAutomaticallyWithdrawsReadiness": true,
+      "otherEditionCacheIgnored": true,
+      "restoredExactCacheRecovered": true
+    }
+  ]
+}

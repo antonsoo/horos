@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased — 2026-10-30
+
+- Withdraw offline readiness when sources or ordinary image requests discover
+  damaged retention; notify all open pages and recheck after verified repair.
+- Coalesce damage notifications and verify real outages, two-page recovery and
+  edition transitions without a synthetic visibility event.
+
 ## 0.1.0 — 2026-10-29
 
 - Four operable investigations from Aristotle's _Prior Analytics_, including
