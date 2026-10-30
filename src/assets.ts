@@ -9,6 +9,18 @@ export function asset(path: string): Asset {
   return found;
 }
 
+async function editionCache(item: Asset): Promise<Response | undefined> {
+  const edition = document.querySelector<HTMLMetaElement>('meta[name="horos-edition"]')?.content;
+  if (!edition || !/^[a-f0-9]{20}$/.test(edition) || !("caches" in window)) return;
+  try {
+    return await caches.match(new URL(`${import.meta.env.BASE_URL}${item.path}`, location.href), {
+      cacheName: `horos-${edition}`,
+    });
+  } catch {
+    return;
+  }
+}
+
 export async function verifiedBytes(item: Asset, signal?: AbortSignal): Promise<ArrayBuffer> {
   const controller = new AbortController();
   const cancel = () => controller.abort(signal?.reason);
@@ -21,10 +33,25 @@ export async function verifiedBytes(item: Asset, signal?: AbortSignal): Promise<
   let response: Response;
   let bytes: ArrayBuffer;
   try {
-    response = await fetch(`${import.meta.env.BASE_URL}${item.path}`, {
-      cache: "no-store",
-      signal: controller.signal,
-    });
+    // Firefox can reject a no-store fetch before the worker sees it when the
+    // browser is explicitly offline. Read only this document's named edition;
+    // the ordinary length/hash checks below still apply to every cached byte.
+    const cached = !navigator.onLine ? await editionCache(item) : undefined;
+    controller.signal.throwIfAborted();
+    if (cached) response = cached;
+    else {
+      try {
+        response = await fetch(`${import.meta.env.BASE_URL}${item.path}`, {
+          cache: "no-store",
+          signal: controller.signal,
+        });
+      } catch (error) {
+        controller.signal.throwIfAborted();
+        const fallback = await editionCache(item);
+        if (!fallback) throw error;
+        response = fallback;
+      }
+    }
     bytes = await response.arrayBuffer();
   } catch (error) {
     if (

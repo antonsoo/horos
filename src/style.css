@@ -617,7 +617,7 @@ nav a {
   height: auto;
 }
 .scan-viewport.enlarged img {
-  width: 1800px;
+  width: var(--source-width, 2175px);
   max-width: none;
 }
 .text-button {

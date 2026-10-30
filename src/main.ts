@@ -64,7 +64,7 @@ function render(): void {
   const l = lesson(s.lesson);
   const argument = argumentFor(s.lesson, s.kind);
   const judgment = assess(argument, s.world, s.existence);
-  for (const button of document.querySelectorAll<HTMLButtonElement>("[data-lesson]"))
+  for (const button of document.querySelectorAll<HTMLButtonElement>("button[data-lesson]"))
     button.setAttribute("aria-pressed", String(button.dataset.lesson === s.lesson));
   el("case-title").textContent = l.question;
   el("source-ref").textContent = `Prior Analytics ${l.source}`;
@@ -76,11 +76,11 @@ function render(): void {
     })
     .join("");
   const conclusion = el<HTMLSelectElement>("conclusion");
-  if (conclusion.dataset.lesson !== s.lesson) {
+  if (conclusion.dataset.optionsFor !== s.lesson) {
     conclusion.innerHTML = KINDS.map(
       (kind) => `<option value="${kind}">${statement({ ...argument.conclusion, kind })}</option>`,
     ).join("");
-    conclusion.dataset.lesson = s.lesson;
+    conclusion.dataset.optionsFor = s.lesson;
   }
   conclusion.value = s.kind;
   el("conclusion-truth").textContent =
@@ -199,7 +199,7 @@ function renderComparison(): void {
       ? "Same premises. Same existence assumptions. Both worlds are permitted, but the conclusion changes truth. It cannot follow from those premises."
       : "These snapshots use the same question and existence assumptions. Check that both worlds satisfy the premises before comparing their conclusions.";
   el("comparison-content").innerHTML =
-    `<div class="world-pair"><figure>${diagram(p.world, "Pinned world").replaceAll('id="title"', 'id="p-title"').replaceAll('id="description"', 'id="p-description"').replace('aria-labelledby="title description"', 'aria-labelledby="p-title p-description"')}<figcaption>Pinned · ${htmlEscape(lesson(p.lesson).title)}</figcaption></figure><figure>${diagram(s.world, "Current world").replaceAll('id="title"', 'id="c-title"').replaceAll('id="description"', 'id="c-description"').replace('aria-labelledby="title description"', 'aria-labelledby="c-title c-description"')}<figcaption>Current · ${htmlEscape(lesson(s.lesson).title)}</figcaption></figure></div><table><caption>Each result uses its own saved assumptions</caption><thead><tr><th scope="col">Check</th><th scope="col">Pinned</th><th scope="col">Current</th></tr></thead><tbody><tr><th scope="row">Required inhabitants</th>${[p, s].map((r) => `<td>${TERMS.filter((_, t) => (r.existence & (1 << t)) !== 0).join(", ") || "None"}</td>`).join("")}</tr><tr><th scope="row">Premises</th>${[p, s].map((r) => `<td>${argumentFor(r.lesson, r.kind).premises.map(statement).join("; ")}</td>`).join("")}</tr><tr><th scope="row">Permitted world</th><td>${pj.admissible ? "Yes" : "No"}</td><td>${sj.admissible ? "Yes" : "No"}</td></tr><tr><th scope="row">Proposed conclusion</th>${[p, s].map((r) => `<td>${statement(argumentFor(r.lesson, r.kind).conclusion)}</td>`).join("")}</tr><tr><th scope="row">Conclusion truth</th><td>${pj.conclusion.truth ? "True" : "False"}</td><td>${sj.conclusion.truth ? "True" : "False"}</td></tr></tbody></table>`;
+    `<div class="world-pair"><figure>${diagram(p.world, "Pinned world")}<figcaption>Pinned · ${htmlEscape(lesson(p.lesson).title)}</figcaption></figure><figure>${diagram(s.world, "Current world")}<figcaption>Current · ${htmlEscape(lesson(s.lesson).title)}</figcaption></figure></div><table><caption>Each result uses its own saved assumptions</caption><thead><tr><th scope="col">Check</th><th scope="col">Pinned</th><th scope="col">Current</th></tr></thead><tbody><tr><th scope="row">Required inhabitants</th>${[p, s].map((r) => `<td>${TERMS.filter((_, t) => (r.existence & (1 << t)) !== 0).join(", ") || "None"}</td>`).join("")}</tr><tr><th scope="row">Premises</th>${[p, s].map((r) => `<td>${argumentFor(r.lesson, r.kind).premises.map(statement).join("; ")}</td>`).join("")}</tr><tr><th scope="row">Permitted world</th><td>${pj.admissible ? "Yes" : "No"}</td><td>${sj.admissible ? "Yes" : "No"}</td></tr><tr><th scope="row">Proposed conclusion</th>${[p, s].map((r) => `<td>${statement(argumentFor(r.lesson, r.kind).conclusion)}</td>`).join("")}</tr><tr><th scope="row">Conclusion truth</th><td>${pj.conclusion.truth ? "True" : "False"}</td><td>${sj.conclusion.truth ? "True" : "False"}</td></tr></tbody></table>`;
 }
 function renderCitations(): void {
   const entries = notebook.citations
@@ -278,9 +278,10 @@ async function showScan(page: number): Promise<void> {
     img.alt = `Complete printed page ${page} from Bekker's 1831 Aristotle edition, including textual notes.`;
     await img.decode();
     if (request !== scanRequest) return;
+    img.style.setProperty("--source-width", `${img.naturalWidth}px`);
     img.hidden = false;
     el("scan-status").textContent =
-      `Printed page ${page} · complete 1800-pixel image. Enlarge and use arrow keys to pan.`;
+      `Printed page ${page} · complete ${img.naturalWidth}-pixel image. Enlarge and use arrow keys to pan.`;
   } catch (error) {
     if (request !== scanRequest) return;
     img.hidden = true;

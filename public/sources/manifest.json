@@ -37,8 +37,8 @@
   },
   {
     "path": "sources/NOTICE.txt",
-    "bytes": 1657,
-    "sha256": "eaf744e1071ef6f388df5690f2c909a26720f4ad1e8ab8ab44ce9b9abba02391",
+    "bytes": 1728,
+    "sha256": "e39cd4c53d4e35677c53566582541916572b2b799983f0bf8259712cfc2a768a",
     "mime": "text/plain"
   },
   {
@@ -48,7 +48,9 @@
     "mime": "image/jpeg",
     "printedPage": 24,
     "source": "https://archive.org/download/Bekker1831/page/n31_w1800.jpg",
-    "edition": "Bekker 1831, Aristotelis opera I"
+    "edition": "Bekker 1831, Aristotelis opera I",
+    "width": 2175,
+    "height": 2917
   },
   {
     "path": "sources/bekker-p25.jpg",
@@ -57,7 +59,9 @@
     "mime": "image/jpeg",
     "printedPage": 25,
     "source": "https://archive.org/download/Bekker1831/page/n32_w1800.jpg",
-    "edition": "Bekker 1831, Aristotelis opera I"
+    "edition": "Bekker 1831, Aristotelis opera I",
+    "width": 2175,
+    "height": 2917
   },
   {
     "path": "sources/bekker-p26.jpg",
@@ -66,7 +70,9 @@
     "mime": "image/jpeg",
     "printedPage": 26,
     "source": "https://archive.org/download/Bekker1831/page/n33_w1800.jpg",
-    "edition": "Bekker 1831, Aristotelis opera I"
+    "edition": "Bekker 1831, Aristotelis opera I",
+    "width": 2175,
+    "height": 2917
   },
   {
     "path": "sources/bekker-p28.jpg",
@@ -75,6 +81,8 @@
     "mime": "image/jpeg",
     "printedPage": 28,
     "source": "https://archive.org/download/Bekker1831/page/n35_w1800.jpg",
-    "edition": "Bekker 1831, Aristotelis opera I"
+    "edition": "Bekker 1831, Aristotelis opera I",
+    "width": 2175,
+    "height": 2917
   }
 ]
