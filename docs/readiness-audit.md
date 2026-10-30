@@ -60,3 +60,37 @@ regenerates the complete worker inventory; it is not an application upgrade.
 Public file identities, the public browser replay and remote CI remain
 separate publication boundaries. The static output is `dist/`; the build command
 is `npm run build`.
+
+
+## Published edition
+
+| Boundary                    | Recorded identity                               |
+| --------------------------- | ----------------------------------------------- |
+| Reviewed source             | `d746f6ed65268821ea71ff369d8fb4b61298e72f`      |
+| Published `gh-pages` commit | `5dc324e1bf72bb28af4211daef01d83436d23c15`      |
+| Worker edition              | `b650d6cb3018691f56a8`                          |
+| Canonical hosted build      | 17 files, every byte matched                    |
+| Public browser matrix       | 4 journeys, Chromium/Firefox at 1440/375 pixels |
+
+The [public-file receipt](readiness-review/public-files.json) independently compares
+all hosted files with the reviewed build. The [public-browser receipt](readiness-review/public-browser.json)
+records two open pages in every journey. It first checks emulated-offline source
+behavior, then closes real TLS tunnels and refuses new connections to the
+actual public origin. No response is substituted and no production request is
+redirected. A fresh worker-free browser fails; `navigator.onLine` remains true.
+
+The installed app reloads while that transport is unavailable, reopens its
+actual downloaded JSON, and produces illustrated HTML identical to its connected
+export. A native image request discovering corrupted retention withdraws both
+pages' readiness. Reconnecting and repairing the complete inventory restores
+both. The recovered native record is identical; displayed source bytes and
+embedded source/font bytes match their retained identities. The warning's
+[375px screenshot](readiness-review/offline-warning-375.png) was visually inspected,
+as were all public footer screenshots.
+
+The [source and publication receipt](readiness-review/publication.json) pins the driver,
+source documents and byte comparisons, and records the preserved deployment
+parent. GitHub's branch-based Pages build completed successfully. The source
+CI/Pages workflows returned failure with empty step lists; they are not passing
+source CI. Local build identity, successful Pages deployment and actual hosted
+browser behavior remain independent evidence.

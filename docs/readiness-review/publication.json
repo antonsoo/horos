@@ -1,0 +1,236 @@
+{
+  "date": "2026-10-30T07:17:26.402Z",
+  "sourceCommit": "d746f6ed65268821ea71ff369d8fb4b61298e72f",
+  "sourceCleanAndSynchronizedAtCapture": true,
+  "deploymentCommit": "5dc324e1bf72bb28af4211daef01d83436d23c15",
+  "deploymentParent": "ad4e1076ca3458c0f5be20af490526921ae47701",
+  "forcePush": false,
+  "edition": "b650d6cb3018691f56a8",
+  "publicFileCount": 17,
+  "publicBrowserJourneys": 4,
+  "driver": "https://github.com/antonsoo/officina/blob/9ba6675870823710ab584197423e3bfba5fdf0e5/scripts/readiness-public.mjs",
+  "pages": {
+    "httpStatus": 200,
+    "buildType": "legacy",
+    "source": {
+      "branch": "gh-pages",
+      "path": "/"
+    },
+    "status": "built"
+  },
+  "latestBuild": {
+    "httpStatus": 200,
+    "status": "built",
+    "commit": "5dc324e1bf72bb28af4211daef01d83436d23c15"
+  },
+  "workflows": [
+    {
+      "id": 41018398114,
+      "name": "pages build and deployment",
+      "commit": "5dc324e1bf72bb28af4211daef01d83436d23c15",
+      "status": "completed",
+      "conclusion": "success",
+      "url": "https://github.com/antonsoo/horos/actions/runs/41018398114",
+      "jobs": [
+        {
+          "name": "build",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Checkout",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Upload artifact",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Post Checkout",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "report-build-status",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Report Build Status",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        },
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "success",
+          "steps": [
+            {
+              "name": "Set up job",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Deploy to GitHub Pages",
+              "status": "completed",
+              "conclusion": "success"
+            },
+            {
+              "name": "Complete job",
+              "status": "completed",
+              "conclusion": "success"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 41018052661,
+      "name": "Pages",
+      "commit": "d746f6ed65268821ea71ff369d8fb4b61298e72f",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/antonsoo/horos/actions/runs/41018052661",
+      "jobs": [
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": 41018052616,
+      "name": "CI",
+      "commit": "d746f6ed65268821ea71ff369d8fb4b61298e72f",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/antonsoo/horos/actions/runs/41018052616",
+      "jobs": [
+        {
+          "name": "check",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    },
+    {
+      "id": 40986359744,
+      "name": "CI",
+      "commit": "134113a419892f5c645672f8ae610d115b1a3b85",
+      "status": "completed",
+      "conclusion": "failure",
+      "url": "https://github.com/antonsoo/horos/actions/runs/40986359744",
+      "jobs": [
+        {
+          "name": "check",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": []
+        }
+      ]
+    }
+  ],
+  "raw": [
+    {
+      "path": "README.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/d746f6ed65268821ea71ff369d8fb4b61298e72f/README.md",
+      "bytes": 12022,
+      "sha256": "b1f9a2c57fe6a10b6f560fb1b45320711a1898206ccd865a2f381d4e92990c57"
+    },
+    {
+      "path": "docs/readiness-audit.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/d746f6ed65268821ea71ff369d8fb4b61298e72f/docs/readiness-audit.md",
+      "bytes": 3391,
+      "sha256": "514585e1547b712f4ebf3603e76fc28710ee9e0eb7fb925d567c06260e2707e7"
+    },
+    {
+      "path": "src/assets.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/d746f6ed65268821ea71ff369d8fb4b61298e72f/src/assets.ts",
+      "bytes": 3853,
+      "sha256": "278f9d26abd1e4b4e7569287278d3a34db5b3fee1d0a9d1e15fc67c0a568d5dd"
+    },
+    {
+      "path": "src/offline.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/d746f6ed65268821ea71ff369d8fb4b61298e72f/src/offline.ts",
+      "bytes": 3647,
+      "sha256": "e3b7ec7a047bd4d5f96125bed3059f44da664034ad35b4a6eec942ef5c999d4f"
+    },
+    {
+      "path": "scripts/offline.mjs",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/d746f6ed65268821ea71ff369d8fb4b61298e72f/scripts/offline.mjs",
+      "bytes": 5535,
+      "sha256": "091ed66fdfb18084c081facfb28784c7d11c4d627ae7070e492dc4476b323b5b"
+    },
+    {
+      "path": "scripts/browser.mjs",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/d746f6ed65268821ea71ff369d8fb4b61298e72f/scripts/browser.mjs",
+      "bytes": 30173,
+      "sha256": "bc6830f3723274a25276c90201beb5cfa41149ae1044a47f7d130a2263c48b8f"
+    },
+    {
+      "path": "scripts/readiness-audit.mjs",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/d746f6ed65268821ea71ff369d8fb4b61298e72f/scripts/readiness-audit.mjs",
+      "bytes": 9882,
+      "sha256": "0f4399f44a672e6dc6ae528407d04717d8f69e9dd8390a1f2625ceb336cd9bb4"
+    },
+    {
+      "path": "scripts/review-server.mjs",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/d746f6ed65268821ea71ff369d8fb4b61298e72f/scripts/review-server.mjs",
+      "bytes": 1939,
+      "sha256": "025866d611dbb61831c71a2a67e54f03e0c8809c23d50d39f5895ce99abbc0bc"
+    },
+    {
+      "path": "docs/readiness-review/before.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/d746f6ed65268821ea71ff369d8fb4b61298e72f/docs/readiness-review/before.json",
+      "bytes": 925,
+      "sha256": "8bba03216d22aae5ff403bde5c7f911daafb6bf09d76852c0c187cb9047b4288"
+    },
+    {
+      "path": "docs/readiness-review/clean-build.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/d746f6ed65268821ea71ff369d8fb4b61298e72f/docs/readiness-review/clean-build.json",
+      "bytes": 947,
+      "sha256": "ce14f750f936ff03fe0cf595056cbffa5cfd5343c130103855f497c91e75d149"
+    },
+    {
+      "path": "docs/readiness-review/local-browser.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/d746f6ed65268821ea71ff369d8fb4b61298e72f/docs/readiness-review/local-browser.json",
+      "bytes": 5858,
+      "sha256": "160a6b8b871df7f950d650d6e0cd4f24d98c41354ceecb5d40e7799c9a5e659a"
+    },
+    {
+      "path": "docs/readiness-review/local-readiness.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/d746f6ed65268821ea71ff369d8fb4b61298e72f/docs/readiness-review/local-readiness.json",
+      "bytes": 1385,
+      "sha256": "af28d3be895adb8ef21fc1faa8f135e212b5fa7554399a0153c64d10a77af786"
+    }
+  ]
+}
