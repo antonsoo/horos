@@ -102,13 +102,13 @@ The authority for the selected Greek is Bekker's printed 1831 volume, not the
 workshop's computational result. Complete retained pages preserve the surrounding
 text. Latin below each premise and in the reader is new teaching text.
 
-| Passage       | Printed page     | What is retained                                                                                               | Modern experiment                                                                       |
-| ------------- | ---------------- | -------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
-| I.1, 24b18–20 | 24, right column | Definition of deduction: something follows necessarily from what was laid down                                 | Separate agreement in a world from entailment                                           |
-| I.2, 25a7–9   | 25, left column  | Universal affirmative conversion yields a particular, not a universal; conditional pleasure/good example       | Reverse Every B is A; compare Every A is B with Some A is B and explicit existence of B |
-| I.4, 25b37–40 | 25, right column | A of every B, B of every Greek Gamma, hence A of every Gamma                                                   | All B are A; all C are B; every C is A                                                  |
-| I.4, 26a2–9   | 26, left column  | First follows every middle; middle belongs to no last; animal/human/horse and animal/human/stone substitutions | Same premise forms admit both an affirmative and negative A–C relation                  |
-| I.6, 28a23–26 | 28, left column  | Ekthesis: taking one of the Sigmas, N, to receive both predicates                                              | One C supplies an A-and-B witness; removing existence changes the modern result         |
+| Passage       | Printed page     | What is retained                                                                                                  | Modern experiment                                                                       |
+| ------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| I.1, 24b18–20 | 24, right column | Definition of deduction: something follows necessarily from what was laid down                                    | Separate agreement in a world from entailment                                           |
+| I.2, 25a7–9   | 25, left column  | Universal affirmative conversion yields a particular, not a universal; conditional pleasure/good example          | Reverse Every B is A; compare Every A is B with Some A is B and explicit existence of B |
+| I.4, 25b37–40 | 25, right column | A of every B, B of every Greek Gamma, hence A of every Gamma                                                      | All B are A; all C are B; every C is A                                                  |
+| I.4, 26a2–9   | 26, left column  | First belongs to every middle; middle belongs to no last; animal/human/horse and animal/human/stone substitutions | Same premise forms admit both an affirmative and negative A–C relation                  |
+| I.6, 28a22–26 | 28, left column  | Ekthesis: taking one of the Sigmas, N, to receive both predicates                                                 | One C supplies an A-and-B witness; removing existence changes the modern result         |
 
 ### Letter mapping
 
@@ -151,6 +151,7 @@ claim about the specified semantics, distinct from the historical reading.
 Greek excerpts have explicit boundaries; no stitched fragments are presented
 as continuous text. Line breaks and line-end hyphens are joined, with normalized
 accents and punctuation. There are no silently supplied lacunae in these excerpts.
+Common ου and στ type ligatures are expanded into ordinary Greek letters.
 The English is new. The teaching Latin is also new; 26a2–9 is explicitly abridged.
 No medieval translation is being attributed or reconstructed.
 

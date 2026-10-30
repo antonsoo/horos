@@ -75,6 +75,38 @@ constructed world is independently evaluated as an actual counterexample.
 A targeted check identifies **C must have an inhabitant** as the blocked
 requirement in the instance-taking question.
 
+## Scan-level correction after the first public pass
+
+The first public browser pass exposed a limitation of the original evidence:
+source hashes establish the identity of an image, not the accuracy of the text
+beside it. Enlarging the actual pages and reading the excerpt boundaries found
+two edition mismatches and one incomplete line reference. These are corrected
+in the current reader and portable notebook.
+
+| Place                                       | Earlier reader | Retained Bekker 1831 page                                 |
+| ------------------------------------------- | -------------- | --------------------------------------------------------- |
+| 26a2, the first predicate                   | `ἀκολουθεῖ`    | `ὑπάρχει`                                                 |
+| 26a9, introducing the negative substitution | `τοῦ μηδενὶ`   | `τῷ μηδενὶ`                                               |
+| Instance-taking excerpt                     | `28a23–26`     | Starts with `ἔστι` at the end of **28a22**, ends at 28a26 |
+
+The close English now begins “If the first belongs to every middle”. The formal
+experiment is unchanged: A is predicated of every B. All five excerpts were
+compared again with the retained printed pages, including the conversion passage
+at 25a7–9, the chain at 25b37–40, and the definition at 24b18–20. Line-end hyphens
+are joined and the common ου/στ type ligatures expanded; punctuation and accents
+are normalized. The reader preserves Bekker's wording instead of silently mixing
+it with the different edition used by a digital locating aid.
+
+The reader now offers **Locate passage** for every excerpt. It fits the printed
+column to the viewport and pans to the approximate passage area, retaining
+adjoining context. This helps the learner compare the text directly with the
+complete page. The coordinates are modern navigation aids, not transcribed
+features of the edition; the image bytes are unchanged. A delayed locator cannot
+move a newly selected page, and the locator also works from the offline edition.
+
+This correction is a textual review against a specified printed source, not a
+claim to establish Aristotle's original wording or to replace a critical edition.
+
 ## Evidence boundaries
 
 `npm run check` covers 14 tests, strict type checking, lint, source identities,

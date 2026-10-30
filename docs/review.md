@@ -26,7 +26,8 @@ Each journey:
 4. Selects a Greek phrase, collects citations, and writes an explanation.
 5. Displays all four source pages, comparing the actual image-blob hashes to
    the retained files. Enlarges a page and pans with arrow keys without
-   introducing document overflow.
+   introducing document overflow. Locates all five excerpts in their printed columns,
+   checking that the column fits and the excerpt area is visible.
 6. Downloads JSON, SVG, and illustrated HTML. Reopens the actual HTML through
    `file://`, checks all embedded image and font hashes, and observes **zero
    HTTP asset requests**. Its native JSON download reopens in the workshop.
@@ -37,8 +38,8 @@ Each journey:
    reloads the document, reads a different source page, and exports again.
    The online and offline HTML downloads are byte-identical in all four runs.
 
-The illustrated HTML was **5,833,360 bytes**, SHA-256
-`d7d166c99c737e9ef1db05c5fa1901dccb812526663697225c4da8fbd8a17cdf`
+The illustrated HTML was **5,833,588 bytes**, SHA-256
+`070e44a0a57e25d163d42b7f1174a54cbe9cae182c622f6f0dada976684746ad`
 in every journey. See [browser-review.json](assets/browser-review.json) for
 the full 17-file production inventory, browser versions, and fault receipts.
 Sixteen files belong to the cached edition; the generated worker is the
@@ -69,7 +70,7 @@ Both browsers passed the following additional cases (including the [subsequent e
 
 ## Corrections made during review
 
-The [editing and explanation audit](audit.md) records the later correction of
+The [editing, explanation, and scan-level audit](audit.md) records the later correction of
 prose loss during undo, stale imports, stale substitution captions, and the lost
 investigation group label. Its constructive explanation and matching notebook
 section are included in the current browser receipt and artifacts.
@@ -106,6 +107,7 @@ at either tested width, including with an enlarged source.
 | Workshop opening    | [Chromium](assets/workshop-chromium-1440.png), [Firefox](assets/workshop-firefox-1440.png)     | [Chromium](assets/workshop-chromium-375.png), [Firefox](assets/workshop-firefox-375.png)     |
 | Operable world      | [Chromium](assets/world-chromium-1440.png), [Firefox](assets/world-firefox-1440.png)           | [Chromium](assets/world-chromium-375.png), [Firefox](assets/world-firefox-375.png)           |
 | Paired worlds       | [Chromium](assets/comparison-chromium-1440.png), [Firefox](assets/comparison-firefox-1440.png) | [Chromium](assets/comparison-chromium-375.png), [Firefox](assets/comparison-firefox-375.png) |
+| Located passage     | [Chromium](assets/located-chromium-1440.png), [Firefox](assets/located-firefox-1440.png)       | [Chromium](assets/located-chromium-375.png), [Firefox](assets/located-firefox-375.png)       |
 | Witness explanation | [Chromium](assets/trace-chromium-1440.png), [Firefox](assets/trace-firefox-1440.png)           | [Chromium](assets/trace-chromium-375.png), [Firefox](assets/trace-firefox-375.png)           |
 | Greek and source    | [Chromium](assets/reader-chromium-1440.png), [Firefox](assets/reader-firefox-1440.png)         | [Chromium](assets/reader-chromium-375.png), [Firefox](assets/reader-firefox-375.png)         |
 

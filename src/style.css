@@ -609,7 +609,6 @@ nav a {
   overflow: auto;
   border: 1px solid var(--line);
   background: #e5e4d8;
-  scrollbar-gutter: stable;
 }
 .scan-viewport img {
   display: block;

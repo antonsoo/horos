@@ -14,4 +14,8 @@
   witnesses, build a witness world, and keep that reasoning in the notebook.
 - Named undo/redo, protection against stale file imports, and direct links to
   each investigation and its source reading.
+- Correct the reader against the retained Bekker scans at 26a2 and 26a9;
+  include the opening word on 28a22 in the instance-taking citation.
+- Locate each quoted passage in its printed column, with keyboard panning
+  and offline support; keep the complete original scan.
 - Complete offline production edition and real browser review drivers.

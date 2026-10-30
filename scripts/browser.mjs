@@ -250,6 +250,45 @@ try {
         await contains(page, "scan-status", "Printed page 24");
         await page.locator("#cite").click();
         await page.locator("#note").fill(explanation);
+        for (const [id, printed, x, y, columnWidth] of [
+          ["deduction", 24, 1110, 1640, 1030],
+          ["conversion", 25, 45, 540, 1030],
+          ["two-worlds", 26, 100, 270, 1030],
+          ["inhabitant", 28, 95, 1435, 1040],
+          ["chain", 25, 1100, 2220, 1030],
+        ]) {
+          await page.locator("#reading").selectOption(id);
+          await page.locator("#locate-scan").click();
+          await contains(page, "scan-status", "excerpt area is in view");
+          assert.equal(
+            await displayedImageHash(page),
+            manifest.find((a) => a.printedPage === printed).sha256,
+          );
+          const area = await page.locator("#scan").evaluate(
+            (img, { x, y, columnWidth }) => {
+              const viewport = img.parentElement,
+                scale = img.width / img.naturalWidth;
+              return {
+                left: x * scale - viewport.scrollLeft,
+                top: y * scale - viewport.scrollTop,
+                columnWidth: columnWidth * scale,
+                width: viewport.clientWidth,
+                height: viewport.clientHeight,
+              };
+            },
+            { x, y, columnWidth },
+          );
+          assert.ok(
+            area.left >= 0 && area.left + area.columnWidth <= area.width + 2,
+            JSON.stringify(area),
+          );
+          assert.ok(area.top >= 0 && area.top < area.height - 60, JSON.stringify(area));
+          await noOverflow(page);
+          if (id === "inhabitant")
+            await page
+              .locator("#reader")
+              .screenshot({ path: resolve(output, `located-${name}-${width}.png`) });
+        }
         for (const p of [24, 25, 26, 28]) {
           await page.locator("#scan-page").selectOption(String(p));
           await contains(page, "scan-status", `Printed page ${p}`);
@@ -413,6 +452,8 @@ try {
           await displayedImageHash(page),
           manifest.find((a) => a.printedPage === 28).sha256,
         );
+        await page.locator("#locate-scan").click();
+        await contains(page, "scan-status", "excerpt area is in view");
         const offline = await download(page, "#save-html");
         assert.equal(hash(offline.bytes), hash(exported.bytes));
         await context.setOffline(false);
@@ -433,6 +474,8 @@ try {
           offlineExportIdentical: true,
           shareRoundTrip: true,
           allInvestigations: true,
+          allFivePassageLocators: true,
+          offlineLocator: true,
         });
         await context.close();
         console.log(
@@ -504,6 +547,7 @@ try {
       });
       await page.locator("#reading").selectOption("conversion");
       await seen;
+      await page.locator("#locate-scan").click();
       await page.locator("#reading").selectOption("inhabitant");
       await contains(page, "scan-status", "Printed page 28");
       release();
@@ -512,6 +556,7 @@ try {
         await displayedImageHash(page),
         manifest.find((a) => a.printedPage === 28).sha256,
       );
+      assert.equal(await page.locator("#zoom").getAttribute("aria-pressed"), "false");
       await context.unroute("**/sources/bekker-p25.jpg");
       const bytes = await readFile("public/sources/bekker-p24.jpg");
       const corrupt = Buffer.from(bytes);

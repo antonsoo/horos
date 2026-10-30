@@ -2,6 +2,7 @@
 
 **Build two worlds with the same premises. Find the object that breaks the conclusion.**
 
+[![Live workshop](https://img.shields.io/badge/live-workshop-923922)](https://antonsoo.github.io/horos/)
 [![MIT license](https://img.shields.io/badge/license-MIT-26342f)](LICENSE)
 
 ![Horos: two premises beside a world made from placed objects](docs/assets/workshop-chromium-1440.png)
@@ -12,9 +13,10 @@ horse: the premise forms survive, while the conclusion changes. Aristotle uses
 these terms in _Prior Analytics_ I.4, 26a2–9. Horos makes the counterexample
 something a learner constructs, compares, reads, and takes away.
 
-This edition is prepared locally. The intended repository is
-`github.com/antonsoo/horos`, with Pages at `antonsoo.github.io/horos/`.
-Publication has not been performed; these are not live-demo claims.
+[Open the workshop](https://antonsoo.github.io/horos/) or read the
+[scan-level audit and actual exercise](docs/audit.md#try-the-actual-work).
+[Publication evidence](docs/publication.md) separates source, hosted bytes,
+browser behavior, and CI.
 
 ## Try it
 
@@ -77,7 +79,9 @@ The Latin for the horse-and-stone passage is an abridgment.
 
 Four complete scanned pages retain Bekker’s printed context and textual notes.
 The viewer checks the source bytes, enlarges to the actual image width, and
-supports keyboard panning. Selecting another page cancels a pending request;
+supports keyboard panning. **Locate passage** fits the quoted column and brings
+the excerpt area into view, including for the chain near the foot of page 25.
+The complete image is preserved. Selecting another page cancels a pending request;
 a late response cannot replace the selected page.
 
 ## A notebook that leaves the website

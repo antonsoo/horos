@@ -8,6 +8,8 @@ export interface Reading {
   title: string;
   location: string;
   page: number;
+  /** Approximate excerpt area in the retained 2175 x 2917 page, including adjoining context. */
+  focus: { x: number; y: number; width: number; column: "left" | "right" };
   greek: string;
   english: string;
   latin: string;
@@ -20,6 +22,7 @@ export const readings: Reading[] = [
     title: "What has to follow",
     location: "I.1 · 24b18–20",
     page: 24,
+    focus: { x: 1110, y: 1640, width: 1030, column: "right" },
     greek:
       "συλλογισμὸς δέ ἐστι λόγος ἐν ᾧ τεθέντων τινῶν ἕτερόν τι τῶν κειμένων ἐξ ἀνάγκης συμβαίνει τῷ ταῦτα εἶναι.",
     english:
@@ -55,13 +58,14 @@ export const readings: Reading[] = [
     title: "The horse and the stone",
     location: "I.4 · 26a2–9",
     page: 26,
+    focus: { x: 100, y: 270, width: 1030, column: "left" },
     greek:
-      "εἰ δὲ τὸ μὲν πρῶτον παντὶ τῷ μέσῳ ἀκολουθεῖ, τὸ δὲ μέσον μηδενὶ τῷ ἐσχάτῳ ὑπάρχει, οὐκ ἔσται συλλογισμὸς τῶν ἄκρων· οὐδὲν γὰρ ἀναγκαῖον συμβαίνει τῷ ταῦτα εἶναι· καὶ γὰρ παντὶ καὶ μηδενὶ ἐνδέχεται τὸ πρῶτον τῷ ἐσχάτῳ ὑπάρχειν, ὥστε οὔτε τὸ κατὰ μέρος οὔτε τὸ καθόλου γίνεται ἀναγκαῖον· μηδενὸς δὲ ὄντος ἀναγκαίου διὰ τούτων οὐκ ἔσται συλλογισμός. ὅροι τοῦ παντὶ ὑπάρχειν ζῷον—ἄνθρωπος—ἵππος, τοῦ μηδενὶ ζῷον—ἄνθρωπος—λίθος.",
+      "εἰ δὲ τὸ μὲν πρῶτον παντὶ τῷ μέσῳ ὑπάρχει, τὸ δὲ μέσον μηδενὶ τῷ ἐσχάτῳ ὑπάρχει, οὐκ ἔσται συλλογισμὸς τῶν ἄκρων· οὐδὲν γὰρ ἀναγκαῖον συμβαίνει τῷ ταῦτα εἶναι· καὶ γὰρ παντὶ καὶ μηδενὶ ἐνδέχεται τὸ πρῶτον τῷ ἐσχάτῳ ὑπάρχειν, ὥστε οὔτε τὸ κατὰ μέρος οὔτε τὸ καθόλου γίνεται ἀναγκαῖον· μηδενὸς δὲ ὄντος ἀναγκαίου διὰ τούτων οὐκ ἔσται συλλογισμός. ὅροι τοῦ παντὶ ὑπάρχειν ζῷον—ἄνθρωπος—ἵππος, τῷ μηδενὶ ζῷον—ἄνθρωπος—λίθος.",
     english:
-      "If the first follows every middle, but the middle belongs to none of the last, there will be no deduction connecting the extremes. Nothing necessary follows because these things are so: the first can belong both to every last and to none. Thus neither a particular nor a universal result becomes necessary. With nothing necessary through these premises, there will be no deduction. Terms for belonging to every: animal, human, horse; for belonging to none: animal, human, stone.",
+      "If the first belongs to every middle, but the middle belongs to none of the last, there will be no deduction connecting the extremes. Nothing necessary follows because these things are so: the first can belong both to every last and to none. Thus neither a particular nor a universal result becomes necessary. With nothing necessary through these premises, there will be no deduction. Terms for belonging to every: animal, human, horse; for belonging to none: animal, human, stone.",
     latin:
       "Si primum omni medio convenit, medium autem nulli extremo, syllogismus extremorum non erit. Nihil enim necessarium ex his sequitur. Termini, ubi primum omni extremo convenit: animal, homo, equus; ubi nulli: animal, homo, lapis.",
-    note: "The Latin condenses the passage. In the two substitutions A = animal, B = human; C is first horse, then stone. The premise forms stay the same while the interpretation of C changes. Our buttons supply small illustrative membership worlds, not Aristotle's actual diagram or a complete inventory of animals. Starting with all three classes inhabited avoids an empty-class shortcut.",
+    note: "The transcription follows the retained Bekker page: ὑπάρχει at 26a2 and τῷ μηδενὶ at 26a9. The Latin condenses the passage. In the two substitutions A = animal, B = human; C is first horse, then stone. The premise forms stay the same while the interpretation of C changes. Our buttons supply small illustrative membership worlds, not Aristotle's actual diagram or a complete inventory of animals. Starting with all three classes inhabited avoids an empty-class shortcut.",
     words: [
       {
         phrase: "παντὶ τῷ μέσῳ",
@@ -95,6 +99,7 @@ export const readings: Reading[] = [
     title: "Reversal, with a smaller claim",
     location: "I.2 · 25a7–9",
     page: 25,
+    focus: { x: 45, y: 540, width: 1030, column: "left" },
     greek:
       "τὴν δὲ κατηγορικὴν ἀντιστρέφειν μὲν ἀναγκαῖον, οὐ μὴν καθόλου ἀλλ᾽ ἐν μέρει, οἷον εἰ πᾶσα ἡδονὴ ἀγαθόν, καὶ ἀγαθόν τι εἶναι ἡδονήν.",
     english:
@@ -128,15 +133,16 @@ export const readings: Reading[] = [
   {
     id: "inhabitant",
     title: "Set out one instance",
-    location: "I.6 · 28a23–26",
+    location: "I.6 · 28a22–26",
     page: 28,
+    focus: { x: 95, y: 1435, width: 1040, column: "left" },
     greek:
       "ἔστι δὲ καὶ διὰ τοῦ ἀδυνάτου καὶ τῷ ἐκθέσθαι ποιεῖν τὴν ἀπόδειξιν· εἰ γὰρ ἄμφω παντὶ τῷ Σ ὑπάρχει, ἂν ληφθῇ τι τῶν Σ οἷον τὸ Ν, τούτῳ καὶ τὸ Π καὶ τὸ Ρ ὑπάρξει, ὥστε τινὶ τῷ Ρ τὸ Π ὑπάρξει.",
     english:
       "The proof can also be made through the impossible and by setting out an instance. For if both belong to every S, and one of the Ss is taken, say N, both P and R will belong to it; so P will belong to some R.",
     latin:
       "Probatio etiam per impossibile et per expositionem fieri potest. Si enim utrumque omni S convenit, et sumitur aliquod S, velut N, huic et P et R convenient; itaque P alicui R conveniet.",
-    note: "The printed terms are Π, Ρ, Σ, with Ν naming the instance. The board renames Π to A, Ρ to B, and Σ to C; object 8 can play the role of Ν. The Greek describes taking an instance. Allowing C to be empty is a modern contrast, not a claim that Aristotle accepts this counterexample against his own inference. This workshop does not adjudicate the scholarly debate about existential import.",
+    note: "The excerpt starts with ἔστι at the end of 28a22 and ends at 28a26. The printed terms are Π, Ρ, Σ, with Ν naming the instance. The board renames Π to A, Ρ to B, and Σ to C; object 8 can play the role of Ν. The Greek describes taking an instance. Allowing C to be empty is a modern contrast, not a claim that Aristotle accepts this counterexample against his own inference. This workshop does not adjudicate the scholarly debate about existential import.",
     words: [
       {
         phrase: "τῷ ἐκθέσθαι",
@@ -165,6 +171,7 @@ export const readings: Reading[] = [
     title: "The universal chain",
     location: "I.4 · 25b37–40",
     page: 25,
+    focus: { x: 1100, y: 2220, width: 1030, column: "right" },
     greek:
       "εἰ γὰρ τὸ Α κατὰ παντὸς τοῦ Β καὶ τὸ Β κατὰ παντὸς τοῦ Γ, ἀνάγκη τὸ Α κατὰ παντὸς τοῦ Γ κατηγορεῖσθαι· πρότερον γὰρ εἴρηται πῶς τὸ κατὰ παντὸς λέγομεν.",
     english:
@@ -199,4 +206,4 @@ export function reading(id: string): Reading {
 export const edition =
   "Aristotle, Prior Analytics I. Greek text transcribed from Immanuel Bekker, Aristotelis opera, volume I (Berlin: G. Reimer, 1831), printed pages 24, 25, 26 and 28. Complete page images are retained from Internet Archive item Bekker1831. This is a nineteenth-century printed edition, not an ancient manuscript.";
 export const textPolicy =
-  "Line breaks and line-end hyphenation are joined; Greek accents and punctuation are normalized for reading. Excerpts have explicit boundaries. English and teaching Latin are new translations for this workshop; Latin is not presented as an ancient or medieval textual witness. The two-worlds Latin is an abridgment. The Greek text and printed scans are public domain.";
+  "Line breaks and line-end hyphenation are joined; Greek accents and punctuation are normalized for reading, and common ου/στ type ligatures are expanded. Excerpts have explicit boundaries. English and teaching Latin are new translations for this workshop; Latin is not presented as an ancient or medieval textual witness. The two-worlds Latin is an abridgment. The Greek text and printed scans are public domain.";

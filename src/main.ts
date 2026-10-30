@@ -286,7 +286,7 @@ function showReading(id: string): void {
 let scanRequest = 0;
 let scanController: AbortController | undefined;
 let scanUrl: string | undefined;
-async function showScan(page: number): Promise<void> {
+async function showScan(page: number): Promise<boolean> {
   const request = ++scanRequest;
   scanController?.abort();
   scanController = new AbortController();
@@ -307,22 +307,24 @@ async function showScan(page: number): Promise<void> {
   let url: string | undefined;
   try {
     const bytes = await verifiedBytes(asset(`sources/bekker-p${page}.jpg`), scanController.signal);
-    if (request !== scanRequest) return;
+    if (request !== scanRequest) return false;
     url = URL.createObjectURL(new Blob([bytes], { type: "image/jpeg" }));
     scanUrl = url;
     img.src = url;
     img.alt = `Complete printed page ${page} from Bekker's 1831 Aristotle edition, including textual notes.`;
     await img.decode();
-    if (request !== scanRequest) return;
+    if (request !== scanRequest) return false;
     img.style.setProperty("--source-width", `${img.naturalWidth}px`);
     img.hidden = false;
     el("scan-status").textContent =
-      `Printed page ${page} · complete ${img.naturalWidth}-pixel image. Enlarge and use arrow keys to pan.`;
+      `Printed page ${page} · complete ${img.naturalWidth}-pixel image. Locate the passage or enlarge; use arrow keys to pan.`;
+    return true;
   } catch (error) {
-    if (request !== scanRequest) return;
+    if (request !== scanRequest) return false;
     img.hidden = true;
     if (url) URL.revokeObjectURL(url);
     el("scan-status").textContent = errorText(error);
+    return false;
   }
 }
 
@@ -442,11 +444,35 @@ el("retry-scan").addEventListener(
   "click",
   () => void showScan(Number(el<HTMLSelectElement>("scan-page").value)),
 );
+el("locate-scan").addEventListener("click", async () => {
+  const r = reading(selectedReading);
+  el<HTMLSelectElement>("scan-page").value = String(r.page);
+  if (!(await showScan(r.page)) || selectedReading !== r.id) return;
+  const viewport = el("scan-viewport");
+  const img = el<HTMLImageElement>("scan");
+  // Fit one printed column, not the whole page; retain a little surrounding context.
+  const scale = Math.min(1, (viewport.clientWidth - 24) / r.focus.width);
+  img.style.setProperty("--source-width", `${img.naturalWidth * scale}px`);
+  viewport.classList.add("enlarged");
+  el("zoom").setAttribute("aria-pressed", "true");
+  el("zoom").textContent = "Fit page";
+  viewport.scrollTo({
+    left: Math.max(0, r.focus.x * scale - 12),
+    top: Math.max(0, r.focus.y * scale - 12),
+    behavior: "instant",
+  });
+  viewport.focus({ preventScroll: true });
+  el("scan-status").textContent =
+    `Printed page ${r.page} · ${r.location}, ${r.focus.column} column. The excerpt area is in view with adjoining text. Arrow keys pan the complete page.`;
+});
 el("zoom").addEventListener("click", () => {
+  const img = el<HTMLImageElement>("scan");
+  img.style.setProperty("--source-width", `${img.naturalWidth}px`);
   const zoomed = el("scan-viewport").classList.toggle("enlarged");
   el("zoom").setAttribute("aria-pressed", String(zoomed));
   el("zoom").textContent = zoomed ? "Fit page" : "Enlarge page";
   if (zoomed) el("scan-viewport").focus();
+  else el("scan-viewport").scrollTo(0, 0);
 });
 el("scan-viewport").addEventListener("keydown", (event) => {
   if (!el("scan-viewport").classList.contains("enlarged")) return;
