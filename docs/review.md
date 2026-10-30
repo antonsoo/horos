@@ -123,5 +123,14 @@ at 375px: source rendering and the stone counterexample worked, there was no
 horizontal overflow or page error, and no service worker registered on the
 development origin.
 
-Clean-install reproducibility is recorded separately in the final build
-receipt; the browser receipt above identifies the exact tested output bytes.
+A fresh archive of source commit `5f706f7fb8cdcac52254a43662b155f5b367d383`
+was installed with `npm ci` and checked with `npm run check` on Node **24.22.1**.
+All checks passed. Every one of the **17 production files** was byte-identical
+to the Node 26.7.0 working build and the browser-reviewed inventory, including
+the generated worker. The complete output is **4,432,219 bytes**.
+[clean-build.json](assets/clean-build.json) records each file's length and hash.
+The documented `gzip -dk examples/two-worlds.html.gz` command also ran in that
+fresh checkout, and its output reopened in Chromium with all four source images.
+
+These final receipt and documentation additions do not change build inputs.
+Public source publication, hosted-byte comparison, and remote CI remain unverified.

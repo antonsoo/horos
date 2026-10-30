@@ -164,7 +164,8 @@ reads actual displayed source bytes, reopens native downloads, checks keyboard
 controls and accessibility, and reloads with the origin refusing connections.
 It also injects late and corrupt source responses, changes the live notebook
 during export, and cancels preparation. [The review](docs/review.md) records
-the observed results and any verification limits.
+the observed results and any verification limits. A fresh Node 24.22.1 install
+reproduced all 17 browser-reviewed build files byte for byte.
 
 ## Accuracy and limitations
 
