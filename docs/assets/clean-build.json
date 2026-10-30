@@ -1,6 +1,6 @@
 {
-  "date": "2026-10-30T00:57:18.161163+00:00",
-  "sourceCommit": "6d2a9d3f253af7e67d0be3285e00a9e2188cd785",
+  "date": "2026-10-30T01:19:50.998371+00:00",
+  "sourceCommit": "c614f494177bda02d2818c1eeb7bbe75cf1b7459",
   "source": "fresh git archive",
   "node": "v24.22.1",
   "commands": [
@@ -10,17 +10,17 @@
   "testsPassed": 14,
   "matchesNode26WorkingBuild": true,
   "matchesBrowserInventory": true,
-  "totalBytes": 4437794,
+  "totalBytes": 4439121,
   "files": [
     {
-      "path": "assets/index-3K5km566.js",
-      "bytes": 53539,
-      "sha256": "61db62e1148140ae709c2cec759c860db5f6384af199276f358e8a1f20c9a297"
+      "path": "assets/index-B58XCBBK.css",
+      "bytes": 11047,
+      "sha256": "f7bd242f372eb8a004adc8f39652d578c939e510b617a4ca9ea0c4f4ede0ccdf"
     },
     {
-      "path": "assets/index-Dgg_Yypv.css",
-      "bytes": 11071,
-      "sha256": "78d4fa0b5c67b57a06a045ac6eaa2ac9e57cadae2f8bb2582c092fe3f834789b"
+      "path": "assets/index-BDQyYib9.js",
+      "bytes": 54828,
+      "sha256": "7052aeeec3d08caa0ec4a6d1b7de30ca08ce81e6a16cdc06c9df55310b2ee266"
     },
     {
       "path": "favicon.svg",
@@ -54,8 +54,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 12651,
-      "sha256": "b945f1c1aaff0de5654a379f9f51089f7618951226db6f74ddb0769ffed4c791"
+      "bytes": 12713,
+      "sha256": "28d9503991e6c4c6167fc96b33c11ada7b27701cceb1b6411dd0086f6db45767"
     },
     {
       "path": "LICENSE.txt",
@@ -95,7 +95,7 @@
     {
       "path": "sw.js",
       "bytes": 5193,
-      "sha256": "f15159af2b3d971bbb81d8e0e914effdb992b7c3c1c63d4386a25d4257af941b"
+      "sha256": "34c9c5b1f6d0c9501f2cd764ffa1cc546863bd1f8c2c0126addde4b5e75ab0fa"
     }
   ]
 }

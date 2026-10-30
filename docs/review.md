@@ -136,11 +136,11 @@ at 375px: source rendering and the stone counterexample worked, there was no
 horizontal overflow or page error, and no service worker registered on the
 development origin.
 
-The audited source commit `6d2a9d3f253af7e67d0be3285e00a9e2188cd785` was
+The audited source commit `c614f494177bda02d2818c1eeb7bbe75cf1b7459` was
 reproduced from a fresh archive with Node **24.22.1**, `npm ci`, and
 `npm run check`. All 14 tests and checks passed. Every one of the **17 production
 files** matched both the Node 26.7.0 working build and the browser-reviewed
-inventory, including the generated worker. Total output: **4,437,794 bytes**.
+inventory, including the generated worker. Total output: **4,439,121 bytes**.
 [clean-build.json](assets/clean-build.json) records their lengths and hashes.
 
 The initial edition also verified the documented
