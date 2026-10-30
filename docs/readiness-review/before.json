@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-30T06:42:02.929Z",
+  "results": [
+    {
+      "browser": "chromium",
+      "url": "https://antonsoo.github.io/horos/",
+      "before": "This edition is available offline, including every source page.",
+      "source": "The downloaded sources/bekker-p28.jpg failed its source check. No substituted file will be used.",
+      "after": "This edition is available offline, including every source page.",
+      "sourceWasRefused": true,
+      "contradiction": true
+    },
+    {
+      "browser": "firefox",
+      "url": "https://antonsoo.github.io/horos/",
+      "before": "This edition is available offline, including every source page.",
+      "source": "The downloaded sources/bekker-p28.jpg failed its source check. No substituted file will be used.",
+      "after": "This edition is available offline, including every source page.",
+      "sourceWasRefused": true,
+      "contradiction": true
+    }
+  ]
+}

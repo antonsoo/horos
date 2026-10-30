@@ -651,11 +651,10 @@ try {
         const bytes = new Uint8Array(await original.arrayBuffer());
         bytes[100] ^= 1;
         await cache.put(url, new Response(bytes, { headers: { "Content-Type": "image/jpeg" } }));
-        document.dispatchEvent(new Event("visibilitychange"));
       });
-      await contains(cachedPage, "offline-status", "not fully available offline");
       await cachedPage.locator("#reading").selectOption("inhabitant");
       await contains(cachedPage, "scan-status", "failed its source check");
+      await contains(cachedPage, "offline-status", "not fully available offline");
       await cachedPage.locator("#save-html").click();
       await contains(cachedPage, "file-status", "failed its source check");
       await cachedPage.evaluate(async () => {
@@ -674,14 +673,8 @@ try {
         return !text.startsWith("Loading") && !text.startsWith("Printed page");
       });
       assert.ok(await cachedPage.locator("#scan").isHidden());
-      await cachedPage.evaluate(async () => {
-        const edition = document.querySelector('meta[name="horos-edition"]').content;
-        await (await caches.open(`horos-${edition}`)).put(
-          new URL("sources/bekker-p28.jpg", location.href),
-          window.cacheOriginal.clone(),
-        );
-        document.dispatchEvent(new Event("visibilitychange"));
-      });
+      unavailable = false;
+      await cachedContext.setOffline(false);
       await cachedPage.locator("#retry-scan").click();
       await contains(cachedPage, "scan-status", "Printed page 28");
       await contains(cachedPage, "offline-status", "available offline");
@@ -698,6 +691,7 @@ try {
         exportSnapshotFrozen: true,
         cancellation: true,
         damagedOfflineCacheRefused: true,
+        discoveredFailureAutomaticallyWithdrawsReadiness: true,
         otherEditionCacheIgnored: true,
         restoredExactCacheRecovered: true,
       });

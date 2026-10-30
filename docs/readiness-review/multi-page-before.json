@@ -1,0 +1,21 @@
+{
+  "stage": "Single-page notification fix, before broadcasting inventory transitions",
+  "results": [
+    {
+      "browser": "chromium",
+      "repo": "horos",
+      "base": "http://127.0.0.1:45299/horos/",
+      "sourceFailure": "The downloaded sources/bekker-p26.jpg failed its source check. No substituted file will be used.",
+      "initiatingFooter": "This edition is not fully available offline. Connect and reload, or save a notebook.",
+      "otherFooter": "This edition is available offline, including every source page."
+    },
+    {
+      "browser": "firefox",
+      "repo": "horos",
+      "base": "http://127.0.0.1:45299/horos/",
+      "sourceFailure": "The downloaded sources/bekker-p26.jpg failed its source check. No substituted file will be used.",
+      "initiatingFooter": "This edition is not fully available offline. Connect and reload, or save a notebook.",
+      "otherFooter": "This edition is available offline, including every source page."
+    }
+  ]
+}
