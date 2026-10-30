@@ -1,0 +1,26 @@
+Aristotle, Analytica priora (Prior Analytics), Book I.
+Immanuel Bekker, Aristotelis opera, volume I (Berlin: G. Reimer, 1831).
+Printed pages 24, 25, 26, 28. Public-domain ancient text and nineteenth-century edition.
+
+Source: https://archive.org/details/Bekker1831
+Individual complete page images:
+https://archive.org/download/Bekker1831/page/n31_w1800.jpg (printed 24)
+https://archive.org/download/Bekker1831/page/n32_w1800.jpg (printed 25)
+https://archive.org/download/Bekker1831/page/n33_w1800.jpg (printed 26)
+https://archive.org/download/Bekker1831/page/n35_w1800.jpg (printed 28)
+
+Retrieved and inspected 2026-10-29. These are complete 2175 by 2917 pixel service
+renditions (the service selected this size for the requested 1800-pixel width), retained unmodified. Internet Archive scan leaf numbers come from
+Bekker I 1831a_scandata.xml and were checked against the printed page numerals.
+This printed edition is not an ancient manuscript. The source's variant notes
+remain visible on the retained pages. Hashes and lengths are in manifest.json.
+
+Transcriptions in src/readings.ts join printed lines and line-end hyphenation,
+normalize accents/punctuation, and give exact passage boundaries. A digital
+Greek reader at https://aristotle.johnhboyer.com/APr/book/1/ was used to locate
+passages; the retained Bekker images are the authority for the selected text.
+A. J. Jenkinson's public-domain translation, available through
+https://classics.mit.edu/Aristotle/prior.1.i.html, was consulted for comparison.
+The workshop's English and teaching Latin are new, not copies of a historical
+translation. The Latin for 26a2-9 is explicitly abridged. Original translations,
+diagrams, and code: MIT, copyright (c) 2026 Anthony Mercer.
