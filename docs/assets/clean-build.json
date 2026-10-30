@@ -1,25 +1,21 @@
 {
-  "date": "2026-10-30T00:41:51Z",
-  "sourceCommit": "5f706f7fb8cdcac52254a43662b155f5b367d383",
-  "cleanNode": "v24.22.1",
-  "workingNode": "v26.7.0",
-  "install": "npm ci",
-  "check": "npm run check",
-  "checkPassed": true,
-  "filesCompared": 17,
-  "cleanMatchesWorkingBuild": true,
-  "cleanMatchesBrowserReviewedBuild": true,
-  "totalProductionBytes": 4432219,
-  "productionFiles": [
+  "date": "2026-10-30T00:57:18.161163+00:00",
+  "sourceCommit": "6d2a9d3f253af7e67d0be3285e00a9e2188cd785",
+  "source": "fresh git archive",
+  "node": "v24.22.1",
+  "commands": [
+    "npm ci",
+    "npm run check"
+  ],
+  "testsPassed": 14,
+  "matchesNode26WorkingBuild": true,
+  "matchesBrowserInventory": true,
+  "totalBytes": 4437794,
+  "files": [
     {
-      "path": "LICENSE.txt",
-      "bytes": 1071,
-      "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
-    },
-    {
-      "path": "assets/index-DCktLFu0.js",
-      "bytes": 48414,
-      "sha256": "378e86805ca78fcaa300491ddec4afbf57b1e145a58d73b9eaa1fc9ccfeea2a0"
+      "path": "assets/index-3K5km566.js",
+      "bytes": 53539,
+      "sha256": "61db62e1148140ae709c2cec759c860db5f6384af199276f358e8a1f20c9a297"
     },
     {
       "path": "assets/index-Dgg_Yypv.css",
@@ -58,13 +54,13 @@
     },
     {
       "path": "index.html",
-      "bytes": 12201,
-      "sha256": "afd4956b640057bd222a65c2fc411c4e41b59fd6e61ad0ac0fd9f40a77da9167"
+      "bytes": 12651,
+      "sha256": "b945f1c1aaff0de5654a379f9f51089f7618951226db6f74ddb0769ffed4c791"
     },
     {
-      "path": "sources/NOTICE.txt",
-      "bytes": 1728,
-      "sha256": "e39cd4c53d4e35677c53566582541916572b2b799983f0bf8259712cfc2a768a"
+      "path": "LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
     },
     {
       "path": "sources/bekker-p24.jpg",
@@ -92,9 +88,14 @@
       "sha256": "25292b65c94822417f51e729eefb8e13a61d5de9b6ab4edf377d3a748cd0c3a9"
     },
     {
+      "path": "sources/NOTICE.txt",
+      "bytes": 1728,
+      "sha256": "e39cd4c53d4e35677c53566582541916572b2b799983f0bf8259712cfc2a768a"
+    },
+    {
       "path": "sw.js",
       "bytes": 5193,
-      "sha256": "ad8004c311c71d852b48ef0c23606ed243df05578343636cadead98279ebb24c"
+      "sha256": "f15159af2b3d971bbb81d8e0e914effdb992b7c3c1c63d4386a25d4257af941b"
     }
   ]
 }

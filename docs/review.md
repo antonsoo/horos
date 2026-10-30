@@ -134,14 +134,15 @@ at 375px: source rendering and the stone counterexample worked, there was no
 horizontal overflow or page error, and no service worker registered on the
 development origin.
 
-The pre-audit edition was reproduced from a fresh archive of source commit `5f706f7fb8cdcac52254a43662b155f5b367d383`
-was installed with `npm ci` and checked with `npm run check` on Node **24.22.1**.
-All checks passed. Every one of the **17 production files** was byte-identical
-to its Node 26.7.0 working build and browser-reviewed inventory, including
-the generated worker. That earlier output was **4,432,219 bytes**.
-The current [clean-build receipt](assets/clean-build.json) records each file's length and hash.
-The documented `gzip -dk examples/two-worlds.html.gz` command also ran in that
-fresh checkout, and its output reopened in Chromium with all four source images.
+The audited source commit `6d2a9d3f253af7e67d0be3285e00a9e2188cd785` was
+reproduced from a fresh archive with Node **24.22.1**, `npm ci`, and
+`npm run check`. All 14 tests and checks passed. Every one of the **17 production
+files** matched both the Node 26.7.0 working build and the browser-reviewed
+inventory, including the generated worker. Total output: **4,437,794 bytes**.
+[clean-build.json](assets/clean-build.json) records their lengths and hashes.
 
-These final receipt and documentation additions do not change build inputs.
-Public source publication, hosted-byte comparison, and remote CI remain unverified.
+The initial edition also verified the documented
+`gzip -dk examples/two-worlds.html.gz` workflow in a fresh checkout; the current
+browser driver opens the downloaded notebook directly and verifies its native
+JSON download and all source images. See [publication.md](publication.md) for
+public-delivery evidence separate from these local results.
