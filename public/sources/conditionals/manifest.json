@@ -1,0 +1,66 @@
+[
+  {
+    "path": "LICENSE.txt",
+    "bytes": 1071,
+    "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81",
+    "mime": "text/plain"
+  },
+  {
+    "path": "fonts/literata-OFL.txt",
+    "bytes": 4389,
+    "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e",
+    "mime": "text/plain"
+  },
+  {
+    "path": "fonts/literata.woff2",
+    "bytes": 396664,
+    "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db",
+    "mime": "font/woff2"
+  },
+  {
+    "path": "fonts/provenance.json",
+    "bytes": 637,
+    "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2",
+    "mime": "application/json"
+  },
+  {
+    "path": "fonts/sourcesans3-OFL.txt",
+    "bytes": 4579,
+    "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+    "mime": "text/plain"
+  },
+  {
+    "path": "fonts/sourcesans3.woff2",
+    "bytes": 170188,
+    "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+    "mime": "font/woff2"
+  },
+  {
+    "path": "sources/conditionals/mutschmann-p92.jpg",
+    "bytes": 695470,
+    "sha256": "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed",
+    "mime": "image/jpeg",
+    "printedPage": 92,
+    "source": "https://archive.org/download/sextiempiriciope01sext/page/n123_w1800.jpg",
+    "edition": "Mutschmann 1912, Sexti Empirici Opera I",
+    "width": 2096,
+    "height": 3177
+  },
+  {
+    "path": "sources/conditionals/mutschmann-p93.jpg",
+    "bytes": 749017,
+    "sha256": "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1",
+    "mime": "image/jpeg",
+    "printedPage": 93,
+    "source": "https://archive.org/download/sextiempiriciope01sext/page/n124_w1800.jpg",
+    "edition": "Mutschmann 1912, Sexti Empirici Opera I",
+    "width": 2096,
+    "height": 3177
+  },
+  {
+    "path": "sources/conditionals/NOTICE.txt",
+    "bytes": 2489,
+    "sha256": "50ab6044f839960ec08fa5b615b5059d57a34451794f0f8656c813d73f3085bd",
+    "mime": "text/plain"
+  }
+]

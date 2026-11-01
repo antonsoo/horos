@@ -1,0 +1,37 @@
+Sextus Empiricus, Pyrrhoneioi hypotyposeis (Outlines of Pyrrhonism), II.110-114.
+Hermann Mutschmann, Sexti Empirici Opera, volume I
+(Leipzig: B. G. Teubner, 1912), printed pages 92 and 93.
+Public-domain ancient text and printed edition. Mutschmann lived 1882-1918.
+
+Scan: University of Florida, George A. Smathers Libraries, through Internet Archive.
+https://archive.org/details/sextiempiriciope01sext
+Retained unmodified 2096 x 3177 pixel page-service renditions:
+https://archive.org/download/sextiempiriciope01sext/page/n123_w1800.jpg (printed 92)
+https://archive.org/download/sextiempiriciope01sext/page/n124_w1800.jpg (printed 93)
+Retrieved and inspected 2026-10-31. The printed page numerals, not the filenames
+or scan-data page labels, determine these citations: this page service's returned
+images were one printed page later than the initial scan-data lookup suggested.
+Both complete pages, margins and textual apparatus remain present.
+
+The authority for the excerpts in src/conditional-readings.ts is these images.
+They join line endings and normalize punctuation and apostrophes; the fourth
+account retains the edition's brackets marking the deletion of axiooma.
+Book/section references and physical page numbers are distinct. The English and
+teaching Latin are new; Latin abridgments and supplied elliptical words are named
+beside their readings. No independent scholarly review is claimed.
+
+The Open Greek and Latin First1KGreek digital text was consulted to locate the
+passages; its markup and transcription were not retained as the source witness.
+It is attributed to the University of Leipzig and Digital Divide Data, under
+CC BY-SA 4.0: https://github.com/OpenGreekAndLatin/First1KGreek/blob/master/data/tlg0544/tlg001/tlg0544.tlg001.1st1K-grc1.xml
+The displayed Greek was checked directly against the complete printed pages;
+printed words missing from digital extraction were restored from those pages.
+
+Sextus reports four competing accounts, rather than endorsing Philo's or
+settling the dispute. The connection proponents are unnamed in this passage.
+The finite considered-case model, illustration and controls are modern. A
+chosen finite table does not certify Diodorus's temporal/modal criterion or
+reconstruct the ancient concepts of connection and potential containment.
+Code, original English and teaching Latin, diagrams and explanations:
+MIT, copyright (c) 2026 Anthony Mercer. Shared font licenses are retained with
+Literata and Source Sans 3 in ../../fonts/.
