@@ -14,3 +14,17 @@ for (const item of manifest) {
 console.log(
   `${manifest.length} source, font and license files match their retained SHA-256 identities.`,
 );
+const conditionals = JSON.parse(await readFile("src/conditional-assets.json", "utf8"));
+assert.deepEqual(
+  JSON.parse(await readFile("public/sources/conditionals/manifest.json", "utf8")),
+  conditionals,
+);
+for (const item of conditionals) {
+  const bytes = await readFile(`public/${item.path}`);
+  assert.equal(bytes.length, item.bytes, item.path);
+  assert.equal(createHash("sha256").update(bytes).digest("hex"), item.sha256, item.path);
+  if (item.printedPage) assert.equal(bytes.subarray(0, 3).toString("hex"), "ffd8ff", item.path);
+}
+console.log(
+  `${conditionals.length} conditional source, font and license files match their retained identities.`,
+);

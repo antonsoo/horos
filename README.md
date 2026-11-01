@@ -44,7 +44,47 @@ Open **http://127.0.0.1:4369/horos/**. The build output is **`dist/`**, using
 the base path **`/horos/`**. Development and production use different origins
 so an installed offline edition cannot conceal source edits.
 
-## Four investigations
+## When is “if” true?
+
+**New in this checkout:** open `conditionals.html` from the room selector.
+Sextus Empiricus reports a dispute over “If it is day, I am talking.” Start
+with both clauses true; stop talking while daylight remains. Then hold the
+present facts fixed and exclude just the daytime-silence case from your table.
+The two tests now answer different questions.
+
+![The conditional experiment: current facts beside the admitted cases](docs/assets/conditional-desktop.png)
+
+Philo's reported truth criterion excludes only a true antecedent with a false
+consequent. A **modern finite compatibility test** searches all admitted cases
+for that pair. Changing the table adds assumptions, rather than establishing
+what is possible. Empty tables, excluded current facts, and vacuous passes stay
+visible. A repeated day sentence shares one truth value in both places.
+
+Six Greek readings and **20 contextual phrase notes** retain all four accounts
+and Sextus's challenge to choosing between them. The English and teaching Latin
+are new. Two complete pages of Mutschmann's 1912 edition preserve the printed
+context and textual apparatus. The room computes no verdict for Diodorus's
+temporal/modal criterion or the potential-containment account.
+
+Pin and compare experiments, undo changes, write an explanation, and keep an
+[editable notebook](examples/conditionals/notebook.json),
+[case diagram](examples/conditionals/cases.svg),
+[complete illustrated reading](examples/conditionals/reading.html.gz), or
+[23-page browser PDF](examples/conditionals/reading.pdf). The HTML embeds both
+source pages, all readings, fonts, licenses and native downloads. Decompress
+before opening it:
+
+```sh
+gzip -dc examples/conditionals/reading.html.gz > /tmp/horos-conditional-reading.html
+```
+
+Both rooms share one verified offline edition. The
+[source, model and browser review](docs/conditional-review.md) records the actual
+operations and publication boundary. `npm run test:conditionals` runs the new
+desktop/phone journeys, native downloads, source failures and real-origin
+offline recovery. This new room has not been deployed by this change.
+
+## Four class investigations
 
 | Investigation            | What the learner changes                        | What it exposes                                  |
 | ------------------------ | ----------------------------------------------- | ------------------------------------------------ |
@@ -71,7 +111,7 @@ explanation is preserved in the illustrated notebook.
 
 ## Read the argument, not just the answer
 
-Five readings pair Greek with new close English and **20 contextual phrase
+In the class room, five readings pair Greek with new close English and **20 contextual phrase
 notes**. Select _παντὶ τῷ μέσῳ_ to see why “A belongs to every B” means “Every
 B is A”; select _ἂν ληφθῇ_ to examine the taking of an instance. The workshop
 also supplies new teaching Latin, labeled separately from the historical text.
@@ -148,7 +188,9 @@ chosen premises + existence requirements
              inspect the source
 ```
 
-`src/core/model.ts` is pure logic. `src/lessons.ts` connects the formal questions
+`src/core/model.ts` is pure class logic. `src/core/conditional.ts` evaluates the
+conditional room's simultaneous truth pairs and validates its saved records.
+`src/lessons.ts` connects the formal class questions
 to the source passages. `src/core/record.ts` validates saved records without
 trusting supplied outcomes. `src/readings.ts` contains the transcriptions,
 translations, and notes. `src/asset-manifest.json` pins the retained bytes.
@@ -165,7 +207,7 @@ Both failure and verified recovery update every controlled page. Run
 
 ## Verification
 
-`npm run check` runs formatting/lint checks, strict TypeScript, **14 tests**,
+`npm run check` runs formatting/lint checks, strict TypeScript, **18 tests**,
 retained-source verification, and a production build. The main independent
 oracle turns universal propositions into forbidden regions and existential
 propositions into occupancy obligations, then counts worlds by
@@ -173,6 +215,10 @@ inclusion–exclusion. It does not call the evaluator or enumerate its worlds.
 The constructive explanation also agrees with the enumerator, and each of its
 witness worlds is evaluated as a real counterexample. All **1,536** combinations of three syllogistic figures, four forms in each
 position, and eight existence settings agree with the engine’s counts.
+All **72** legal conditional drafts independently agree with the existing
+class-membership engine after translating admitted pairs into objects with
+two memberships. Empty tables, vacuous passes, identity constraints and
+conflicting present facts retain their separate diagnoses.
 
 With Playwright Chromium and Firefox available:
 
@@ -215,6 +261,13 @@ The source selections cover 24b18–20, 25a7–9, 25b37–40, 26a2–9, and 28a2
 The [Jenkinson translation](https://classics.mit.edu/Aristotle/prior.1.i.html)
 was consulted for comparison; the workshop’s English is new. See the
 [source notice](public/sources/NOTICE.txt) and [file manifest](public/sources/manifest.json).
+
+The conditional room retains Hermann Mutschmann's **1912** edition of Sextus
+Empiricus, _Sexti Empirici Opera_ I, printed pages 92–93, from the
+[University of Florida scan](https://archive.org/details/sextiempiriciope01sext).
+The [conditional source notice](public/sources/conditionals/NOTICE.txt) records
+the page-service offset, direct inspection and transcription policy. Its
+[manifest](public/sources/conditionals/manifest.json) pins the actual bytes.
 
 ## Contributing and license
 

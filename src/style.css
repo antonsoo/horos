@@ -27,6 +27,19 @@
   --good: #295b4b;
   --bad: #9b3325;
 }
+.room-selector {
+  width: min(1320px, 100%);
+  margin: 0 auto;
+  padding: 12px clamp(18px, 4vw, 60px);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 30px;
+  font-size: 0.88rem;
+}
+.room-selector [aria-current] {
+  color: var(--ink);
+  font-weight: 650;
+}
 * {
   box-sizing: border-box;
 }

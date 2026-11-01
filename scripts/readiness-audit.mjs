@@ -18,6 +18,17 @@ const views = [
     image: "#scan",
     note: "#note",
   },
+  {
+    id: "conditionals",
+    route: "conditionals.html",
+    select: "#source-page",
+    page: "93",
+    path: "sources/conditionals/mutschmann-p93.jpg",
+    retry: "#retry-source",
+    status: "#source-status",
+    image: "#source-image",
+    note: "#note",
+  },
 ];
 const out = resolve(process.argv[2] || "test-results/readiness");
 await mkdir(out, { recursive: true });
@@ -33,7 +44,7 @@ await writeFile(
   `${await readFile(`${b}/favicon.svg`, "utf8")}\n<!-- Readiness audit B -->\n`,
 );
 // Strip a generated identity before asking the builder for a distinct edition.
-for (const file of ["index.html"]) {
+for (const file of ["index.html", "conditionals.html"]) {
   const path = `${b}/${file}`;
   await writeFile(
     path,
@@ -54,7 +65,7 @@ const incomplete = (p) =>
 const sourceChecked = (p, v) =>
   p
     .locator(v.status)
-    .filter({ hasText: /checked|Printed page/ })
+    .filter({ hasText: /checked|[Pp]rinted page/ })
     .waitFor();
 async function damage(p, path) {
   await p.evaluate(
@@ -239,6 +250,13 @@ try {
       const active = await next.evaluate(() => caches.keys());
       assert.ok(active.includes(`${project}-${editionB}`));
       assert.ok(!active.includes(`${project}-${editionA}`));
+      const conditional = await updates.newPage();
+      await conditional.goto(`${server.base}conditionals.html`);
+      await ready(conditional);
+      assert.equal(
+        await conditional.locator(`meta[name="${project}-edition"]`).getAttribute("content"),
+        editionB,
+      );
       await updates.close();
       results.push({
         browser: name,

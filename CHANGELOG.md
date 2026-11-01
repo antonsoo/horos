@@ -1,5 +1,18 @@
 # Changelog
 
+## Unreleased — 2026-10-31
+
+- Add a conditional room: change the present facts, edit admitted cases, pin
+  comparisons and distinguish Philo's truth test from a modern finite
+  compatibility model. Expose inconsistent and vacuous drafts.
+- Retain Sextus's four reported accounts and his objection to choosing between
+  them, with six Greek readings, new English/teaching Latin, twenty phrase notes
+  and two complete, verified pages of Mutschmann's 1912 edition.
+- Keep editable notebooks, explicit links, independent SVG and self-contained
+  illustrated readings, with checked sources and protection for intervening edits.
+- Share a verified offline edition between both rooms; test real-origin outages,
+  cross-room source-loss notifications, recovery and edition transitions.
+
 ## Unreleased — 2026-10-30
 
 - Withdraw offline readiness when sources or ordinary image requests discover

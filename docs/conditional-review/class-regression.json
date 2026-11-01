@@ -1,0 +1,234 @@
+{
+  "date": "2026-11-01T01:12:53.378Z",
+  "node": "v26.7.0",
+  "origin": "local production server",
+  "files": [
+    {
+      "path": "assets/conditionals-BLhVgsG0.js",
+      "bytes": 41599,
+      "sha256": "ac379b51ab41643dfc297dda2dc509cb2c2b31213b1dc8821bdbc4c3f793e6de"
+    },
+    {
+      "path": "assets/conditionals-DFlinm-K.css",
+      "bytes": 9718,
+      "sha256": "40efdb85a09c107112657a07d0754f55c58b7f22865b85fbbc3de83ac6e4cc83"
+    },
+    {
+      "path": "assets/index-C5zXY866.js",
+      "bytes": 44369,
+      "sha256": "43b99693fe40e01ff60e7f6363539dbb523183c92726c9f894b42f01a60a7d87"
+    },
+    {
+      "path": "assets/index-DUMHrpQK.css",
+      "bytes": 11255,
+      "sha256": "00f9b17bdbfc26dbde77a2c25dd03caf5b34f1302ba7307b6bc08a54809ed06a"
+    },
+    {
+      "path": "assets/offline-DQZS_mYe.js",
+      "bytes": 11262,
+      "sha256": "eec2cf2c8491773e50b4cf408cbd6d63f4c7ab72b723172022e2dd2008750848"
+    },
+    {
+      "path": "conditionals.html",
+      "bytes": 13509,
+      "sha256": "209f8119b4aefcbf142d373c1813a5c7edeadced257e4c3f351bf02229102c00"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 399,
+      "sha256": "b743fbd2d73b8cae622aa658af6176359bb4a5fdaf318784f75f189c68842add"
+    },
+    {
+      "path": "fonts/literata-OFL.txt",
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    },
+    {
+      "path": "fonts/literata.woff2",
+      "bytes": 396664,
+      "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+    },
+    {
+      "path": "fonts/provenance.json",
+      "bytes": 637,
+      "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2"
+    },
+    {
+      "path": "fonts/sourcesans3-OFL.txt",
+      "bytes": 4579,
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "path": "fonts/sourcesans3.woff2",
+      "bytes": 170188,
+      "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 12972,
+      "sha256": "9c36eafb740ac0c9ab488bd3a6ea5ee34314b45952bb6335ad35970c76176ead"
+    },
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
+    },
+    {
+      "path": "sources/bekker-p24.jpg",
+      "bytes": 863245,
+      "sha256": "acb61feb74c9a7e5c532708ee1826fc6054d82e294aeef539a4a315fbe6f109a"
+    },
+    {
+      "path": "sources/bekker-p25.jpg",
+      "bytes": 974737,
+      "sha256": "7ee0106dc32eb37e32477d9e62f433b2ca14a64118a9fe3bfe1fffbf91f25d2d"
+    },
+    {
+      "path": "sources/bekker-p26.jpg",
+      "bytes": 935958,
+      "sha256": "13ce538bb4c850041e77f3672fe7228587a90cfbc1497c49190bd28f9e4d6048"
+    },
+    {
+      "path": "sources/bekker-p28.jpg",
+      "bytes": 999080,
+      "sha256": "a93760f9e0f3bc05114cc6e50e2e6dbd6b04d325baba2241cf0f2bd6801f4c9b"
+    },
+    {
+      "path": "sources/conditionals/manifest.json",
+      "bytes": 2024,
+      "sha256": "ee312bfca509bd103eef1e7a26da7344507e98ad32c7a42a756ffcbc8a42b6ef"
+    },
+    {
+      "path": "sources/conditionals/mutschmann-p92.jpg",
+      "bytes": 695470,
+      "sha256": "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed"
+    },
+    {
+      "path": "sources/conditionals/mutschmann-p93.jpg",
+      "bytes": 749017,
+      "sha256": "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1"
+    },
+    {
+      "path": "sources/conditionals/NOTICE.txt",
+      "bytes": 2489,
+      "sha256": "50ab6044f839960ec08fa5b615b5059d57a34451794f0f8656c813d73f3085bd"
+    },
+    {
+      "path": "sources/manifest.json",
+      "bytes": 2665,
+      "sha256": "25292b65c94822417f51e729eefb8e13a61d5de9b6ab4edf377d3a748cd0c3a9"
+    },
+    {
+      "path": "sources/NOTICE.txt",
+      "bytes": 1728,
+      "sha256": "e39cd4c53d4e35677c53566582541916572b2b799983f0bf8259712cfc2a768a"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 7226,
+      "sha256": "8de8279cfd6031d83db81cba1ae0398b7be318af174a9384e411f3759adb2ba1"
+    }
+  ],
+  "journeys": [
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 1440,
+      "keyboard": true,
+      "sourcePages": 4,
+      "axeViolations": 0,
+      "standaloneRequests": 0,
+      "notebookBytes": 5833588,
+      "notebookSha256": "070e44a0a57e25d163d42b7f1174a54cbe9cae182c622f6f0dada976684746ad",
+      "offlineReload": true,
+      "offlineExportIdentical": true,
+      "shareRoundTrip": true,
+      "allInvestigations": true,
+      "allFivePassageLocators": true,
+      "offlineLocator": true
+    },
+    {
+      "browser": "chromium",
+      "version": "153.0.8010.12",
+      "width": 375,
+      "keyboard": true,
+      "sourcePages": 4,
+      "axeViolations": 0,
+      "standaloneRequests": 0,
+      "notebookBytes": 5833588,
+      "notebookSha256": "070e44a0a57e25d163d42b7f1174a54cbe9cae182c622f6f0dada976684746ad",
+      "offlineReload": true,
+      "offlineExportIdentical": true,
+      "shareRoundTrip": true,
+      "allInvestigations": true,
+      "allFivePassageLocators": true,
+      "offlineLocator": true
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "width": 1440,
+      "keyboard": true,
+      "sourcePages": 4,
+      "axeViolations": 0,
+      "standaloneRequests": 0,
+      "notebookBytes": 5833588,
+      "notebookSha256": "070e44a0a57e25d163d42b7f1174a54cbe9cae182c622f6f0dada976684746ad",
+      "offlineReload": true,
+      "offlineExportIdentical": true,
+      "shareRoundTrip": true,
+      "allInvestigations": true,
+      "allFivePassageLocators": true,
+      "offlineLocator": true
+    },
+    {
+      "browser": "firefox",
+      "version": "155.0",
+      "width": 375,
+      "keyboard": true,
+      "sourcePages": 4,
+      "axeViolations": 0,
+      "standaloneRequests": 0,
+      "notebookBytes": 5833588,
+      "notebookSha256": "070e44a0a57e25d163d42b7f1174a54cbe9cae182c622f6f0dada976684746ad",
+      "offlineReload": true,
+      "offlineExportIdentical": true,
+      "shareRoundTrip": true,
+      "allInvestigations": true,
+      "allFivePassageLocators": true,
+      "offlineLocator": true
+    }
+  ],
+  "faults": [
+    {
+      "browser": "chromium",
+      "lateSourceIgnored": true,
+      "namedUndoRedo": true,
+      "importPreservesNewerEdits": true,
+      "newestImportWins": true,
+      "corruptScanRefused": true,
+      "corruptExportRefused": true,
+      "exportSnapshotFrozen": true,
+      "cancellation": true,
+      "damagedOfflineCacheRefused": true,
+      "discoveredFailureAutomaticallyWithdrawsReadiness": true,
+      "otherEditionCacheIgnored": true,
+      "restoredExactCacheRecovered": true
+    },
+    {
+      "browser": "firefox",
+      "lateSourceIgnored": true,
+      "namedUndoRedo": true,
+      "importPreservesNewerEdits": true,
+      "newestImportWins": true,
+      "corruptScanRefused": true,
+      "corruptExportRefused": true,
+      "exportSnapshotFrozen": true,
+      "cancellation": true,
+      "damagedOfflineCacheRefused": true,
+      "discoveredFailureAutomaticallyWithdrawsReadiness": true,
+      "otherEditionCacheIgnored": true,
+      "restoredExactCacheRecovered": true
+    }
+  ]
+}

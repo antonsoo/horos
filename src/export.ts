@@ -6,19 +6,7 @@ import { argumentFor, lesson } from "./lessons";
 import { edition, readings, textPolicy } from "./readings";
 import { traceHtml } from "./trace";
 
-export function saveBlob(blob: Blob, name: string): void {
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement("a");
-  a.href = url;
-  a.download = name;
-  document.body.append(a);
-  a.click();
-  a.remove();
-  setTimeout(() => URL.revokeObjectURL(url), 60_000);
-}
-export function saveText(text: string, type: string, name: string): void {
-  saveBlob(new Blob([text], { type }), name);
-}
+export { saveText } from "./download";
 export function snapshotHtml(snapshot: Snapshot, label: string): string {
   const argument = argumentFor(snapshot.lesson, snapshot.kind);
   const judgment = assess(argument, snapshot.world, snapshot.existence);

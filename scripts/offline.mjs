@@ -19,11 +19,13 @@ const seed = [];
 for (const path of paths) seed.push(`${path}:${hash(await readFile(path))}`);
 seed.push(`worker-builder:${hash(await readFile(new URL(import.meta.url)))}`);
 const edition = hash(seed.join("\n")).slice(0, 20);
-const html = await readFile("dist/index.html", "utf8");
-await writeFile(
-  "dist/index.html",
-  html.replace("</head>", `<meta name="horos-edition" content="${edition}"></head>`),
-);
+for (const path of paths.filter((path) => path.endsWith(".html"))) {
+  const html = await readFile(path, "utf8");
+  await writeFile(
+    path,
+    html.replace("</head>", `<meta name="horos-edition" content="${edition}"></head>`),
+  );
+}
 const files = [];
 for (const path of paths) {
   const bytes = await readFile(path);

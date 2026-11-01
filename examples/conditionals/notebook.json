@@ -1,0 +1,15 @@
+{
+  "format": "horos-conditionals",
+  "version": 1,
+  "current": {
+    "sentence": "speech",
+    "now": 3,
+    "allowed": 11
+  },
+  "pinned": {
+    "sentence": "speech",
+    "now": 3,
+    "allowed": 15
+  },
+  "note": "The present facts stay day + talking. I excluded day + silence by assumption, not by evidence.\nσυνάρτησις <script> & an ungraded explanation."
+}
