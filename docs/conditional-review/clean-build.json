@@ -1,0 +1,125 @@
+{
+  "checkedAt": "2026-11-01T01:26:09.942199+00:00",
+  "sourceCommit": "ca62f871b8aae4eb7c6c30ca07dbe538ccea414e",
+  "source": "fresh git archive, separate npm ci install",
+  "node": "v24.22.1",
+  "steps": [
+    {
+      "command": "npm ci",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run check",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run test:readiness -- test-results/final-readiness",
+      "exitCode": 0
+    }
+  ],
+  "allBuiltFilesEqual": true,
+  "files": 25,
+  "bytes": 5956295,
+  "inventory": {
+    "LICENSE.txt": {
+      "bytes": 1071,
+      "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81"
+    },
+    "assets/conditionals-BaGjhEzU.js": {
+      "bytes": 41644,
+      "sha256": "df27fb0d4d5ef1eae2ea3aa9e2088d724611a5d89f1858ec3c788018b144a894"
+    },
+    "assets/conditionals-DFlinm-K.css": {
+      "bytes": 9718,
+      "sha256": "40efdb85a09c107112657a07d0754f55c58b7f22865b85fbbc3de83ac6e4cc83"
+    },
+    "assets/index-C5zXY866.js": {
+      "bytes": 44369,
+      "sha256": "43b99693fe40e01ff60e7f6363539dbb523183c92726c9f894b42f01a60a7d87"
+    },
+    "assets/index-DUMHrpQK.css": {
+      "bytes": 11255,
+      "sha256": "00f9b17bdbfc26dbde77a2c25dd03caf5b34f1302ba7307b6bc08a54809ed06a"
+    },
+    "assets/offline-DQZS_mYe.js": {
+      "bytes": 11262,
+      "sha256": "eec2cf2c8491773e50b4cf408cbd6d63f4c7ab72b723172022e2dd2008750848"
+    },
+    "conditionals.html": {
+      "bytes": 13509,
+      "sha256": "46667fe063e3bddd95e5094de6b4d824c4fca2cbfd2bc68e861e6df53ceeca54"
+    },
+    "favicon.svg": {
+      "bytes": 399,
+      "sha256": "b743fbd2d73b8cae622aa658af6176359bb4a5fdaf318784f75f189c68842add"
+    },
+    "fonts/literata-OFL.txt": {
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    },
+    "fonts/literata.woff2": {
+      "bytes": 396664,
+      "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+    },
+    "fonts/provenance.json": {
+      "bytes": 637,
+      "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2"
+    },
+    "fonts/sourcesans3-OFL.txt": {
+      "bytes": 4579,
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    "fonts/sourcesans3.woff2": {
+      "bytes": 170188,
+      "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+    },
+    "index.html": {
+      "bytes": 12972,
+      "sha256": "199f858d5c8d7744aacb2fc54126ab74680a9aafad00c87a91f1e9eb797731fc"
+    },
+    "sources/NOTICE.txt": {
+      "bytes": 1728,
+      "sha256": "e39cd4c53d4e35677c53566582541916572b2b799983f0bf8259712cfc2a768a"
+    },
+    "sources/bekker-p24.jpg": {
+      "bytes": 863245,
+      "sha256": "acb61feb74c9a7e5c532708ee1826fc6054d82e294aeef539a4a315fbe6f109a"
+    },
+    "sources/bekker-p25.jpg": {
+      "bytes": 974737,
+      "sha256": "7ee0106dc32eb37e32477d9e62f433b2ca14a64118a9fe3bfe1fffbf91f25d2d"
+    },
+    "sources/bekker-p26.jpg": {
+      "bytes": 935958,
+      "sha256": "13ce538bb4c850041e77f3672fe7228587a90cfbc1497c49190bd28f9e4d6048"
+    },
+    "sources/bekker-p28.jpg": {
+      "bytes": 999080,
+      "sha256": "a93760f9e0f3bc05114cc6e50e2e6dbd6b04d325baba2241cf0f2bd6801f4c9b"
+    },
+    "sources/conditionals/NOTICE.txt": {
+      "bytes": 2489,
+      "sha256": "50ab6044f839960ec08fa5b615b5059d57a34451794f0f8656c813d73f3085bd"
+    },
+    "sources/conditionals/manifest.json": {
+      "bytes": 2024,
+      "sha256": "ee312bfca509bd103eef1e7a26da7344507e98ad32c7a42a756ffcbc8a42b6ef"
+    },
+    "sources/conditionals/mutschmann-p92.jpg": {
+      "bytes": 695470,
+      "sha256": "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed"
+    },
+    "sources/conditionals/mutschmann-p93.jpg": {
+      "bytes": 749017,
+      "sha256": "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1"
+    },
+    "sources/manifest.json": {
+      "bytes": 2665,
+      "sha256": "25292b65c94822417f51e729eefb8e13a61d5de9b6ab4edf377d3a748cd0c3a9"
+    },
+    "sw.js": {
+      "bytes": 7226,
+      "sha256": "7466474a5f6554a39ba76725799024466b7df7cb92a08402aa7d4c8d3df9c5d0"
+    }
+  }
+}

@@ -126,6 +126,13 @@ the shared chunk; source retention is a separate background transfer.
 
 ## Publication boundary
 
+[The clean-build receipt](conditional-review/clean-build.json) records a fresh
+archive of `ca62f87`, a separate `npm ci`, all 18 tests/source checks and a
+production build under **Node 24.22.1**. Every one of the 25 files matches the
+reviewed Node 26 build byte for byte. The same fresh checkout passed the
+[expanded two-room readiness audit](conditional-review/readiness.json),
+including both directions of source-loss notification and edition activation.
+
 These are local source, build and browser results. The new room has not been
 pushed or deployed: the workspace house standards reserve publication for
 review. The existing site's availability does not imply this room is hosted.

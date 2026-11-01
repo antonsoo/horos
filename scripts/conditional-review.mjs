@@ -252,7 +252,14 @@ try {
             format: "A4",
             printBackground: true,
           });
-          await page.locator("#reader").scrollIntoViewIfNeeded();
+          await page.locator("#reading").selectOption("connection");
+          await displayedSource(page, 92);
+          await page.locator("#greek button").first().click();
+          await page.locator("#reader").evaluate((n) => n.scrollIntoView({ block: "start" }));
+          await page.evaluate(
+            () =>
+              new Promise((resolve) => requestAnimationFrame(() => requestAnimationFrame(resolve))),
+          );
           await page.screenshot({ path: resolve(out, "reader-desktop.png") });
         }
         assert.deepEqual(errors, []);
