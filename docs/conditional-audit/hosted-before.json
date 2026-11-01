@@ -1,0 +1,290 @@
+{
+  "schemaVersion": 1,
+  "node": "v26.7.0",
+  "requestTimeoutMs": 10000,
+  "retryWindowMs": 180000,
+  "pollIntervalMs": 5000,
+  "concurrency": 6,
+  "baseURL": "https://antonsoo.github.io/horos/",
+  "state": "verified",
+  "attempts": 2,
+  "startedAtUtc": "2026-11-01T01:48:31.157Z",
+  "checkedAtUtc": "2026-11-01T01:48:40.677Z",
+  "buildManifestSha256": "db086557f313875e912da05d09b5ac3130899c06aa565b9b80a4d841fdcedce7",
+  "expectedFileCount": 25,
+  "checkedFileCount": 25,
+  "verifiedFileCount": 25,
+  "rootBefore": {
+    "path": "index.html",
+    "bytes": 12972,
+    "sha256": "495b3a37b766c2a32287302ff384418e3efa120266d444796dac6401b6264235",
+    "url": "https://antonsoo.github.io/horos/",
+    "httpStatus": 200,
+    "observedBytes": 12972,
+    "observedSha256": "495b3a37b766c2a32287302ff384418e3efa120266d444796dac6401b6264235",
+    "state": "verified"
+  },
+  "rootAfter": {
+    "path": "index.html",
+    "bytes": 12972,
+    "sha256": "495b3a37b766c2a32287302ff384418e3efa120266d444796dac6401b6264235",
+    "url": "https://antonsoo.github.io/horos/",
+    "httpStatus": 200,
+    "observedBytes": 12972,
+    "observedSha256": "495b3a37b766c2a32287302ff384418e3efa120266d444796dac6401b6264235",
+    "state": "verified"
+  },
+  "files": [
+    {
+      "path": "LICENSE.txt",
+      "bytes": 1071,
+      "sha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81",
+      "url": "https://antonsoo.github.io/horos/LICENSE.txt",
+      "httpStatus": 200,
+      "observedBytes": 1071,
+      "observedSha256": "62145e70388e9be739b404f904df6434bacaa748c9b5875c146791457fb83b81",
+      "state": "verified"
+    },
+    {
+      "path": "assets/conditionals-5JvrTjvr.js",
+      "bytes": 42994,
+      "sha256": "c9bdf31fae72ae704319c5ed883a307411348635efeaa250057caf3bef6b35fe",
+      "url": "https://antonsoo.github.io/horos/assets/conditionals-5JvrTjvr.js",
+      "httpStatus": 200,
+      "observedBytes": 42994,
+      "observedSha256": "c9bdf31fae72ae704319c5ed883a307411348635efeaa250057caf3bef6b35fe",
+      "state": "verified"
+    },
+    {
+      "path": "assets/conditionals-DFlinm-K.css",
+      "bytes": 9718,
+      "sha256": "40efdb85a09c107112657a07d0754f55c58b7f22865b85fbbc3de83ac6e4cc83",
+      "url": "https://antonsoo.github.io/horos/assets/conditionals-DFlinm-K.css",
+      "httpStatus": 200,
+      "observedBytes": 9718,
+      "observedSha256": "40efdb85a09c107112657a07d0754f55c58b7f22865b85fbbc3de83ac6e4cc83",
+      "state": "verified"
+    },
+    {
+      "path": "assets/index-CJI6M2yy.js",
+      "bytes": 44863,
+      "sha256": "464ddc91943579f2f97ed2bc790e4e5c6f4403ab107af2be6c36e29277c481d2",
+      "url": "https://antonsoo.github.io/horos/assets/index-CJI6M2yy.js",
+      "httpStatus": 200,
+      "observedBytes": 44863,
+      "observedSha256": "464ddc91943579f2f97ed2bc790e4e5c6f4403ab107af2be6c36e29277c481d2",
+      "state": "verified"
+    },
+    {
+      "path": "assets/index-DUMHrpQK.css",
+      "bytes": 11255,
+      "sha256": "00f9b17bdbfc26dbde77a2c25dd03caf5b34f1302ba7307b6bc08a54809ed06a",
+      "url": "https://antonsoo.github.io/horos/assets/index-DUMHrpQK.css",
+      "httpStatus": 200,
+      "observedBytes": 11255,
+      "observedSha256": "00f9b17bdbfc26dbde77a2c25dd03caf5b34f1302ba7307b6bc08a54809ed06a",
+      "state": "verified"
+    },
+    {
+      "path": "assets/offline-GZ3PreiX.js",
+      "bytes": 11449,
+      "sha256": "0120d5eaa1262a50ba67f8d8a57f8b312c1b3e486bdf2c14c943ba1435b49d2f",
+      "url": "https://antonsoo.github.io/horos/assets/offline-GZ3PreiX.js",
+      "httpStatus": 200,
+      "observedBytes": 11449,
+      "observedSha256": "0120d5eaa1262a50ba67f8d8a57f8b312c1b3e486bdf2c14c943ba1435b49d2f",
+      "state": "verified"
+    },
+    {
+      "path": "conditionals.html",
+      "bytes": 13509,
+      "sha256": "67b326f9da4accb80860ec6de0ddd2d021e777ccc4475ee83d12976e72dbec18",
+      "url": "https://antonsoo.github.io/horos/conditionals.html",
+      "httpStatus": 200,
+      "observedBytes": 13509,
+      "observedSha256": "67b326f9da4accb80860ec6de0ddd2d021e777ccc4475ee83d12976e72dbec18",
+      "state": "verified"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 399,
+      "sha256": "b743fbd2d73b8cae622aa658af6176359bb4a5fdaf318784f75f189c68842add",
+      "url": "https://antonsoo.github.io/horos/favicon.svg",
+      "httpStatus": 200,
+      "observedBytes": 399,
+      "observedSha256": "b743fbd2d73b8cae622aa658af6176359bb4a5fdaf318784f75f189c68842add",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/literata-OFL.txt",
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e",
+      "url": "https://antonsoo.github.io/horos/fonts/literata-OFL.txt",
+      "httpStatus": 200,
+      "observedBytes": 4389,
+      "observedSha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/literata.woff2",
+      "bytes": 396664,
+      "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db",
+      "url": "https://antonsoo.github.io/horos/fonts/literata.woff2",
+      "httpStatus": 200,
+      "observedBytes": 396664,
+      "observedSha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/provenance.json",
+      "bytes": 637,
+      "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2",
+      "url": "https://antonsoo.github.io/horos/fonts/provenance.json",
+      "httpStatus": 200,
+      "observedBytes": 637,
+      "observedSha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/sourcesans3-OFL.txt",
+      "bytes": 4579,
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+      "url": "https://antonsoo.github.io/horos/fonts/sourcesans3-OFL.txt",
+      "httpStatus": 200,
+      "observedBytes": 4579,
+      "observedSha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392",
+      "state": "verified"
+    },
+    {
+      "path": "fonts/sourcesans3.woff2",
+      "bytes": 170188,
+      "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+      "url": "https://antonsoo.github.io/horos/fonts/sourcesans3.woff2",
+      "httpStatus": 200,
+      "observedBytes": 170188,
+      "observedSha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8",
+      "state": "verified"
+    },
+    {
+      "path": "index.html",
+      "bytes": 12972,
+      "sha256": "495b3a37b766c2a32287302ff384418e3efa120266d444796dac6401b6264235",
+      "url": "https://antonsoo.github.io/horos/index.html",
+      "httpStatus": 200,
+      "observedBytes": 12972,
+      "observedSha256": "495b3a37b766c2a32287302ff384418e3efa120266d444796dac6401b6264235",
+      "state": "verified"
+    },
+    {
+      "path": "sources/NOTICE.txt",
+      "bytes": 1728,
+      "sha256": "e39cd4c53d4e35677c53566582541916572b2b799983f0bf8259712cfc2a768a",
+      "url": "https://antonsoo.github.io/horos/sources/NOTICE.txt",
+      "httpStatus": 200,
+      "observedBytes": 1728,
+      "observedSha256": "e39cd4c53d4e35677c53566582541916572b2b799983f0bf8259712cfc2a768a",
+      "state": "verified"
+    },
+    {
+      "path": "sources/bekker-p24.jpg",
+      "bytes": 863245,
+      "sha256": "acb61feb74c9a7e5c532708ee1826fc6054d82e294aeef539a4a315fbe6f109a",
+      "url": "https://antonsoo.github.io/horos/sources/bekker-p24.jpg",
+      "httpStatus": 200,
+      "observedBytes": 863245,
+      "observedSha256": "acb61feb74c9a7e5c532708ee1826fc6054d82e294aeef539a4a315fbe6f109a",
+      "state": "verified"
+    },
+    {
+      "path": "sources/bekker-p25.jpg",
+      "bytes": 974737,
+      "sha256": "7ee0106dc32eb37e32477d9e62f433b2ca14a64118a9fe3bfe1fffbf91f25d2d",
+      "url": "https://antonsoo.github.io/horos/sources/bekker-p25.jpg",
+      "httpStatus": 200,
+      "observedBytes": 974737,
+      "observedSha256": "7ee0106dc32eb37e32477d9e62f433b2ca14a64118a9fe3bfe1fffbf91f25d2d",
+      "state": "verified"
+    },
+    {
+      "path": "sources/bekker-p26.jpg",
+      "bytes": 935958,
+      "sha256": "13ce538bb4c850041e77f3672fe7228587a90cfbc1497c49190bd28f9e4d6048",
+      "url": "https://antonsoo.github.io/horos/sources/bekker-p26.jpg",
+      "httpStatus": 200,
+      "observedBytes": 935958,
+      "observedSha256": "13ce538bb4c850041e77f3672fe7228587a90cfbc1497c49190bd28f9e4d6048",
+      "state": "verified"
+    },
+    {
+      "path": "sources/bekker-p28.jpg",
+      "bytes": 999080,
+      "sha256": "a93760f9e0f3bc05114cc6e50e2e6dbd6b04d325baba2241cf0f2bd6801f4c9b",
+      "url": "https://antonsoo.github.io/horos/sources/bekker-p28.jpg",
+      "httpStatus": 200,
+      "observedBytes": 999080,
+      "observedSha256": "a93760f9e0f3bc05114cc6e50e2e6dbd6b04d325baba2241cf0f2bd6801f4c9b",
+      "state": "verified"
+    },
+    {
+      "path": "sources/conditionals/NOTICE.txt",
+      "bytes": 2489,
+      "sha256": "50ab6044f839960ec08fa5b615b5059d57a34451794f0f8656c813d73f3085bd",
+      "url": "https://antonsoo.github.io/horos/sources/conditionals/NOTICE.txt",
+      "httpStatus": 200,
+      "observedBytes": 2489,
+      "observedSha256": "50ab6044f839960ec08fa5b615b5059d57a34451794f0f8656c813d73f3085bd",
+      "state": "verified"
+    },
+    {
+      "path": "sources/conditionals/manifest.json",
+      "bytes": 2024,
+      "sha256": "ee312bfca509bd103eef1e7a26da7344507e98ad32c7a42a756ffcbc8a42b6ef",
+      "url": "https://antonsoo.github.io/horos/sources/conditionals/manifest.json",
+      "httpStatus": 200,
+      "observedBytes": 2024,
+      "observedSha256": "ee312bfca509bd103eef1e7a26da7344507e98ad32c7a42a756ffcbc8a42b6ef",
+      "state": "verified"
+    },
+    {
+      "path": "sources/conditionals/mutschmann-p92.jpg",
+      "bytes": 695470,
+      "sha256": "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed",
+      "url": "https://antonsoo.github.io/horos/sources/conditionals/mutschmann-p92.jpg",
+      "httpStatus": 200,
+      "observedBytes": 695470,
+      "observedSha256": "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed",
+      "state": "verified"
+    },
+    {
+      "path": "sources/conditionals/mutschmann-p93.jpg",
+      "bytes": 749017,
+      "sha256": "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1",
+      "url": "https://antonsoo.github.io/horos/sources/conditionals/mutschmann-p93.jpg",
+      "httpStatus": 200,
+      "observedBytes": 749017,
+      "observedSha256": "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1",
+      "state": "verified"
+    },
+    {
+      "path": "sources/manifest.json",
+      "bytes": 2665,
+      "sha256": "25292b65c94822417f51e729eefb8e13a61d5de9b6ab4edf377d3a748cd0c3a9",
+      "url": "https://antonsoo.github.io/horos/sources/manifest.json",
+      "httpStatus": 200,
+      "observedBytes": 2665,
+      "observedSha256": "25292b65c94822417f51e729eefb8e13a61d5de9b6ab4edf377d3a748cd0c3a9",
+      "state": "verified"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 7226,
+      "sha256": "363a0aafa221ca8a95a542a8db82928d9591c9b3fac0cd061abc7a13be662d63",
+      "url": "https://antonsoo.github.io/horos/sw.js",
+      "httpStatus": 200,
+      "observedBytes": 7226,
+      "observedSha256": "363a0aafa221ca8a95a542a8db82928d9591c9b3fac0cd061abc7a13be662d63",
+      "state": "verified"
+    }
+  ],
+  "scope": "Compares canonical responses with this captured build inventory during the recorded pass. Extra hosted files, browser behavior, public source, registry releases and deployment provenance are not established."
+}

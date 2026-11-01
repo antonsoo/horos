@@ -6,6 +6,7 @@ import { pathToFileURL } from "node:url";
 import { gzipSync } from "node:zlib";
 import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
+import { networkGate } from "./network-gate.mjs";
 import { reviewServer } from "./review-server.mjs";
 
 const out = resolve(process.argv[2] || "test-results/conditionals");
@@ -14,6 +15,8 @@ const server = reviewServer("dist");
 const hosted = process.env.REVIEW_BASE;
 if (!hosted) await server.start();
 const base = hosted || server.base;
+const gate = hosted ? networkGate(hosted) : null;
+await gate?.start();
 const source = JSON.parse(await readFile("src/conditional-assets.json", "utf8"));
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const report = {
@@ -89,7 +92,10 @@ try {
     ["chromium", chromium],
     ["firefox", firefox],
   ]) {
-    const browser = await launch.launch({ headless: true });
+    const browser = await launch.launch({
+      headless: true,
+      ...(gate ? { proxy: { server: gate.url } } : {}),
+    });
     try {
       for (const width of [1440, 375]) {
         const context = await browser.newContext({
@@ -289,7 +295,8 @@ try {
       }
 
       // Both rooms share one edition and one verified inventory. Refuse the
-      // actual origin after takeover; never fulfill "offline" from test code.
+      // local origin or the public HTTPS tunnel after takeover; never fulfill
+      // "offline" application responses from test code.
       const context = await browser.newContext({ acceptDownloads: true });
       await context.addInitScript(observeBlobs);
       const page = await context.newPage();
@@ -303,7 +310,7 @@ try {
         await other.locator('meta[name="horos-edition"]').getAttribute("content"),
         edition,
       );
-      if (hosted) await context.setOffline(true);
+      if (gate) await gate.stop();
       else await server.stop();
       await page.reload();
       await other.reload();
@@ -327,7 +334,7 @@ try {
       await contains(page, "source-status", "HTTP 503");
       await contains(page, "offline-status", "not fully available offline");
       await contains(other, "offline-status", "not fully available offline");
-      if (hosted) await context.setOffline(false);
+      if (gate) await gate.start();
       else await server.start();
       await page.locator("#retry-source").click();
       await displayedSource(page, 92);
@@ -337,7 +344,7 @@ try {
         engine,
         edition,
         originStopped: !hosted,
-        browserNetworkDenied: !!hosted,
+        publicHttpsTunnelStopped: !!gate,
         bothRoomsReloaded: true,
         offlineExportBytes: saved.bytes.length,
         sourceLossInvalidatedBothRooms: true,
@@ -345,7 +352,7 @@ try {
       });
       await context.close();
       console.log(
-        `${engine}: both rooms, genuine origin outage, source loss and verified recovery passed`,
+        `${engine}: both rooms, ${gate ? "closed public HTTPS tunnel" : "genuine origin outage"}, source loss and verified recovery passed`,
       );
 
       // Failures and late completion are tested with worker handling disabled.
@@ -480,6 +487,7 @@ try {
     }
   }
 } finally {
+  await gate?.stop();
   await server.stop();
   await writeFile(resolve(out, "receipt.json"), `${JSON.stringify(report, null, 2)}\n`);
 }

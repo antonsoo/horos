@@ -1,0 +1,130 @@
+{
+  "date": "2026-11-01T01:50:30.957Z",
+  "base": "https://antonsoo.github.io/horos/",
+  "journeys": [
+    {
+      "engine": "chromium",
+      "room": "classes",
+      "widths": [
+        {
+          "viewport": 375,
+          "document": 375,
+          "note": 343,
+          "table": {
+            "client": 343,
+            "scroll": 343
+          },
+          "keyboardScrolled": null
+        },
+        {
+          "viewport": 320,
+          "document": 320,
+          "note": 288,
+          "table": {
+            "client": 288,
+            "scroll": 288
+          },
+          "keyboardScrolled": null
+        }
+      ],
+      "hostileTextEscaped": true,
+      "editableNoteRoundTrip": true,
+      "embeddedFiles": 11,
+      "noNetworkRequests": true,
+      "htmlBytes": 5836629
+    },
+    {
+      "engine": "chromium",
+      "room": "conditionals",
+      "widths": [
+        {
+          "viewport": 375,
+          "document": 375,
+          "note": 343,
+          "table": {
+            "client": 343,
+            "scroll": 410
+          },
+          "keyboardScrolled": true
+        },
+        {
+          "viewport": 320,
+          "document": 320,
+          "note": 288,
+          "table": {
+            "client": 288,
+            "scroll": 410
+          },
+          "keyboardScrolled": true
+        }
+      ],
+      "hostileTextEscaped": true,
+      "editableNoteRoundTrip": true,
+      "embeddedFiles": 9,
+      "noNetworkRequests": true,
+      "htmlBytes": 2733964
+    },
+    {
+      "engine": "firefox",
+      "room": "classes",
+      "widths": [
+        {
+          "viewport": 375,
+          "document": 375,
+          "note": 343,
+          "table": {
+            "client": 343,
+            "scroll": 343
+          },
+          "keyboardScrolled": null
+        },
+        {
+          "viewport": 320,
+          "document": 320,
+          "note": 288,
+          "table": {
+            "client": 288,
+            "scroll": 288
+          },
+          "keyboardScrolled": null
+        }
+      ],
+      "hostileTextEscaped": true,
+      "editableNoteRoundTrip": true,
+      "embeddedFiles": 11,
+      "noNetworkRequests": true,
+      "htmlBytes": 5836629
+    },
+    {
+      "engine": "firefox",
+      "room": "conditionals",
+      "widths": [
+        {
+          "viewport": 375,
+          "document": 375,
+          "note": 343,
+          "table": {
+            "client": 343,
+            "scroll": 386
+          },
+          "keyboardScrolled": true
+        },
+        {
+          "viewport": 320,
+          "document": 320,
+          "note": 288,
+          "table": {
+            "client": 288,
+            "scroll": 386
+          },
+          "keyboardScrolled": true
+        }
+      ],
+      "hostileTextEscaped": true,
+      "editableNoteRoundTrip": true,
+      "embeddedFiles": 9,
+      "noNetworkRequests": true,
+      "htmlBytes": 2733964
+    }
+  ]
+}

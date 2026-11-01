@@ -1,0 +1,10 @@
+{
+  "recordedAt": "2026-11-01T01:54:38.413985+00:00",
+  "reviewedCodeCommit": "6f0542e128926163be392d94ab33dc28c2b75c47",
+  "sourceAtPublish": "fa9968e748f55644d5d6dd8c4cd8f58419154ceb",
+  "deploymentCommit": "f06a049176574c896db63cec9cef9f6b7a4a2225",
+  "pagesBranch": "gh-pages",
+  "method": "Fast-forward push preserving previous deployment history; clean-build dist plus .nojekyll",
+  "edition": "b0fde77e0644f97f96d2",
+  "packageRelease": false
+}

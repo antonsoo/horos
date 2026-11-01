@@ -1,0 +1,234 @@
+{
+  "date": "2026-11-01T01:52:07.460Z",
+  "origin": "https://antonsoo.github.io/horos/",
+  "journeys": [
+    {
+      "engine": "chromium",
+      "width": 1440,
+      "operated": "facts, tables, witness, conflicts, identity, empty and vacuous drafts, pin, history, six readings, keyboard panning, imports, sharing, native exports, portable reading",
+      "sources": [
+        "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed",
+        "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1"
+      ],
+      "embedded": [
+        {
+          "mime": "font/woff2",
+          "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+        },
+        {
+          "mime": "font/woff2",
+          "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+        },
+        {
+          "mime": "image/jpeg",
+          "sha256": "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed"
+        },
+        {
+          "mime": "image/jpeg",
+          "sha256": "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1"
+        }
+      ],
+      "downloads": [
+        {
+          "name": "horos-conditional.json",
+          "bytes": 560,
+          "sha256": "66327bd6d72bc624029887a0c4671480c93320a494bcdbd4e6e67374d108b2c5"
+        },
+        {
+          "name": "horos-conditional.svg",
+          "bytes": 1912,
+          "sha256": "458c00e80ee37e01cb3e4e35eb015473b0475df11063b8137e8bdaeef3ae27b6"
+        },
+        {
+          "name": "horos-conditional-reading.html",
+          "bytes": 2730400,
+          "sha256": "16afeb673e64c316dc0fea81744ef211120261e77ef982c9419218073d790fab"
+        }
+      ],
+      "axeViolations": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "chromium",
+      "width": 375,
+      "operated": "facts, tables, witness, conflicts, identity, empty and vacuous drafts, pin, history, six readings, keyboard panning, imports, sharing, native exports, portable reading",
+      "sources": [
+        "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed",
+        "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1"
+      ],
+      "embedded": [
+        {
+          "mime": "font/woff2",
+          "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+        },
+        {
+          "mime": "font/woff2",
+          "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+        },
+        {
+          "mime": "image/jpeg",
+          "sha256": "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed"
+        },
+        {
+          "mime": "image/jpeg",
+          "sha256": "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1"
+        }
+      ],
+      "downloads": [
+        {
+          "name": "horos-conditional.json",
+          "bytes": 560,
+          "sha256": "66327bd6d72bc624029887a0c4671480c93320a494bcdbd4e6e67374d108b2c5"
+        },
+        {
+          "name": "horos-conditional.svg",
+          "bytes": 1912,
+          "sha256": "458c00e80ee37e01cb3e4e35eb015473b0475df11063b8137e8bdaeef3ae27b6"
+        },
+        {
+          "name": "horos-conditional-reading.html",
+          "bytes": 2730400,
+          "sha256": "16afeb673e64c316dc0fea81744ef211120261e77ef982c9419218073d790fab"
+        }
+      ],
+      "axeViolations": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 1440,
+      "operated": "facts, tables, witness, conflicts, identity, empty and vacuous drafts, pin, history, six readings, keyboard panning, imports, sharing, native exports, portable reading",
+      "sources": [
+        "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed",
+        "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1"
+      ],
+      "embedded": [
+        {
+          "mime": "font/woff2",
+          "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+        },
+        {
+          "mime": "font/woff2",
+          "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+        },
+        {
+          "mime": "image/jpeg",
+          "sha256": "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed"
+        },
+        {
+          "mime": "image/jpeg",
+          "sha256": "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1"
+        }
+      ],
+      "downloads": [
+        {
+          "name": "horos-conditional.json",
+          "bytes": 560,
+          "sha256": "66327bd6d72bc624029887a0c4671480c93320a494bcdbd4e6e67374d108b2c5"
+        },
+        {
+          "name": "horos-conditional.svg",
+          "bytes": 1912,
+          "sha256": "458c00e80ee37e01cb3e4e35eb015473b0475df11063b8137e8bdaeef3ae27b6"
+        },
+        {
+          "name": "horos-conditional-reading.html",
+          "bytes": 2730400,
+          "sha256": "16afeb673e64c316dc0fea81744ef211120261e77ef982c9419218073d790fab"
+        }
+      ],
+      "axeViolations": 0,
+      "pageErrors": []
+    },
+    {
+      "engine": "firefox",
+      "width": 375,
+      "operated": "facts, tables, witness, conflicts, identity, empty and vacuous drafts, pin, history, six readings, keyboard panning, imports, sharing, native exports, portable reading",
+      "sources": [
+        "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed",
+        "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1"
+      ],
+      "embedded": [
+        {
+          "mime": "font/woff2",
+          "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+        },
+        {
+          "mime": "font/woff2",
+          "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+        },
+        {
+          "mime": "image/jpeg",
+          "sha256": "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed"
+        },
+        {
+          "mime": "image/jpeg",
+          "sha256": "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1"
+        }
+      ],
+      "downloads": [
+        {
+          "name": "horos-conditional.json",
+          "bytes": 560,
+          "sha256": "66327bd6d72bc624029887a0c4671480c93320a494bcdbd4e6e67374d108b2c5"
+        },
+        {
+          "name": "horos-conditional.svg",
+          "bytes": 1912,
+          "sha256": "458c00e80ee37e01cb3e4e35eb015473b0475df11063b8137e8bdaeef3ae27b6"
+        },
+        {
+          "name": "horos-conditional-reading.html",
+          "bytes": 2730400,
+          "sha256": "16afeb673e64c316dc0fea81744ef211120261e77ef982c9419218073d790fab"
+        }
+      ],
+      "axeViolations": 0,
+      "pageErrors": []
+    }
+  ],
+  "faults": [
+    {
+      "engine": "chromium",
+      "sameLengthCorruptScanRejected": true,
+      "corruptExportRejected": true,
+      "latePageCannotReplaceSelection": true,
+      "canceledExport": true,
+      "exportSnapshotFrozen": true,
+      "importPreservesInterveningEdits": true,
+      "newestImportWins": true
+    },
+    {
+      "engine": "firefox",
+      "sameLengthCorruptScanRejected": true,
+      "corruptExportRejected": true,
+      "latePageCannotReplaceSelection": true,
+      "canceledExport": true,
+      "exportSnapshotFrozen": true,
+      "importPreservesInterveningEdits": true,
+      "newestImportWins": true
+    }
+  ],
+  "offline": [
+    {
+      "engine": "chromium",
+      "edition": "b0fde77e0644f97f96d2",
+      "originStopped": false,
+      "publicHttpsTunnelStopped": true,
+      "bothRoomsReloaded": true,
+      "offlineExportBytes": 2726555,
+      "sourceLossInvalidatedBothRooms": true,
+      "reconnectedSourceRestoredBothRooms": true
+    },
+    {
+      "engine": "firefox",
+      "edition": "b0fde77e0644f97f96d2",
+      "originStopped": false,
+      "publicHttpsTunnelStopped": true,
+      "bothRoomsReloaded": true,
+      "offlineExportBytes": 2726555,
+      "sourceLossInvalidatedBothRooms": true,
+      "reconnectedSourceRestoredBothRooms": true
+    }
+  ]
+}

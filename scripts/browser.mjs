@@ -7,6 +7,7 @@ import { pathToFileURL } from "node:url";
 import { gzipSync } from "node:zlib";
 import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
+import { networkGate } from "./network-gate.mjs";
 
 const root = resolve("dist");
 const output = resolve(process.env.REVIEW_OUTPUT || "docs/assets");
@@ -54,6 +55,8 @@ const server = createServer(async (req, res) => {
 });
 await new Promise((r) => server.listen(0, "127.0.0.1", r));
 const base = process.env.REVIEW_BASE || `http://127.0.0.1:${server.address().port}/horos/`;
+const gate = process.env.REVIEW_BASE ? networkGate(base) : null;
+await gate?.start();
 async function inventory(directory, prefix = "") {
   const entries = [];
   for (const entry of (await readdir(directory, { withFileTypes: true })).sort((a, b) =>
@@ -73,6 +76,9 @@ const report = {
   date: new Date().toISOString(),
   node: process.version,
   origin: process.env.REVIEW_BASE || "local production server",
+  offlineNetworkBoundary: gate
+    ? "Public HTTPS CONNECT tunnel stopped; worker and page traffic denied"
+    : "Local origin refuses connections, and browser network is disabled",
   files: await inventory(root),
   journeys: [],
   faults: [],
@@ -161,7 +167,7 @@ try {
     ["chromium", chromium],
     ["firefox", firefox],
   ]) {
-    const browser = await engine.launch();
+    const browser = await engine.launch(gate ? { proxy: { server: gate.url } } : {});
     try {
       for (const width of [1440, 375]) {
         const context = await browser.newContext({
@@ -436,8 +442,9 @@ try {
         await contains(page, "file-status", "out of range");
         await status(page, "counterexample");
         unavailable = true;
+        await gate?.stop();
         await context.setOffline(true);
-        // Navigate the real document with the origin refusing connections.
+        // Navigate with the local origin stopped or public HTTPS tunnel closed.
         await page.reload({ waitUntil: "domcontentloaded" });
         await contains(page, "offline-status", "available offline");
         await page.locator("#open-file").setInputFiles({
@@ -458,6 +465,7 @@ try {
         assert.equal(hash(offline.bytes), hash(exported.bytes));
         await context.setOffline(false);
         unavailable = false;
+        await gate?.start();
         await noOverflow(page);
         assert.deepEqual(errors, []);
         report.journeys.push({
@@ -642,6 +650,7 @@ try {
       await contains(cachedPage, "offline-status", "available offline");
       await cachedContext.setOffline(true);
       unavailable = true;
+      await gate?.stop();
       await cachedPage.evaluate(async () => {
         const edition = document.querySelector('meta[name="horos-edition"]').content;
         const cache = await caches.open(`horos-${edition}`);
@@ -674,11 +683,13 @@ try {
       });
       assert.ok(await cachedPage.locator("#scan").isHidden());
       unavailable = false;
+      await gate?.start();
       await cachedContext.setOffline(false);
       await cachedPage.locator("#retry-scan").click();
       await contains(cachedPage, "scan-status", "Printed page 28");
       await contains(cachedPage, "offline-status", "available offline");
       unavailable = false;
+      await gate?.start();
       await cachedContext.close();
       report.faults.push({
         browser: name,
@@ -698,10 +709,12 @@ try {
     } finally {
       await browser.close();
       unavailable = false;
+      await gate?.start();
     }
   }
   await writeFile(resolve(output, "browser-review.json"), `${JSON.stringify(report, null, 2)}\n`);
   console.log("Four browser journeys and both fault suites passed.");
 } finally {
+  await gate?.stop();
   await new Promise((r) => server.close(r));
 }

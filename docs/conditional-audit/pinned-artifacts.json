@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-11-01T01:53:39.558565+00:00",
+  "commit": "fa9968e748f55644d5d6dd8c4cd8f58419154ceb",
+  "scope": "Pinned public artifacts equal their Git blobs; working-tree and latest branch synchronization are separate checks.",
+  "artifacts": [
+    {
+      "path": "docs/conditional-review.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/fa9968e748f55644d5d6dd8c4cd8f58419154ceb/docs/conditional-review.md",
+      "bytes": 9518,
+      "sha256": "986a68c4ee0e6ee0abf0142b979a5d5ce4bc0c32f164636e93c78a23cbfd3b39",
+      "equalsPinnedGitBlob": true
+    },
+    {
+      "path": "docs/conditional-audit.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/fa9968e748f55644d5d6dd8c4cd8f58419154ceb/docs/conditional-audit.md",
+      "bytes": 5823,
+      "sha256": "6f225fbc3430e695d78222fc1165bbd72591bc1d58d892960654b4f2c4dc805a",
+      "equalsPinnedGitBlob": true
+    },
+    {
+      "path": "docs/conditional-audit/clean-build.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/fa9968e748f55644d5d6dd8c4cd8f58419154ceb/docs/conditional-audit/clean-build.json",
+      "bytes": 4044,
+      "sha256": "f23b218396fc31fe6320e40686bb95b60cbba7cee47b11644ac9972b1c1e0c58",
+      "equalsPinnedGitBlob": true
+    },
+    {
+      "path": "examples/conditionals/reading.pdf",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/fa9968e748f55644d5d6dd8c4cd8f58419154ceb/examples/conditionals/reading.pdf",
+      "bytes": 2054556,
+      "sha256": "6fd378fb8362623c470acadc8c509af22dc0a39e1179ffb0193c9461dbf4ec89",
+      "equalsPinnedGitBlob": true
+    },
+    {
+      "path": "examples/conditionals/reading.html.gz",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/fa9968e748f55644d5d6dd8c4cd8f58419154ceb/examples/conditionals/reading.html.gz",
+      "bytes": 2027668,
+      "sha256": "eb5fdf89643ad9bd288562b584e401343e75b58ac86854db99ad7e6f89421612",
+      "equalsPinnedGitBlob": true
+    },
+    {
+      "path": "public/sources/conditionals/manifest.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/fa9968e748f55644d5d6dd8c4cd8f58419154ceb/public/sources/conditionals/manifest.json",
+      "bytes": 2024,
+      "sha256": "ee312bfca509bd103eef1e7a26da7344507e98ad32c7a42a756ffcbc8a42b6ef",
+      "equalsPinnedGitBlob": true
+    }
+  ]
+}

@@ -64,8 +64,11 @@ node scripts/edition-upgrade.mjs /tmp/horos-old test-results/upgrade
 The archived deployment commit is retained in Git history. It is intentionally
 fixed rather than using today's moving `gh-pages` branch. For hosted read-only
 checks, `REVIEW_BASE=https://antonsoo.github.io/horos/` selects the actual public
-site for the conditional and portable drivers; public offline checks deny the
-browser's network rather than claiming control over the public origin.
+site for the conditional and portable drivers; public offline checks close a real HTTPS CONNECT tunnel rather than claiming
+control over the public origin. The selected origin stays encrypted end to end;
+application responses are not substituted. This covers worker fetches too: an
+earlier Firefox browser-toggle-only check could still recover an evicted source
+from the network, so that attempt is not used as offline evidence.
 
 ## Publication boundary
 
@@ -73,6 +76,31 @@ These local receipts describe edition `b0fde77e0644f97f96d2`. The
 [clean-build receipt](conditional-audit/clean-build.json) records a fresh archive
 of `6f0542e`, a separate `npm ci` and `npm run check` under Node 24.22.1.
 All 25 files (5,958,326 bytes, including the worker) match the reviewed build.
-Canonical hosted-file comparison and public browser review are still required
-before claiming the edition is published. No package release or CI
-execution is implied by the local results.
+The source was pushed and the clean build was published at
+[the conditional room](https://antonsoo.github.io/horos/conditionals.html).
+Deployment commit: `f06a049176574c896db63cec9cef9f6b7a4a2225` on `gh-pages`.
+- [Canonical bytes before](conditional-audit/hosted-before.json) and
+  [after](conditional-audit/hosted-after.json): all 25 built files, including the
+  worker, both room entries, all source pages, fonts and notices.
+- [Public conditional journeys](conditional-audit/public.json): both browsers at
+  desktop/phone widths, all six readings, source identities, native artifacts,
+  failure/cancellation/import races and two-room offline reload/export. Both
+  public offline records explicitly report the stopped HTTPS tunnel, not a
+  stopped public origin. Eviction withdrew readiness in both tabs; reconnecting
+  restored it only after repair.
+- [Public portable documents](conditional-audit/portable-public.json): both
+  rooms at 320px/375px, stress notes, keyboard tables, exact source/font/notice
+  retention and native editable round trips with no HTTP requests from the file.
+- [Public class-room regression](conditional-audit/class-public.json): the
+  original four Aristotle journeys and fault suites, using the same stoppable
+  tunnel for hosted offline checks.
+- [Pinned public artifacts](conditional-audit/pinned-artifacts.json): six raw
+  source/review/example files equal their immutable Git blobs. The
+  [PDF extraction](conditional-audit/pdf.json) additionally verifies that the two
+  JPEGs embedded in the PDF are byte-identical to the retained original scans.
+
+The [source workflow receipt](conditional-audit/remote-checks.json) records failed
+source CI/Pages jobs with zero executed steps for `fa9968e`. That is not a CI
+pass. Canonical hosted bytes and browser operations establish the delivered
+behavior separately. No registry release, comprehensive accessibility
+certification or independent scholarly review is claimed.

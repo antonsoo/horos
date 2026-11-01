@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-01T01:49:03.147823+00:00",
+  "sourceCommit": "fa9968e748f55644d5d6dd8c4cd8f58419154ceb",
+  "runs": [
+    {
+      "run": 41262586939,
+      "jobs": [
+        {
+          "name": "check",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": 0
+        }
+      ]
+    },
+    {
+      "run": 41262586860,
+      "jobs": [
+        {
+          "name": "deploy",
+          "status": "completed",
+          "conclusion": "failure",
+          "steps": 0
+        }
+      ]
+    }
+  ],
+  "boundary": "These source workflows did not execute checks; local and hosted evidence is separate."
+}

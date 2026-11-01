@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-11-01T01:52:30.706130+00:00",
+  "pdfBytes": 2054556,
+  "pdfSha256": "6fd378fb8362623c470acadc8c509af22dc0a39e1179ffb0193c9461dbf4ec89",
+  "pages": 20,
+  "tagged": true,
+  "verification": "pdfinfo and pdfimages -j; extracted JPEG bytes compared to the retained source manifest",
+  "sourceImages": [
+    {
+      "printedPage": 92,
+      "bytes": 695470,
+      "sha256": "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed",
+      "equalsRetainedOriginalJpeg": true
+    },
+    {
+      "printedPage": 93,
+      "bytes": 749017,
+      "sha256": "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1",
+      "equalsRetainedOriginalJpeg": true
+    }
+  ]
+}
