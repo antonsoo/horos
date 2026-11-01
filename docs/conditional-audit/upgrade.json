@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-01T01:45:59.153Z",
+  "before": "b650d6cb3018691f56a8",
+  "after": "b0fde77e0644f97f96d2",
+  "retainedOldBuild": true,
+  "results": [
+    {
+      "engine": "chromium",
+      "oldNotebookDownloadRetained": true,
+      "waitingEditionExplainedAfterReload": true,
+      "newEditionActivatedAfterClosingTabs": true,
+      "oldCacheRemoved": true,
+      "oldNotebookReopened": true,
+      "bothRoomsReloadedWithOriginStopped": true
+    },
+    {
+      "engine": "firefox",
+      "oldNotebookDownloadRetained": true,
+      "waitingEditionExplainedAfterReload": true,
+      "newEditionActivatedAfterClosingTabs": true,
+      "oldCacheRemoved": true,
+      "oldNotebookReopened": true,
+      "bothRoomsReloadedWithOriginStopped": true
+    }
+  ]
+}

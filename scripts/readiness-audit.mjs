@@ -231,7 +231,7 @@ try {
           (await navigator.serviceWorker.getRegistration()).waiting?.state === "installed",
       );
       await old.reload();
-      await ready(old);
+      await old.locator("#offline-status").filter({ hasText: "close all Horos tabs" }).waitFor();
       assert.equal(
         await old.locator(`meta[name="${project}-edition"]`).getAttribute("content"),
         editionA,

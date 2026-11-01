@@ -10,9 +10,16 @@ export function installOffline(status: HTMLElement): void {
   }
   const expected = document.querySelector<HTMLMetaElement>('meta[name="horos-edition"]')?.content;
   let request = 0;
+  let registration: ServiceWorkerRegistration | undefined;
+  const updateNotice =
+    "A newer edition is ready. Save your notebook in each Horos tab, close all Horos tabs, then reopen Horos to finish the update.";
   async function inspect(): Promise<void> {
     const id = ++request;
     const controller = navigator.serviceWorker.controller;
+    if (registration?.waiting) {
+      status.textContent = updateNotice;
+      return;
+    }
     if (!controller) {
       status.textContent = "Preparing this edition for offline reading…";
       return;
@@ -30,8 +37,9 @@ export function installOffline(status: HTMLElement): void {
       channel.port1.close();
       if (id !== request || controller !== navigator.serviceWorker.controller) return;
       const value = event.data as { edition?: unknown; complete?: unknown; files?: unknown } | null;
-      status.textContent =
-        value?.edition === expected && value?.complete === true
+      status.textContent = registration?.waiting
+        ? updateNotice
+        : value?.edition === expected && value?.complete === true
           ? "This edition is available offline, including every source page."
           : "This edition is not fully available offline. Connect and reload, or save a notebook.";
     };
@@ -60,7 +68,8 @@ export function installOffline(status: HTMLElement): void {
   });
   void navigator.serviceWorker
     .register(`${import.meta.env.BASE_URL}sw.js`, { scope: import.meta.env.BASE_URL })
-    .then((registration) => {
+    .then((installed) => {
+      registration = installed;
       const watched = new WeakSet<ServiceWorker>();
       function watch(worker: ServiceWorker | null): void {
         if (!worker || watched.has(worker)) return;
@@ -73,11 +82,11 @@ export function installOffline(status: HTMLElement): void {
           } else void inspect();
         });
       }
-      registration.addEventListener("updatefound", () => {
-        watch(registration.installing);
+      installed.addEventListener("updatefound", () => {
+        watch(installed.installing);
       });
       // The first updatefound event can precede register() resolving.
-      watch(registration.installing);
+      watch(installed.installing);
       return inspect();
     })
     .catch(() => {

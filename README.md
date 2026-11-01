@@ -46,7 +46,7 @@ so an installed offline edition cannot conceal source edits.
 
 ## When is “if” true?
 
-**New in this checkout:** open `conditionals.html` from the room selector.
+**Conditional room:** open `conditionals.html` from the room selector.
 Sextus Empiricus reports a dispute over “If it is day, I am talking.” Start
 with both clauses true; stop talking while daylight remains. Then hold the
 present facts fixed and exclude just the daytime-silence case from your table.
@@ -60,7 +60,7 @@ for that pair. Changing the table adds assumptions, rather than establishing
 what is possible. Empty tables, excluded current facts, and vacuous passes stay
 visible. A repeated day sentence shares one truth value in both places.
 
-Six Greek readings and **20 contextual phrase notes** retain all four accounts
+Six Greek readings and **21 contextual phrase notes** retain all four accounts
 and Sextus's challenge to choosing between them. The English and teaching Latin
 are new. Two complete pages of Mutschmann's 1912 edition preserve the printed
 context and textual apparatus. The room computes no verdict for Diodorus's
@@ -70,7 +70,7 @@ Pin and compare experiments, undo changes, write an explanation, and keep an
 [editable notebook](examples/conditionals/notebook.json),
 [case diagram](examples/conditionals/cases.svg),
 [complete illustrated reading](examples/conditionals/reading.html.gz), or
-[23-page browser PDF](examples/conditionals/reading.pdf). The HTML embeds both
+[20-page tagged browser PDF](examples/conditionals/reading.pdf). The HTML embeds both
 source pages, all readings, fonts, licenses and native downloads. Decompress
 before opening it:
 
@@ -82,7 +82,9 @@ Both rooms share one verified offline edition. The
 [source, model and browser review](docs/conditional-review.md) records the actual
 operations and publication boundary. `npm run test:conditionals` runs the new
 desktop/phone journeys, native downloads, source failures and real-origin
-offline recovery. This new room has not been deployed by this change.
+offline recovery. `npm run test:portable` also checks actual saved readings at
+320px and 375px, including long notes, keyboard tables and retained-file identities.
+The [audit](docs/conditional-audit.md) records the subsequent repairs and publication evidence.
 
 ## Four class investigations
 

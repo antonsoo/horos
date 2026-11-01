@@ -98,7 +98,7 @@ Retained illustrations:
 - [Editable example](../examples/conditionals/notebook.json)
 - [Independent SVG](../examples/conditionals/cases.svg)
 - [Complete compressed HTML](../examples/conditionals/reading.html.gz)
-- [Actual 23-page browser PDF](../examples/conditionals/reading.pdf)
+- [Actual 20-page tagged browser PDF](../examples/conditionals/reading.pdf)
 
 The PDF's comparison and Greek pages were rasterized and visually inspected.
 Print layout starts the model explanation on its own page, keeping it from
@@ -124,7 +124,7 @@ and generated worker. The worker verifies 24 retained files (5,949,069 bytes);
 the 7,226-byte worker itself is additional. The conditional JavaScript is about 15.6 KB gzip plus
 the shared chunk; source retention is a separate background transfer.
 
-## Publication boundary
+## Original local boundary
 
 [The clean-build receipt](conditional-review/clean-build.json) records a fresh
 archive of `ca62f87`, a separate `npm ci`, all 18 tests/source checks and a
@@ -133,10 +133,10 @@ reviewed Node 26 build byte for byte. The same fresh checkout passed the
 [expanded two-room readiness audit](conditional-review/readiness.json),
 including both directions of source-loss notification and edition activation.
 
-These are local source, build and browser results. The new room has not been
+At that initial review these were local source, build and browser results. The room had not been
 pushed or deployed: the workspace house standards reserve publication for
 review. The existing site's availability does not imply this room is hosted.
-No CI execution or package release is claimed.
+No CI execution or package release was claimed. The later [audit and publication record](conditional-audit.md) supersedes this original boundary and records repairs to the saved readings and update guidance.
 
 Suggested repository description: “Build ancient arguments and test what ‘if’
 commits you to, with Greek readings and explicit finite models.”

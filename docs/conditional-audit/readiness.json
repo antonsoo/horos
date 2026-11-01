@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-01T01:46:05.406Z",
+  "editionA": "b0fde77e0644f97f96d2",
+  "editionB": "6250cb27b8580f4d52e4",
+  "syntheticInventoryEvents": false,
+  "results": [
+    {
+      "browser": "chromium",
+      "page": "index.html",
+      "explicitFailureWithdrawsReadiness": true,
+      "otherEditionCopyNotUsed": true,
+      "nativeImageFailureWithRealOriginStopped": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignNotificationsIgnored": true,
+      "explanationPreserved": true
+    },
+    {
+      "browser": "chromium",
+      "page": "conditionals.html",
+      "explicitFailureWithdrawsReadiness": true,
+      "otherEditionCopyNotUsed": true,
+      "nativeImageFailureWithRealOriginStopped": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignNotificationsIgnored": true,
+      "explanationPreserved": true
+    },
+    {
+      "browser": "chromium",
+      "oldEditionHeldWhileOpen": true,
+      "newEditionActivatedAfterClose": true
+    },
+    {
+      "browser": "firefox",
+      "page": "index.html",
+      "explicitFailureWithdrawsReadiness": true,
+      "otherEditionCopyNotUsed": true,
+      "nativeImageFailureWithRealOriginStopped": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignNotificationsIgnored": true,
+      "explanationPreserved": true
+    },
+    {
+      "browser": "firefox",
+      "page": "conditionals.html",
+      "explicitFailureWithdrawsReadiness": true,
+      "otherEditionCopyNotUsed": true,
+      "nativeImageFailureWithRealOriginStopped": true,
+      "otherOpenPageAutomaticallyWithdrawsReadiness": true,
+      "repeatedFailureNotificationsCoalesced": true,
+      "uncachedNavigationNotInvented": true,
+      "connectedRecovery": true,
+      "foreignNotificationsIgnored": true,
+      "explanationPreserved": true
+    },
+    {
+      "browser": "firefox",
+      "oldEditionHeldWhileOpen": true,
+      "newEditionActivatedAfterClose": true
+    }
+  ]
+}

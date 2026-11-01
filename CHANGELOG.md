@@ -2,11 +2,19 @@
 
 ## Unreleased — 2026-10-31
 
+- Keep both portable readings within narrow phone widths, with keyboard-scrollable
+  tables and wrapping for long notes and retained-file names.
+- Keep each complete source scan with its heading and caption in print. Make the
+  conditional example a tagged PDF with a substantive learner explanation.
+- Explain waiting editions, including Firefox tabs that have no current controller;
+  preserve saved notebooks across the published one-room to two-room upgrade.
+- Explain the fourth account's disputed printed term and alternative spellings.
+
 - Add a conditional room: change the present facts, edit admitted cases, pin
   comparisons and distinguish Philo's truth test from a modern finite
   compatibility model. Expose inconsistent and vacuous drafts.
 - Retain Sextus's four reported accounts and his objection to choosing between
-  them, with six Greek readings, new English/teaching Latin, twenty phrase notes
+  them, with six Greek readings, new English/teaching Latin, twenty-one phrase notes
   and two complete, verified pages of Mutschmann's 1912 edition.
 - Keep editable notebooks, explicit links, independent SVG and self-contained
   illustrated readings, with checked sources and protection for intervening edits.

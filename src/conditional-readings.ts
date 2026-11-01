@@ -174,8 +174,13 @@ export const conditionalReadings: ConditionalReading[] = [
       "Those who judge by indication say that a conditional is true when its consequent is contained potentially in its antecedent. On their account, ‘If it is day, it is day’ and every repeated conditional will perhaps be false: for a thing's being contained in itself is impossible.",
     latin:
       "Qui ex indicatione iudicant verum esse conexum dicunt cuius consequens in antecedente potentia continetur. Secundum eos ‘Si dies est, dies est’ et omne conexum repetitum fortasse falsum erit: nihil enim in se ipso contineri potest.",
-    note: "‘Indication’ translates the difficult ἔμφασις here; ‘force’ or ‘meaning’ are other renderings. Sextus presents this as another reported account, and uses ‘perhaps’ for his objection. His report of its treatment of the repeated conditional must not be silently replaced by the modern identity result. This room computes no verdict for this account. The editor brackets ἀξίωμα for deletion; the English omits that bracketed noun.",
+    note: "‘Indication’ translates the difficult ἔμφασις here; ‘force’ or ‘meaning’ are other renderings. Sextus presents this as another reported account, and uses ‘perhaps’ for his objection. His report of its treatment of the repeated conditional must not be silently replaced by the modern identity result. This room computes no verdict for this account. The editor brackets ἀξίωμα for deletion; the English omits that bracketed noun. ‘Repeated’ is an interpretive rendering of διαφορούμενον in light of the day/day example, not its unambiguous everyday meaning. The apparatus records διφορούμενον in EAB and a different spelling in L; the displayed Greek follows the printed main text.",
     words: [
+      {
+        greek: "διαφορούμενον",
+        latin: "repetitum",
+        note: "diaphoroúmenon: rendered ‘repeated’ here from the day/day example. The main text prints διαφορούμενον; the apparatus at printed page 92, line 17 records διφορούμενον in EAB and διαφορόμενον in L (with an erased letter). Read this as a textual and interpretive difficulty, not a settled vocabulary equivalence.",
+      },
       {
         greek: "ἐμφάσει",
         latin: "indicatione",

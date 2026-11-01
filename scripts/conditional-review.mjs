@@ -11,19 +11,20 @@ import { reviewServer } from "./review-server.mjs";
 const out = resolve(process.argv[2] || "test-results/conditionals");
 await mkdir(out, { recursive: true });
 const server = reviewServer("dist");
-await server.start();
-const base = server.base;
+const hosted = process.env.REVIEW_BASE;
+if (!hosted) await server.start();
+const base = hosted || server.base;
 const source = JSON.parse(await readFile("src/conditional-assets.json", "utf8"));
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 const report = {
   date: new Date().toISOString(),
-  origin: "local production server",
+  origin: hosted || "local production server",
   journeys: [],
   faults: [],
   offline: [],
 };
 const explanation =
-  "The present facts stay day + talking. I excluded day + silence by assumption, not by evidence.\nσυνάρτησις <script> & an ungraded explanation.";
+  "Both current clauses are true, so Philo’s criterion accepts this pair. The pinned table also admits day with silence, which defeats the finite compatibility test. Removing that case makes my new table pass but adds an assumption I have not justified.\nThe Greek μάχηται asks for a conflict. A checkbox alone does not establish it.";
 
 async function contains(page, id, value) {
   await page.locator(`#${id}`).filter({ hasText: value }).waitFor();
@@ -79,7 +80,7 @@ function verifyEmbedded(bytes) {
       item.path,
     );
   assert.ok(!html.includes("<script>"));
-  assert.ok(html.includes("&lt;script&gt; &amp; an ungraded explanation."));
+  assert.ok(html.includes("A checkbox alone does not establish it."));
   return embedded;
 }
 
@@ -217,6 +218,7 @@ try {
         });
         await portable.goto(pathToFileURL(htmlPath).href);
         await portable.evaluate(() => document.fonts.ready);
+        await noOverflow(portable);
         assert.equal(await portable.locator(".source img").count(), 2);
         assert.equal(await portable.locator(".reading").count(), 6);
         assert.equal(await portable.locator("script").count(), 0);
@@ -239,7 +241,7 @@ try {
           portableAxe.violations.map((v) => ({ id: v.id, nodes: v.nodes.map((n) => n.target) })),
           [],
         );
-        if (engine === "chromium" && width === 1440) {
+        if (engine === "chromium" && width === 1440 && !hosted) {
           await mkdir("examples/conditionals", { recursive: true });
           await writeFile("examples/conditionals/notebook.json", json.bytes);
           await writeFile("examples/conditionals/cases.svg", svg.bytes);
@@ -251,6 +253,8 @@ try {
             path: "examples/conditionals/reading.pdf",
             format: "A4",
             printBackground: true,
+            tagged: true,
+            outline: true,
           });
           await page.locator("#reading").selectOption("connection");
           await displayedSource(page, 92);
@@ -299,7 +303,8 @@ try {
         await other.locator('meta[name="horos-edition"]').getAttribute("content"),
         edition,
       );
-      await server.stop();
+      if (hosted) await context.setOffline(true);
+      else await server.stop();
       await page.reload();
       await other.reload();
       await contains(page, "offline-status", "This edition is available offline");
@@ -322,7 +327,8 @@ try {
       await contains(page, "source-status", "HTTP 503");
       await contains(page, "offline-status", "not fully available offline");
       await contains(other, "offline-status", "not fully available offline");
-      await server.start();
+      if (hosted) await context.setOffline(false);
+      else await server.start();
       await page.locator("#retry-source").click();
       await displayedSource(page, 92);
       await contains(page, "offline-status", "This edition is available offline");
@@ -330,7 +336,8 @@ try {
       report.offline.push({
         engine,
         edition,
-        originStopped: true,
+        originStopped: !hosted,
+        browserNetworkDenied: !!hosted,
         bothRoomsReloaded: true,
         offlineExportBytes: saved.bytes.length,
         sourceLossInvalidatedBothRooms: true,
