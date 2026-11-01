@@ -69,7 +69,10 @@ browser's network rather than claiming control over the public origin.
 
 ## Publication boundary
 
-These local receipts describe edition `b0fde77e0644f97f96d2`. A separate clean
-installation, canonical hosted-file comparison and public browser review are
-required before claiming the edition is published. No package release or CI
+These local receipts describe edition `b0fde77e0644f97f96d2`. The
+[clean-build receipt](conditional-audit/clean-build.json) records a fresh archive
+of `6f0542e`, a separate `npm ci` and `npm run check` under Node 24.22.1.
+All 25 files (5,958,326 bytes, including the worker) match the reviewed build.
+Canonical hosted-file comparison and public browser review are still required
+before claiming the edition is published. No package release or CI
 execution is implied by the local results.
