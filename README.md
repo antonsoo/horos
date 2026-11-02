@@ -3,7 +3,7 @@
 **Build two worlds with the same premises. Find the object that breaks the conclusion.**
 
 [![Live workshop](https://img.shields.io/badge/live-workshop-923922)](https://antonsoo.github.io/horos/)
-[![MIT license](https://img.shields.io/badge/license-MIT-26342f)](LICENSE)
+[![PolyForm Noncommercial license](https://img.shields.io/badge/license-PolyForm%20Noncommercial-26342f)](LICENSE)
 
 ![Horos: two premises beside a world made from placed objects](docs/assets/workshop-chromium-1440.png)
 
@@ -273,7 +273,9 @@ the page-service offset, direct inspection and transcription policy. Its
 
 ## Contributing and license
 
+New versions are released under the [PolyForm Noncommercial License 1.0.0](LICENSE). It is free for any noncommercial purpose, including personal study, teaching and research, and for use by charities, schools, universities, research organizations and government institutions. Commercial use needs written permission from Anthony Mercer (anthony@praviel.com). Versions up to commit [`8a8021f`](https://github.com/antonsoo/horos/tree/8a8021f) (2026-11-01) were released under the MIT License, and copies of those versions keep it.
+
 See [CONTRIBUTING.md](CONTRIBUTING.md) for the source and browser review process.
-Code, diagrams, English, and teaching Latin are [MIT](LICENSE).
+Code, diagrams, English, and teaching Latin are [PolyForm Noncommercial 1.0.0](LICENSE).
 Historical Greek and scans are public domain. Literata and Source Sans 3
 retain their SIL Open Font Licenses in `public/fonts/`.
