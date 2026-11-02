@@ -41,7 +41,9 @@ export async function editionFileBytes(
           return await transfer.readBytes(saved, file, signal);
         } catch (error) {
           signal?.throwIfAborted();
-          window.dispatchEvent(new Event("horos:asset-failure"));
+          // The inventory already diagnosed a repair job's missing file.
+          // Re-announcing its own failure would recursively start fresh repairs.
+          if (!mustRetain) window.dispatchEvent(new Event("horos:asset-failure"));
           // An offline corrupt copy cannot be replaced by an unrelated edition.
           if (!navigator.onLine) throw error;
         }

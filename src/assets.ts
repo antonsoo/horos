@@ -32,7 +32,7 @@ async function readVerifiedBytes(item: Asset, signal?: AbortSignal): Promise<Arr
   } catch (error) {
     signal?.throwIfAborted();
     throw new Error(
-      `Loading ${item.path}: ${error instanceof Error ? error.message : "The file could not be read"}. Check the connection and try again; your case has been kept.`,
+      `Could not read ${item.path}: ${error instanceof Error ? error.message : "The file could not be read"}. Check the connection and try again; your case has been kept.`,
     );
   }
 }
