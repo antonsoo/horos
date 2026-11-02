@@ -1,0 +1,233 @@
+{
+  "date": "2026-11-02T21:33:49.717Z",
+  "build": "5747e0b",
+  "bytesPerSecond": 128000,
+  "elapsedMs": 21214,
+  "source": "Loading sources/bekker-p26.jpg took too long. Check the connection and try again; your case has been kept.",
+  "export": "Loading sources/bekker-p24.jpg took too long. Check the connection and try again; your case has been kept.",
+  "offline": "Preparing this edition for offline reading…",
+  "downloads": 0,
+  "note": "Keep this explanation while cold files are being transferred.",
+  "requests": [
+    {
+      "path": "/horos/",
+      "mode": "slow",
+      "at": 1793655208512,
+      "bytes": 14755,
+      "sent": 14755,
+      "closedAt": 1793655208822,
+      "lastByteAt": 1793655208821,
+      "maxGapMs": 128
+    },
+    {
+      "path": "/horos/assets/index-C8sWZH3y.js",
+      "mode": "slow",
+      "at": 1793655208542,
+      "bytes": 50356,
+      "sent": 50356,
+      "closedAt": 1793655209272,
+      "lastByteAt": 1793655209272,
+      "maxGapMs": 129
+    },
+    {
+      "path": "/horos/assets/index-D0iTZpS4.css",
+      "mode": "slow",
+      "at": 1793655208542,
+      "bytes": 12519,
+      "sent": 12519,
+      "closedAt": 1793655208984,
+      "lastByteAt": 1793655208983,
+      "maxGapMs": 129
+    },
+    {
+      "path": "/horos/assets/offline-DOPf6Z92.js",
+      "mode": "slow",
+      "at": 1793655208542,
+      "bytes": 11449,
+      "sent": 11449,
+      "closedAt": 1793655208919,
+      "lastByteAt": 1793655208919,
+      "maxGapMs": 130
+    },
+    {
+      "path": "/horos/fonts/sourcesans3.woff2",
+      "mode": "slow",
+      "at": 1793655209352,
+      "bytes": 170188,
+      "sent": 170188,
+      "closedAt": 1793655217084,
+      "lastByteAt": 1793655217084,
+      "maxGapMs": 194
+    },
+    {
+      "path": "/horos/sources/bekker-p26.jpg",
+      "mode": "slow",
+      "at": 1793655209353,
+      "bytes": 935958,
+      "sent": 430080,
+      "closedAt": 1793655229347,
+      "lastByteAt": 1793655229264,
+      "maxGapMs": 200
+    },
+    {
+      "path": "/horos/fonts/literata.woff2",
+      "mode": "slow",
+      "at": 1793655209353,
+      "bytes": 396664,
+      "sent": 396664,
+      "closedAt": 1793655227753,
+      "lastByteAt": 1793655227752,
+      "maxGapMs": 199
+    },
+    {
+      "path": "/horos/sw.js",
+      "mode": "slow",
+      "at": 1793655209357,
+      "bytes": 7226,
+      "sent": 7226,
+      "closedAt": 1793655209595,
+      "lastByteAt": 1793655209595,
+      "maxGapMs": 130
+    },
+    {
+      "path": "/horos/assets/conditionals-C3mfzwbR.js",
+      "mode": "slow",
+      "at": 1793655209600,
+      "bytes": 42994,
+      "sent": 42994,
+      "closedAt": 1793655211653,
+      "lastByteAt": 1793655211653,
+      "maxGapMs": 194
+    },
+    {
+      "path": "/horos/LICENSE.txt",
+      "mode": "slow",
+      "at": 1793655209713,
+      "bytes": 4651,
+      "sent": 4651,
+      "closedAt": 1793655210047,
+      "lastByteAt": 1793655210046,
+      "maxGapMs": 193
+    },
+    {
+      "path": "/horos/fonts/literata-OFL.txt",
+      "mode": "slow",
+      "at": 1793655209713,
+      "bytes": 4389,
+      "sent": 4389,
+      "closedAt": 1793655210079,
+      "lastByteAt": 1793655210079,
+      "maxGapMs": 194
+    },
+    {
+      "path": "/horos/fonts/literata.woff2",
+      "mode": "slow",
+      "at": 1793655210051,
+      "bytes": 396664,
+      "sent": 396664,
+      "closedAt": 1793655228750,
+      "lastByteAt": 1793655228750,
+      "maxGapMs": 199
+    },
+    {
+      "path": "/horos/fonts/provenance.json",
+      "mode": "slow",
+      "at": 1793655210080,
+      "bytes": 637,
+      "sent": 637,
+      "closedAt": 1793655210270,
+      "lastByteAt": 1793655210270,
+      "maxGapMs": 0
+    },
+    {
+      "path": "/horos/fonts/sourcesans3-OFL.txt",
+      "mode": "slow",
+      "at": 1793655210272,
+      "bytes": 4579,
+      "sent": 4579,
+      "closedAt": 1793655210656,
+      "lastByteAt": 1793655210655,
+      "maxGapMs": 192
+    },
+    {
+      "path": "/horos/fonts/sourcesans3.woff2",
+      "mode": "slow",
+      "at": 1793655210657,
+      "bytes": 170188,
+      "sent": 170188,
+      "closedAt": 1793655218755,
+      "lastByteAt": 1793655218755,
+      "maxGapMs": 194
+    },
+    {
+      "path": "/horos/sources/NOTICE.txt",
+      "mode": "slow",
+      "at": 1793655211655,
+      "bytes": 1747,
+      "sent": 1747,
+      "closedAt": 1793655211845,
+      "lastByteAt": 1793655211845,
+      "maxGapMs": 0
+    },
+    {
+      "path": "/horos/sources/bekker-p24.jpg",
+      "mode": "slow",
+      "at": 1793655211847,
+      "bytes": 863245,
+      "sent": 376832,
+      "closedAt": 1793655229711,
+      "lastByteAt": 1793655229553,
+      "maxGapMs": 199
+    },
+    {
+      "path": "/horos/sources/bekker-p25.jpg",
+      "mode": "slow",
+      "at": 1793655217086,
+      "bytes": 974737,
+      "sent": 266240,
+      "closedAt": 1793655229712,
+      "lastByteAt": 1793655229585,
+      "maxGapMs": 198
+    },
+    {
+      "path": "/horos/sources/bekker-p26.jpg",
+      "mode": "slow",
+      "at": 1793655218756,
+      "bytes": 935958,
+      "sent": 233472,
+      "closedAt": 1793655229712,
+      "lastByteAt": 1793655229682,
+      "maxGapMs": 199
+    },
+    {
+      "path": "/horos/sources/bekker-p28.jpg",
+      "mode": "slow",
+      "at": 1793655227755,
+      "bytes": 999080,
+      "sent": 40960,
+      "closedAt": 1793655229713,
+      "lastByteAt": 1793655229618,
+      "maxGapMs": 195
+    },
+    {
+      "path": "/horos/assets/conditionals-DFlinm-K.css",
+      "mode": "slow",
+      "at": 1793655228752,
+      "bytes": 9718,
+      "sent": 9718,
+      "closedAt": 1793655229329,
+      "lastByteAt": 1793655229329,
+      "maxGapMs": 193
+    },
+    {
+      "path": "/horos/assets/index-C8sWZH3y.js",
+      "mode": "slow",
+      "at": 1793655229334,
+      "bytes": 50356,
+      "sent": 12288,
+      "closedAt": null,
+      "lastByteAt": 1793655229715,
+      "maxGapMs": 161
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-02T22:20:24.965Z",
+  "engine": "chromium",
+  "version": "153.0.8010.12",
+  "elapsedMs": 180433,
+  "continuousTrickle": true,
+  "partialSourceRefused": true,
+  "notePreserved": true,
+  "retrySucceeded": true,
+  "request": {
+    "path": "/horos/sources/bekker-p28.jpg",
+    "mode": "drip",
+    "at": 1793657844511,
+    "bytes": 999080,
+    "sent": 4275,
+    "closedAt": 1793658024504,
+    "lastByteAt": 1793658023559,
+    "maxGapMs": 1008
+  }
+}

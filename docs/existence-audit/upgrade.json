@@ -1,0 +1,79 @@
+{
+  "date": "2026-11-02T22:23:07.304Z",
+  "before": "b0fde77e0644f97f96d2",
+  "after": "f69295e424511b7f8a0c",
+  "results": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "sixVerifiedSourcesCarriedForward": [
+        {
+          "path": "sources/bekker-p24.jpg",
+          "sha256": "acb61feb74c9a7e5c532708ee1826fc6054d82e294aeef539a4a315fbe6f109a"
+        },
+        {
+          "path": "sources/bekker-p25.jpg",
+          "sha256": "7ee0106dc32eb37e32477d9e62f433b2ca14a64118a9fe3bfe1fffbf91f25d2d"
+        },
+        {
+          "path": "sources/bekker-p26.jpg",
+          "sha256": "13ce538bb4c850041e77f3672fe7228587a90cfbc1497c49190bd28f9e4d6048"
+        },
+        {
+          "path": "sources/bekker-p28.jpg",
+          "sha256": "a93760f9e0f3bc05114cc6e50e2e6dbd6b04d325baba2241cf0f2bd6801f4c9b"
+        },
+        {
+          "path": "sources/conditionals/mutschmann-p92.jpg",
+          "sha256": "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed"
+        },
+        {
+          "path": "sources/conditionals/mutschmann-p93.jpg",
+          "sha256": "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1"
+        }
+      ],
+      "networkClosedBeforeOldTabsClosed": true,
+      "offlineActivationSucceeded": true,
+      "oldNotebookReopened": true,
+      "bothRoomsAvailable": true,
+      "oldCachePrunedAfterCompleteVerification": true,
+      "oldNotebookSha256": "6d440c266e1f015b6d7718ebe5eb47084cb0119a03dbe8f36ef5f75b4a64f6e6"
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "sixVerifiedSourcesCarriedForward": [
+        {
+          "path": "sources/bekker-p24.jpg",
+          "sha256": "acb61feb74c9a7e5c532708ee1826fc6054d82e294aeef539a4a315fbe6f109a"
+        },
+        {
+          "path": "sources/bekker-p25.jpg",
+          "sha256": "7ee0106dc32eb37e32477d9e62f433b2ca14a64118a9fe3bfe1fffbf91f25d2d"
+        },
+        {
+          "path": "sources/bekker-p26.jpg",
+          "sha256": "13ce538bb4c850041e77f3672fe7228587a90cfbc1497c49190bd28f9e4d6048"
+        },
+        {
+          "path": "sources/bekker-p28.jpg",
+          "sha256": "a93760f9e0f3bc05114cc6e50e2e6dbd6b04d325baba2241cf0f2bd6801f4c9b"
+        },
+        {
+          "path": "sources/conditionals/mutschmann-p92.jpg",
+          "sha256": "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed"
+        },
+        {
+          "path": "sources/conditionals/mutschmann-p93.jpg",
+          "sha256": "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1"
+        }
+      ],
+      "networkClosedBeforeOldTabsClosed": true,
+      "offlineActivationSucceeded": true,
+      "oldNotebookReopened": true,
+      "bothRoomsAvailable": true,
+      "oldCachePrunedAfterCompleteVerification": true,
+      "oldNotebookSha256": "6d440c266e1f015b6d7718ebe5eb47084cb0119a03dbe8f36ef5f75b4a64f6e6"
+    }
+  ]
+}

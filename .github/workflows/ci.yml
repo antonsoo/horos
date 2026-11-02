@@ -23,3 +23,5 @@ jobs:
       - run: npm run test:conditionals
       - run: npm run test:portable
       - run: npm run test:notebook-links
+      - run: npm run test:readiness
+      - run: npm run test:cold-transfer

@@ -2,6 +2,18 @@
 
 ## Unreleased - 2026-11-02
 
+- Keep full requirement answers behind an explicit disclosure.
+- Open same-tab conditional notebook links with reversible history; reject stale
+  imports after a newer shared record.
+- Separate body inactivity from total transfer time, verify streamed bytes before
+  reading or saving, and cancel oversized, truncated and substituted responses.
+- Install a short offline bootstrap, retain large files in the page, and carry
+  forward only digest-verified files. Keep readiness honest after failed repairs.
+- Exercise cold shared-bandwidth loads, real stalled bodies, an active 180-second
+  trickle, native exports and offline activation of an updated edition.
+- Refresh the conditional example with current notices (22 tagged PDF pages);
+  earlier MIT examples remain available in their original commit history.
+
 - Compare all eight inhabitant requirements within every class investigation;
   identify every weakest sufficient option and a smallest refutation for each
   failing setting. Keep satisfiability separate from absence of counterexamples.

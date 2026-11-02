@@ -70,7 +70,7 @@ Pin and compare experiments, undo changes, write an explanation, and keep an
 [editable notebook](examples/conditionals/notebook.json),
 [case diagram](examples/conditionals/cases.svg),
 [complete illustrated reading](examples/conditionals/reading.html.gz), or
-[20-page tagged browser PDF](examples/conditionals/reading.pdf). The HTML embeds both
+[22-page tagged browser PDF](examples/conditionals/reading.pdf). The HTML embeds both
 source pages, all readings, fonts, licenses and native downloads. Decompress
 before opening it:
 
@@ -145,7 +145,8 @@ as a successful repair.
 The illustrated notebook includes the full comparison for both snapshots,
 with witness inventories. [Reopen an actual existence notebook](examples/existence.json)
 using **Reopen an editable notebook**, or follow the [source and browser review](docs/existence-review.md).
-The extension is locally verified; its publication boundary is recorded there.
+The [independent follow-up audit](docs/existence-audit.md) records cold-transfer repairs,
+source reinspection, offline upgrades and the publication boundary.
 
 ## Read the argument, not just the answer
 
@@ -235,8 +236,13 @@ translations, and notes. `src/asset-manifest.json` pins the retained bytes.
 
 The production build generates an edition-specific worker from the complete
 output inventory. Offline readiness requires a controlling worker, the matching
-edition ID, and byte-verified cached files. The development server does not
-install a worker. Saving the standalone notebook is a separate offline path.
+edition ID, and byte-verified cached files. The worker installs the small bootstrap first. The open page retains large
+images and fonts, so a short worker-event lifetime cannot interrupt an active
+source download. Verified files from an older edition can be reused only when
+their current hashes agree. Transfers allow 60 seconds for headers, 15 seconds
+without body progress and 180 seconds total per file. A partial cache never
+qualifies as ready. The development server does not install a worker. Saving
+the standalone notebook is a separate offline path.
 
 The [offline-readiness audit](docs/readiness-audit.md) reproduces and repairs
 stale availability claims after source loss, including another open page.
@@ -245,7 +251,7 @@ Both failure and verified recovery update every controlled page. Run
 
 ## Verification
 
-`npm run check` runs formatting/lint checks, strict TypeScript, **18 tests**,
+`npm run check` runs formatting/lint checks, strict TypeScript, **25 tests**,
 retained-source verification, and a production build. The main independent
 oracle turns universal propositions into forbidden regions and existential
 propositions into occupancy obligations, then counts worlds by
@@ -269,8 +275,8 @@ reads actual displayed source bytes, reopens native downloads, checks keyboard
 controls and accessibility, and reloads with the origin refusing connections.
 It also injects late and corrupt source responses, changes the live notebook
 during export, and cancels preparation. [The review](docs/review.md) records
-the observed results and any verification limits. A fresh Node 24.22.1 install
-reproduced all 17 browser-reviewed build files byte for byte.
+the observed results and any verification limits. A fresh Node 24.22.1 install reproduced all **25** current build files byte for
+byte; [the inventory](docs/existence-audit/clean-build.json) pins their identities.
 
 ## Accuracy and limitations
 
@@ -288,8 +294,8 @@ proposed conclusion does not imply that no other conclusion follows.
 
 Code checks, reproduced browser behavior, source interpretation, clean-build
 reproducibility, and publication are separate claims. No independent scholarly
-review is claimed. CI and Pages workflows are prepared; no remote execution or
-deployment is claimed for this local edition.
+review is claimed. The [current audit](docs/existence-audit.md) records publication and browser
+evidence separately from remote workflow execution.
 
 ## Sources
 

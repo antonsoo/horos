@@ -1,0 +1,656 @@
+{
+  "date": "2026-11-02T22:24:20.495Z",
+  "bytesPerSecond": 128000,
+  "journeys": [
+    {
+      "engine": "chromium",
+      "edition": "f69295e424511b7f8a0c",
+      "version": "153.0.8010.12",
+      "room": "classes",
+      "exportedAtMs": 41606,
+      "allReadyAtMs": 53460,
+      "sourceSha256": "13ce538bb4c850041e77f3672fe7228587a90cfbc1497c49190bd28f9e4d6048",
+      "notebookSha256": "187c3e3bbd6c4e5ae1456103f6f216b723fd7f0defea766e1f9b776bfaf39dcd",
+      "continuousBodiesOverTwentySeconds": 4,
+      "offlineExportIdentical": true,
+      "notePreserved": true,
+      "requests": [
+        {
+          "path": "/horos/",
+          "mode": "slow",
+          "at": 1793658260747,
+          "bytes": 14854,
+          "sent": 14854,
+          "closedAt": 1793658260956,
+          "lastByteAt": 1793658260955,
+          "maxGapMs": 132
+        },
+        {
+          "path": "/horos/assets/index-D0iTZpS4.css",
+          "mode": "slow",
+          "at": 1793658260793,
+          "bytes": 12519,
+          "sent": 12519,
+          "closedAt": 1793658261182,
+          "lastByteAt": 1793658261181,
+          "maxGapMs": 132
+        },
+        {
+          "path": "/horos/assets/index-DMXMU-To.js",
+          "mode": "slow",
+          "at": 1793658260794,
+          "bytes": 50623,
+          "sent": 50623,
+          "closedAt": 1793658261541,
+          "lastByteAt": 1793658261540,
+          "maxGapMs": 130
+        },
+        {
+          "path": "/horos/assets/offline-lP_CRzm6.js",
+          "mode": "slow",
+          "at": 1793658260794,
+          "bytes": 15575,
+          "sent": 15575,
+          "closedAt": 1793658261248,
+          "lastByteAt": 1793658261247,
+          "maxGapMs": 129
+        },
+        {
+          "path": "/horos/fonts/sourcesans3.woff2",
+          "mode": "slow",
+          "at": 1793658261685,
+          "bytes": 170188,
+          "sent": 170188,
+          "closedAt": 1793658268999,
+          "lastByteAt": 1793658268999,
+          "maxGapMs": 204
+        },
+        {
+          "path": "/horos/fonts/literata.woff2",
+          "mode": "slow",
+          "at": 1793658261685,
+          "bytes": 396664,
+          "sent": 396664,
+          "closedAt": 1793658279640,
+          "lastByteAt": 1793658279639,
+          "maxGapMs": 195
+        },
+        {
+          "path": "/horos/sw.js",
+          "mode": "slow",
+          "at": 1793658261693,
+          "bytes": 14012,
+          "sent": 14012,
+          "closedAt": 1793658262168,
+          "lastByteAt": 1793658262167,
+          "maxGapMs": 140
+        },
+        {
+          "path": "/horos/sources/bekker-p26.jpg",
+          "mode": "slow",
+          "at": 1793658261693,
+          "bytes": 935958,
+          "sent": 935958,
+          "closedAt": 1793658298239,
+          "lastByteAt": 1793658298239,
+          "maxGapMs": 203
+        },
+        {
+          "path": "/horos/assets/conditionals-CTsE3aXz.js",
+          "mode": "slow",
+          "at": 1793658262219,
+          "bytes": 43173,
+          "sent": 43173,
+          "closedAt": 1793658263952,
+          "lastByteAt": 1793658263952,
+          "maxGapMs": 202
+        },
+        {
+          "path": "/horos/LICENSE.txt",
+          "mode": "slow",
+          "at": 1793658262922,
+          "bytes": 4651,
+          "sent": 4651,
+          "closedAt": 1793658263273,
+          "lastByteAt": 1793658263273,
+          "maxGapMs": 193
+        },
+        {
+          "path": "/horos/fonts/literata-OFL.txt",
+          "mode": "slow",
+          "at": 1793658262923,
+          "bytes": 4389,
+          "sent": 4389,
+          "closedAt": 1793658263306,
+          "lastByteAt": 1793658263305,
+          "maxGapMs": 193
+        },
+        {
+          "path": "/horos/fonts/literata.woff2",
+          "mode": "slow",
+          "at": 1793658263274,
+          "bytes": 396664,
+          "sent": 396664,
+          "closedAt": 1793658281983,
+          "lastByteAt": 1793658281983,
+          "maxGapMs": 195
+        },
+        {
+          "path": "/horos/fonts/provenance.json",
+          "mode": "slow",
+          "at": 1793658263308,
+          "bytes": 637,
+          "sent": 637,
+          "closedAt": 1793658263501,
+          "lastByteAt": 1793658263500,
+          "maxGapMs": 0
+        },
+        {
+          "path": "/horos/fonts/sourcesans3-OFL.txt",
+          "mode": "slow",
+          "at": 1793658263503,
+          "bytes": 4579,
+          "sent": 4579,
+          "closedAt": 1793658263888,
+          "lastByteAt": 1793658263886,
+          "maxGapMs": 194
+        },
+        {
+          "path": "/horos/fonts/sourcesans3.woff2",
+          "mode": "slow",
+          "at": 1793658263889,
+          "bytes": 170188,
+          "sent": 170188,
+          "closedAt": 1793658271990,
+          "lastByteAt": 1793658271990,
+          "maxGapMs": 196
+        },
+        {
+          "path": "/horos/sources/NOTICE.txt",
+          "mode": "slow",
+          "at": 1793658263953,
+          "bytes": 1747,
+          "sent": 1747,
+          "closedAt": 1793658264145,
+          "lastByteAt": 1793658264145,
+          "maxGapMs": 0
+        },
+        {
+          "path": "/horos/sources/bekker-p24.jpg",
+          "mode": "slow",
+          "at": 1793658264146,
+          "bytes": 863245,
+          "sent": 863245,
+          "closedAt": 1793658298047,
+          "lastByteAt": 1793658298047,
+          "maxGapMs": 196
+        },
+        {
+          "path": "/horos/sources/bekker-p25.jpg",
+          "mode": "slow",
+          "at": 1793658269000,
+          "bytes": 974737,
+          "sent": 974737,
+          "closedAt": 1793658301483,
+          "lastByteAt": 1793658301483,
+          "maxGapMs": 195
+        },
+        {
+          "path": "/horos/sources/bekker-p28.jpg",
+          "mode": "slow",
+          "at": 1793658271994,
+          "bytes": 999080,
+          "sent": 999080,
+          "closedAt": 1793658302202,
+          "lastByteAt": 1793658302202,
+          "maxGapMs": 195
+        },
+        {
+          "path": "/horos/assets/conditionals-DFlinm-K.css",
+          "mode": "slow",
+          "at": 1793658279641,
+          "bytes": 9718,
+          "sent": 9718,
+          "closedAt": 1793658280215,
+          "lastByteAt": 1793658280215,
+          "maxGapMs": 192
+        },
+        {
+          "path": "/horos/assets/index-D0iTZpS4.css",
+          "mode": "slow",
+          "at": 1793658280220,
+          "bytes": 12519,
+          "sent": 12519,
+          "closedAt": 1793658280988,
+          "lastByteAt": 1793658280988,
+          "maxGapMs": 194
+        },
+        {
+          "path": "/horos/assets/index-DMXMU-To.js",
+          "mode": "slow",
+          "at": 1793658280992,
+          "bytes": 50623,
+          "sent": 50623,
+          "closedAt": 1793658283268,
+          "lastByteAt": 1793658283268,
+          "maxGapMs": 194
+        },
+        {
+          "path": "/horos/assets/offline-lP_CRzm6.js",
+          "mode": "slow",
+          "at": 1793658283273,
+          "bytes": 15575,
+          "sent": 15575,
+          "closedAt": 1793658283909,
+          "lastByteAt": 1793658283909,
+          "maxGapMs": 161
+        },
+        {
+          "path": "/horos/conditionals.html",
+          "mode": "slow",
+          "at": 1793658283913,
+          "bytes": 13528,
+          "sent": 13528,
+          "closedAt": 1793658284558,
+          "lastByteAt": 1793658284558,
+          "maxGapMs": 163
+        },
+        {
+          "path": "/horos/favicon.svg",
+          "mode": "slow",
+          "at": 1793658284576,
+          "bytes": 399,
+          "sent": 399,
+          "closedAt": 1793658284719,
+          "lastByteAt": 1793658284718,
+          "maxGapMs": 0
+        },
+        {
+          "path": "/horos/index.html",
+          "mode": "slow",
+          "at": 1793658284738,
+          "bytes": 14854,
+          "sent": 14854,
+          "closedAt": 1793658285364,
+          "lastByteAt": 1793658285364,
+          "maxGapMs": 162
+        },
+        {
+          "path": "/horos/sources/conditionals/manifest.json",
+          "mode": "slow",
+          "at": 1793658285371,
+          "bytes": 2024,
+          "sent": 2024,
+          "closedAt": 1793658285525,
+          "lastByteAt": 1793658285524,
+          "maxGapMs": 0
+        },
+        {
+          "path": "/horos/sources/conditionals/NOTICE.txt",
+          "mode": "slow",
+          "at": 1793658285529,
+          "bytes": 2508,
+          "sent": 2508,
+          "closedAt": 1793658285685,
+          "lastByteAt": 1793658285685,
+          "maxGapMs": 0
+        },
+        {
+          "path": "/horos/sources/manifest.json",
+          "mode": "slow",
+          "at": 1793658285692,
+          "bytes": 2665,
+          "sent": 2665,
+          "closedAt": 1793658285846,
+          "lastByteAt": 1793658285846,
+          "maxGapMs": 0
+        },
+        {
+          "path": "/horos/sources/conditionals/mutschmann-p92.jpg",
+          "mode": "slow",
+          "at": 1793658302321,
+          "bytes": 695470,
+          "sent": 695470,
+          "closedAt": 1793658307768,
+          "lastByteAt": 1793658307768,
+          "maxGapMs": 34
+        },
+        {
+          "path": "/horos/sources/conditionals/mutschmann-p93.jpg",
+          "mode": "slow",
+          "at": 1793658307788,
+          "bytes": 749017,
+          "sent": 749017,
+          "closedAt": 1793658313660,
+          "lastByteAt": 1793658313660,
+          "maxGapMs": 36
+        }
+      ]
+    },
+    {
+      "engine": "chromium",
+      "edition": "f69295e424511b7f8a0c",
+      "version": "153.0.8010.12",
+      "room": "conditionals",
+      "exportedAtMs": 25756,
+      "allReadyAtMs": 52630,
+      "sourceSha256": "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed",
+      "notebookSha256": "a69938471d7aef463c5bdbe61c46874fd7f31bd012ddcd2b6514f3487807fd6e",
+      "continuousBodiesOverTwentySeconds": 2,
+      "offlineExportIdentical": true,
+      "notePreserved": true,
+      "requests": [
+        {
+          "path": "/horos/conditionals.html",
+          "mode": "slow",
+          "at": 1793658315025,
+          "bytes": 13528,
+          "sent": 13528,
+          "closedAt": 1793658315319,
+          "lastByteAt": 1793658315318,
+          "maxGapMs": 129
+        },
+        {
+          "path": "/horos/assets/conditionals-DFlinm-K.css",
+          "mode": "slow",
+          "at": 1793658315038,
+          "bytes": 9718,
+          "sent": 9718,
+          "closedAt": 1793658315351,
+          "lastByteAt": 1793658315351,
+          "maxGapMs": 130
+        },
+        {
+          "path": "/horos/assets/conditionals-CTsE3aXz.js",
+          "mode": "slow",
+          "at": 1793658315038,
+          "bytes": 43173,
+          "sent": 43173,
+          "closedAt": 1793658316155,
+          "lastByteAt": 1793658316154,
+          "maxGapMs": 129
+        },
+        {
+          "path": "/horos/assets/offline-lP_CRzm6.js",
+          "mode": "slow",
+          "at": 1793658315039,
+          "bytes": 15575,
+          "sent": 15575,
+          "closedAt": 1793658315543,
+          "lastByteAt": 1793658315543,
+          "maxGapMs": 129
+        },
+        {
+          "path": "/horos/fonts/literata.woff2",
+          "mode": "slow",
+          "at": 1793658315402,
+          "bytes": 396664,
+          "sent": 396664,
+          "closedAt": 1793658331682,
+          "lastByteAt": 1793658331682,
+          "maxGapMs": 197
+        },
+        {
+          "path": "/horos/fonts/sourcesans3.woff2",
+          "mode": "slow",
+          "at": 1793658315402,
+          "bytes": 170188,
+          "sent": 170188,
+          "closedAt": 1793658322723,
+          "lastByteAt": 1793658322723,
+          "maxGapMs": 197
+        },
+        {
+          "path": "/horos/sw.js",
+          "mode": "slow",
+          "at": 1793658316171,
+          "bytes": 14012,
+          "sent": 14012,
+          "closedAt": 1793658316764,
+          "lastByteAt": 1793658316764,
+          "maxGapMs": 192
+        },
+        {
+          "path": "/horos/sources/conditionals/mutschmann-p92.jpg",
+          "mode": "slow",
+          "at": 1793658316197,
+          "bytes": 695470,
+          "sent": 695470,
+          "closedAt": 1793658339525,
+          "lastByteAt": 1793658339524,
+          "maxGapMs": 197
+        },
+        {
+          "path": "/horos/LICENSE.txt",
+          "mode": "slow",
+          "at": 1793658316253,
+          "bytes": 4651,
+          "sent": 4651,
+          "closedAt": 1793658316605,
+          "lastByteAt": 1793658316604,
+          "maxGapMs": 192
+        },
+        {
+          "path": "/horos/fonts/literata-OFL.txt",
+          "mode": "slow",
+          "at": 1793658316253,
+          "bytes": 4389,
+          "sent": 4389,
+          "closedAt": 1793658316637,
+          "lastByteAt": 1793658316636,
+          "maxGapMs": 192
+        },
+        {
+          "path": "/horos/fonts/literata.woff2",
+          "mode": "slow",
+          "at": 1793658316606,
+          "bytes": 396664,
+          "sent": 396664,
+          "closedAt": 1793658332742,
+          "lastByteAt": 1793658332742,
+          "maxGapMs": 197
+        },
+        {
+          "path": "/horos/fonts/provenance.json",
+          "mode": "slow",
+          "at": 1793658316638,
+          "bytes": 637,
+          "sent": 637,
+          "closedAt": 1793658316833,
+          "lastByteAt": 1793658316833,
+          "maxGapMs": 0
+        },
+        {
+          "path": "/horos/fonts/sourcesans3-OFL.txt",
+          "mode": "slow",
+          "at": 1793658316765,
+          "bytes": 4579,
+          "sent": 4579,
+          "closedAt": 1793658317155,
+          "lastByteAt": 1793658317155,
+          "maxGapMs": 193
+        },
+        {
+          "path": "/horos/fonts/sourcesans3.woff2",
+          "mode": "slow",
+          "at": 1793658316835,
+          "bytes": 170188,
+          "sent": 170188,
+          "closedAt": 1793658324941,
+          "lastByteAt": 1793658324941,
+          "maxGapMs": 198
+        },
+        {
+          "path": "/horos/sources/conditionals/mutschmann-p93.jpg",
+          "mode": "slow",
+          "at": 1793658317156,
+          "bytes": 749017,
+          "sent": 749017,
+          "closedAt": 1793658340711,
+          "lastByteAt": 1793658340711,
+          "maxGapMs": 197
+        },
+        {
+          "path": "/horos/sources/conditionals/NOTICE.txt",
+          "mode": "slow",
+          "at": 1793658322724,
+          "bytes": 2508,
+          "sent": 2508,
+          "closedAt": 1793658322915,
+          "lastByteAt": 1793658322915,
+          "maxGapMs": 0
+        },
+        {
+          "path": "/horos/assets/conditionals-CTsE3aXz.js",
+          "mode": "slow",
+          "at": 1793658322917,
+          "bytes": 43173,
+          "sent": 43173,
+          "closedAt": 1793658325038,
+          "lastByteAt": 1793658325038,
+          "maxGapMs": 194
+        },
+        {
+          "path": "/horos/assets/conditionals-DFlinm-K.css",
+          "mode": "slow",
+          "at": 1793658325043,
+          "bytes": 9718,
+          "sent": 9718,
+          "closedAt": 1793658325522,
+          "lastByteAt": 1793658325522,
+          "maxGapMs": 162
+        },
+        {
+          "path": "/horos/assets/index-D0iTZpS4.css",
+          "mode": "slow",
+          "at": 1793658325526,
+          "bytes": 12519,
+          "sent": 12519,
+          "closedAt": 1793658326164,
+          "lastByteAt": 1793658326164,
+          "maxGapMs": 161
+        },
+        {
+          "path": "/horos/assets/index-DMXMU-To.js",
+          "mode": "slow",
+          "at": 1793658326168,
+          "bytes": 50623,
+          "sent": 50623,
+          "closedAt": 1793658328248,
+          "lastByteAt": 1793658328248,
+          "maxGapMs": 161
+        },
+        {
+          "path": "/horos/assets/offline-lP_CRzm6.js",
+          "mode": "slow",
+          "at": 1793658328253,
+          "bytes": 15575,
+          "sent": 15575,
+          "closedAt": 1793658328891,
+          "lastByteAt": 1793658328891,
+          "maxGapMs": 161
+        },
+        {
+          "path": "/horos/conditionals.html",
+          "mode": "slow",
+          "at": 1793658328895,
+          "bytes": 13528,
+          "sent": 13528,
+          "closedAt": 1793658329535,
+          "lastByteAt": 1793658329535,
+          "maxGapMs": 162
+        },
+        {
+          "path": "/horos/favicon.svg",
+          "mode": "slow",
+          "at": 1793658329538,
+          "bytes": 399,
+          "sent": 399,
+          "closedAt": 1793658329695,
+          "lastByteAt": 1793658329695,
+          "maxGapMs": 0
+        },
+        {
+          "path": "/horos/index.html",
+          "mode": "slow",
+          "at": 1793658329701,
+          "bytes": 14854,
+          "sent": 14854,
+          "closedAt": 1793658330336,
+          "lastByteAt": 1793658330336,
+          "maxGapMs": 161
+        },
+        {
+          "path": "/horos/sources/conditionals/manifest.json",
+          "mode": "slow",
+          "at": 1793658330341,
+          "bytes": 2024,
+          "sent": 2024,
+          "closedAt": 1793658330496,
+          "lastByteAt": 1793658330496,
+          "maxGapMs": 0
+        },
+        {
+          "path": "/horos/sources/manifest.json",
+          "mode": "slow",
+          "at": 1793658330501,
+          "bytes": 2665,
+          "sent": 2665,
+          "closedAt": 1793658330657,
+          "lastByteAt": 1793658330657,
+          "maxGapMs": 0
+        },
+        {
+          "path": "/horos/sources/NOTICE.txt",
+          "mode": "slow",
+          "at": 1793658330661,
+          "bytes": 1747,
+          "sent": 1747,
+          "closedAt": 1793658330817,
+          "lastByteAt": 1793658330817,
+          "maxGapMs": 0
+        },
+        {
+          "path": "/horos/sources/bekker-p24.jpg",
+          "mode": "slow",
+          "at": 1793658332774,
+          "bytes": 863245,
+          "sent": 863245,
+          "closedAt": 1793658344657,
+          "lastByteAt": 1793658344657,
+          "maxGapMs": 99
+        },
+        {
+          "path": "/horos/sources/bekker-p25.jpg",
+          "mode": "slow",
+          "at": 1793658344668,
+          "bytes": 974737,
+          "sent": 974737,
+          "closedAt": 1793658352307,
+          "lastByteAt": 1793658352307,
+          "maxGapMs": 33
+        },
+        {
+          "path": "/horos/sources/bekker-p26.jpg",
+          "mode": "slow",
+          "at": 1793658352320,
+          "bytes": 935958,
+          "sent": 935958,
+          "closedAt": 1793658359665,
+          "lastByteAt": 1793658359665,
+          "maxGapMs": 37
+        },
+        {
+          "path": "/horos/sources/bekker-p28.jpg",
+          "mode": "slow",
+          "at": 1793658359676,
+          "bytes": 999080,
+          "sent": 999080,
+          "closedAt": 1793658367496,
+          "lastByteAt": 1793658367496,
+          "maxGapMs": 33
+        }
+      ]
+    }
+  ]
+}

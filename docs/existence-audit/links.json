@@ -1,0 +1,54 @@
+{
+  "date": "2026-11-02T22:24:56.081Z",
+  "origin": "local production build",
+  "journeys": [
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "room": "classes",
+      "sameTabLink": true,
+      "nativeJsonDownloads": 2,
+      "undoRedo": true,
+      "invalidLinkPreservesEdits": true,
+      "ordinaryFragmentPreservesEdits": true,
+      "browserHistory": true,
+      "olderImportCannotReplaceSharedRecord": true
+    },
+    {
+      "engine": "chromium",
+      "version": "153.0.8010.12",
+      "room": "conditionals",
+      "sameTabLink": true,
+      "nativeJsonDownloads": 2,
+      "undoRedo": true,
+      "invalidLinkPreservesEdits": true,
+      "ordinaryFragmentPreservesEdits": true,
+      "browserHistory": true,
+      "olderImportCannotReplaceSharedRecord": true
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "room": "classes",
+      "sameTabLink": true,
+      "nativeJsonDownloads": 2,
+      "undoRedo": true,
+      "invalidLinkPreservesEdits": true,
+      "ordinaryFragmentPreservesEdits": true,
+      "browserHistory": true,
+      "olderImportCannotReplaceSharedRecord": true
+    },
+    {
+      "engine": "firefox",
+      "version": "155.0",
+      "room": "conditionals",
+      "sameTabLink": true,
+      "nativeJsonDownloads": 2,
+      "undoRedo": true,
+      "invalidLinkPreservesEdits": true,
+      "ordinaryFragmentPreservesEdits": true,
+      "browserHistory": true,
+      "olderImportCannotReplaceSharedRecord": true
+    }
+  ]
+}
