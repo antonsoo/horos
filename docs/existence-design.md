@@ -41,3 +41,20 @@ named classes. Satisfiability is checked before calling a setting sufficient;
 inconsistent settings cannot count as a successful repair. Unchecked does not
 mean empty. Counts describe occupancy patterns, never probabilities or people.
 The feature makes no new claim about Aristotle's treatment of existential import.
+
+## Audit: keep the answer behind a deliberate action
+
+The initial comparison made its complete table and weakest requirements visible
+while scrolling from the workbench to the pinned worlds. This undermines the
+existing invitation to try a counterexample before asking for the complete
+answer. Keep the same palette and type; use the existing native disclosure
+rather than another panel or navigation system.
+
+    workbench and learner route
+    Which inhabitant does the work?
+    > Compare all eight inhabitant requirements
+    pinned and current worlds
+
+An explicit board link or a direct `#existence-map` URL opens the disclosure.
+Ordinary visits and shared notebooks leave it closed. Opening and closing it
+changes no notebook facts, and later edits preserve the learner's choice.

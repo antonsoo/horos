@@ -674,6 +674,15 @@ function readHash(): void {
     fileStatus(errorText(error));
   }
 }
+function openExistenceMap(): void {
+  el<HTMLDetailsElement>("existence-disclosure").open = true;
+}
+for (const link of document.querySelectorAll<HTMLAnchorElement>('a[href="#existence-map"]'))
+  link.addEventListener("click", openExistenceMap);
+window.addEventListener("hashchange", () => {
+  if (location.hash === "#existence-map") openExistenceMap();
+});
+if (location.hash === "#existence-map") openExistenceMap();
 window.addEventListener("hashchange", readHash);
 render();
 showReading(selectedReading);

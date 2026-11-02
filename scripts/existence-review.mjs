@@ -58,6 +58,10 @@ try {
         page.on("pageerror", (e) => errors.push(e.message));
         await page.goto(`${server.base}?investigation=conversion`);
         await text(page, "#offline-status", "This edition is available offline");
+        assert.equal(await page.locator("#existence-summary").isVisible(), false);
+        await page.locator("#existence-disclosure > summary").focus();
+        await page.keyboard.press("Enter");
+        assert.equal(await page.locator("#existence-disclosure").getAttribute("open"), "");
         await page.selectOption("#conclusion", "some");
         await text(page, "#existence-summary", "Weakest sufficient requirements: B.");
         assert.equal(await page.locator("#existence-table tbody tr").count(), 8);
@@ -176,8 +180,10 @@ try {
           .setInputFiles({ name: "notebook.json", mimeType: "application/json", buffer: json });
         await text(page, "#file-status", "Notebook reopened");
         await status(page, "existence");
+        await page.locator('.existence a[href="#existence-map"]').click();
         await text(page, "#existence-summary", "Weakest sufficient requirements: C.");
         assert.equal(hash(await download(page, "#save-html")), hash(html));
+        await page.locator('.existence a[href="#existence-map"]').click();
         await page.locator('[data-require-mask="0"]').click();
         await status(page, "counterexample");
         await page.locator('[data-require-mask="4"]').click();
