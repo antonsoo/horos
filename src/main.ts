@@ -1,6 +1,7 @@
 import "./style.css";
 import { asset, verifiedBytes } from "./assets";
 import { counterexampleTrace } from "./core/constraints";
+import { type ExistenceMap, existenceMap, requirementLabel } from "./core/existence";
 import { NotebookHistory } from "./core/history";
 import {
   assess,
@@ -17,6 +18,7 @@ import {
 } from "./core/model";
 import { blank, decode, encode, initial, type Notebook, parse } from "./core/record";
 import { circles, diagram, htmlEscape, positions } from "./drawing";
+import { existenceQuestion, existenceSummary, existenceTable } from "./existence-view";
 import { notebookHtml, saveText } from "./export";
 import { argumentFor, LESSON_IDS, type LessonId, lesson, lessons } from "./lessons";
 import { installOffline } from "./offline";
@@ -82,6 +84,7 @@ el("text-policy").textContent = textPolicy;
 
 function render(): void {
   const s = notebook.current;
+  el("existence-status").textContent = "The highlighted row uses the board’s current requirements.";
   const l = lesson(s.lesson);
   const argument = argumentFor(s.lesson, s.kind);
   const judgment = assess(argument, s.world, s.existence);
@@ -175,6 +178,7 @@ function render(): void {
     ? "Hide the complete search"
     : "Inspect every possible pattern";
   if (inspected) renderSearch();
+  renderExistence();
   renderComparison();
   renderCitations();
   if (el<HTMLTextAreaElement>("note").value !== notebook.note)
@@ -215,6 +219,41 @@ function renderSearch(): void {
   if ([...select.options].some((o) => o.value === previous)) select.value = previous;
   select.disabled = !result.admissible.length;
   el<HTMLButtonElement>("load-witness").disabled = !result.admissible.length;
+}
+// Each of the sixteen fixed lesson/conclusion questions has one comparison.
+// Moving objects or changing requirements only changes its highlighted row.
+const existenceMaps = new Map<string, ExistenceMap>();
+function currentExistenceMap(): ExistenceMap {
+  const s = notebook.current;
+  const key = `${s.lesson}:${s.kind}`;
+  let map = existenceMaps.get(key);
+  if (!map) {
+    map = existenceMap(argumentFor(s.lesson, s.kind));
+    existenceMaps.set(key, map);
+  }
+  return map;
+}
+function renderExistence(): void {
+  const s = notebook.current;
+  const argument = argumentFor(s.lesson, s.kind);
+  const active = document.activeElement as HTMLElement | null;
+  const action = active?.dataset.requireMask !== undefined ? "requireMask" : "refuteMask";
+  const mask = active?.dataset[action];
+  el("existence-question").textContent = existenceQuestion(argument);
+  el("existence-summary").textContent = existenceSummary(currentExistenceMap());
+  el("existence-table").innerHTML = existenceTable(
+    argument,
+    currentExistenceMap(),
+    s.existence,
+    s.world,
+    true,
+  );
+  if (mask !== undefined) {
+    const attribute = action === "requireMask" ? "data-require-mask" : "data-refute-mask";
+    el("existence-table")
+      .querySelector<HTMLButtonElement>(`[${attribute}="${mask}"]`)
+      ?.focus({ preventScroll: true });
+  }
 }
 function renderComparison(): void {
   const p = notebook.pinned;
@@ -355,6 +394,29 @@ for (const [i, t] of ["a", "b", "c"].entries())
     notebook.current.existence ^= 1 << (i as Term);
     render();
   });
+el("existence-table").addEventListener("click", (event) => {
+  const button = (event.target as HTMLElement).closest<HTMLButtonElement>(
+    "[data-require-mask], [data-refute-mask]",
+  );
+  if (!button) return;
+  const refute = button.dataset.refuteMask !== undefined;
+  const mask = Number(refute ? button.dataset.refuteMask : button.dataset.requireMask);
+  const s = notebook.current;
+  const row = currentExistenceMap().rows.find((item) => item.mask === mask);
+  if (!row || (refute && row.smallest === null)) return;
+  if (s.existence !== mask || (refute && s.world !== row.smallest)) {
+    remember(refute ? "existence refutation" : "existence requirement comparison");
+    s.existence = mask;
+    if (refute && row.smallest !== null) s.world = row.smallest;
+  }
+  render();
+  const judgment = assess(argumentFor(s.lesson, s.kind), s.world, s.existence);
+  el("existence-status").textContent =
+    `${refute ? "Loaded a smallest refutation" : "Kept every board object"}. Required inhabitants: ${requirementLabel(mask)}. ${judgment.status === "counterexample" ? "The board is a counterexample." : judgment.missing.length ? `The board lacks a required inhabitant in ${judgment.missing.map((t) => TERMS[t]).join(", ")}; it is inadmissible.` : judgment.status === "empty" ? "The board is an empty draft, not a permitted universe." : judgment.status === "premise" ? "A board premise fails." : "The board is permitted and its conclusion is true."}`;
+});
+el("existence-reading").addEventListener("click", () => {
+  showReading(lesson(notebook.current.lesson).reading);
+});
 el("pin").addEventListener("click", () => {
   remember("pin world");
   notebook.pinned = { ...notebook.current };

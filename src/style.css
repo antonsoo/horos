@@ -874,3 +874,88 @@ footer strong {
     transition: background-color 0.12s ease-out;
   }
 }
+
+.existence-map {
+  padding: 2.4rem 0;
+  border-bottom: 1px solid var(--line);
+  scroll-margin-top: 1rem;
+}
+.existence-intro {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+}
+.existence-intro p {
+  max-width: 60ch;
+}
+.existence-question {
+  font-family: Literata, serif;
+  font-size: 1.12rem;
+  border-left: 3px solid var(--ink);
+  padding-left: 1rem;
+}
+.existence-guide {
+  padding: 0 1.2rem;
+  border-left: 1px solid var(--line);
+  font-size: 0.93rem;
+}
+.existence-guide h3 {
+  margin-top: 0;
+}
+.existence-status {
+  padding: 0.7rem 1rem;
+  background: var(--board);
+  font-size: 0.9rem;
+}
+.existence-table {
+  table-layout: fixed;
+}
+.existence-table th,
+.existence-table td {
+  padding: 0.75rem 1rem;
+}
+.existence-table tbody th {
+  font-weight: 400;
+}
+.existence-table .selected {
+  background: #e1e7d9;
+}
+.existence-table small {
+  display: block;
+  margin-top: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+.existence-table button[aria-pressed="true"] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--paper);
+}
+.existence-table button {
+  min-width: 5rem;
+}
+@media (max-width: 720px) {
+  .existence-intro {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  .existence-guide {
+    padding-left: 1rem;
+  }
+  .existence-table {
+    font-size: 0.83rem;
+  }
+  .existence-table th,
+  .existence-table td {
+    padding: 0.6rem 0.25rem;
+    overflow-wrap: anywhere;
+  }
+  .existence-table small {
+    font-size: 0.73rem;
+  }
+  .existence-table button {
+    min-width: 0;
+    max-width: 100%;
+    padding: 0.5rem;
+  }
+}
