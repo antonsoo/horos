@@ -147,7 +147,11 @@ Receipts: [new journeys](existence-review/journeys.json),
 [portable readings](existence-review/portable.json). These identify actual runs;
 they do not assert that a remote workflow or public deployment ran.
 
-## Publication boundary and limits
+## Initial publication boundary and limits
+
+This section records the initial local review. The later authorized push,
+public byte comparison and hosted browser journeys are in the
+[follow-up audit](existence-audit.md#publication-boundary).
 
 The extension is committed locally. No push, tag, deployment, repository creation
 or remote workflow was requested or performed. The public site and Officina entry

@@ -133,6 +133,36 @@ review are not claimed.
 
 ## Publication boundary
 
-The final candidate is locally verified. Public byte comparison, hosted browser
-journeys, remote source synchronization and CI execution will be recorded
-separately after publication. None follows merely from this local matrix.
+Source `9c2327e28a5ec1c1da2277f679bceec17146932b` was pushed after the local
+review. Its clean build was published by a normal fast-forward push to
+`gh-pages`, deployment `a32957b139adbec539ce24c59218b15ff1ee800c`.
+- [Canonical bytes before](existence-audit/public/bytes-before.json) and
+  [after](existence-audit/public/bytes-after.json): all 25 build files, plus the
+  root entry alias, match the clean-build identities.
+- Public Chromium/Firefox desktop/phone journeys:
+  [class investigations](existence-audit/public/classes.json),
+  [requirement comparison](existence-audit/public/existence.json),
+  [conditional room](existence-audit/public/conditionals.json),
+  [same-tab links](existence-audit/public/links.json), and
+  [320/375px standalone readings](existence-audit/public/portable.json).
+  Offline journeys close the real HTTPS CONNECT tunnel, including worker
+  connections. No hosted application response is substituted.
+- [Immutable public source, review and native examples](existence-audit/public/source.json)
+  agree byte for byte with 11 corresponding Git blobs.
+- GitHub's Pages deployment run `41538193187` completed successfully with actual
+  build/upload/deploy steps. The source CI run `41538190696` concluded failure
+  with `steps: []`; no remote CI success is claimed.
+
+One initial public class-room attempt received the explicit installation-failed
+status and stopped before its learner journey. Its underlying cause was not
+established. The same complete driver subsequently passed; the final run also
+requires the exact positive readiness sentence, so an incomplete-cache message
+cannot satisfy the check. A failure during installation still requires the
+shown reconnect/reload action. Local fault and cold-link receipts above address
+reproducible transfer failures separately.
+
+Suggested description: Build Aristotle's counterexamples, compare existence
+assumptions, and read Greek beside the printed evidence.
+
+Topics: `aristotle`, `ancient-greek`, `logic`, `education`, `visualization`,
+`offline-first`, `typescript`.

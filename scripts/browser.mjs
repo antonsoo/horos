@@ -84,6 +84,8 @@ const report = {
   faults: [],
 };
 async function contains(page, id, text) {
+  if (id === "offline-status" && text === "available offline")
+    text = "This edition is available offline, including every source page.";
   await page
     .waitForFunction(({ id, text }) => document.getElementById(id)?.textContent.includes(text), {
       id,

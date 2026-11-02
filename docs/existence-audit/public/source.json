@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-02T22:37:42.074870+00:00",
+  "commit": "9c2327e28a5ec1c1da2277f679bceec17146932b",
+  "files": [
+    {
+      "path": "src/core/existence.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/9c2327e28a5ec1c1da2277f679bceec17146932b/src/core/existence.ts",
+      "status": 200,
+      "bytes": 1130,
+      "sha256": "5e9a7e10934937c184ea6976e23c07fd39d547b1b48019e0711ec33797de2483"
+    },
+    {
+      "path": "src/existence-view.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/9c2327e28a5ec1c1da2277f679bceec17146932b/src/existence-view.ts",
+      "status": 200,
+      "bytes": 4584,
+      "sha256": "9c6082cc4cf9a959a8f8af3dfb9dd94a9c02e9180722c135404ac884955ac2b2"
+    },
+    {
+      "path": "src/conditional-main.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/9c2327e28a5ec1c1da2277f679bceec17146932b/src/conditional-main.ts",
+      "status": 200,
+      "bytes": 21164,
+      "sha256": "3b97d78b52e4cac219ea458b3b4abfd08e3d2da9e550e4b73f7aafe4933df8be"
+    },
+    {
+      "path": "src/verified-transfer.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/9c2327e28a5ec1c1da2277f679bceec17146932b/src/verified-transfer.ts",
+      "status": 200,
+      "bytes": 5254,
+      "sha256": "8bebdc99d435037fc17f5864be6f4eceba4869b9764730943e6678212bfa880f"
+    },
+    {
+      "path": "src/edition-files.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/9c2327e28a5ec1c1da2277f679bceec17146932b/src/edition-files.ts",
+      "status": 200,
+      "bytes": 3052,
+      "sha256": "061ecfe86786bd92ef03cb11963341a7ba12945f9fbf82bdab58430ef0eb830e"
+    },
+    {
+      "path": "src/offline.ts",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/9c2327e28a5ec1c1da2277f679bceec17146932b/src/offline.ts",
+      "status": 200,
+      "bytes": 7733,
+      "sha256": "ddbc16c5a2628fa3c81c101e2fa6a191b719e8c919583c29e3161df4246e2694"
+    },
+    {
+      "path": "scripts/offline.mjs",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/9c2327e28a5ec1c1da2277f679bceec17146932b/scripts/offline.mjs",
+      "status": 200,
+      "bytes": 7508,
+      "sha256": "d6ff6deb973de458984b18f04b77e6b6232337685f5d32527323abe20e08bfa2"
+    },
+    {
+      "path": "docs/existence-audit.md",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/9c2327e28a5ec1c1da2277f679bceec17146932b/docs/existence-audit.md",
+      "status": 200,
+      "bytes": 12003,
+      "sha256": "3c86b0e05894b32415c986ccd04128b8463ac73c9332c753af8fad7333c7ca3d"
+    },
+    {
+      "path": "examples/existence.json",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/9c2327e28a5ec1c1da2277f679bceec17146932b/examples/existence.json",
+      "status": 200,
+      "bytes": 496,
+      "sha256": "a8b3987f51ac012168b76f9904a0e65c85f5391df44e0f491fd42f5dc2b12300"
+    },
+    {
+      "path": "examples/conditionals/reading.html.gz",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/9c2327e28a5ec1c1da2277f679bceec17146932b/examples/conditionals/reading.html.gz",
+      "status": 200,
+      "bytes": 2029012,
+      "sha256": "9a3caf232f5cf9f7a757ddb5062b4916271cd3817f5b40abcbfaa6a6e4365a59"
+    },
+    {
+      "path": "examples/conditionals/reading.pdf",
+      "url": "https://raw.githubusercontent.com/antonsoo/horos/9c2327e28a5ec1c1da2277f679bceec17146932b/examples/conditionals/reading.pdf",
+      "status": 200,
+      "bytes": 2060971,
+      "sha256": "0476ecdac7fc2028a7c07bc01aab6f41a6c34da5e5abc23d723870f9379dd6f2"
+    }
+  ]
+}
