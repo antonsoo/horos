@@ -41,7 +41,11 @@
     "test:conditionals": "node scripts/conditional-review.mjs",
     "test:portable": "node scripts/portable-review.mjs",
     "verify:existence": "node --import tsx scripts/existence-cases.ts | python3 scripts/existence-oracle.py",
-    "test:existence": "node scripts/existence-review.mjs"
+    "test:existence": "node scripts/existence-review.mjs",
+    "test:cold-transfer": "node scripts/cold-transfer-review.mjs",
+    "test:transfer-faults": "node scripts/transfer-fault-review.mjs",
+    "test:transfer-deadline": "node scripts/transfer-deadline-review.mjs",
+    "test:notebook-links": "node scripts/notebook-links-review.mjs"
   },
   "devDependencies": {
     "@axe-core/playwright": "4.14.0",

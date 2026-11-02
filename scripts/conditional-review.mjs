@@ -331,7 +331,7 @@ try {
         { edition, badPath },
       );
       await page.locator("#reading").selectOption("philo");
-      await contains(page, "source-status", "HTTP 503");
+      await contains(page, "source-status", "Could not load");
       await contains(page, "offline-status", "not fully available offline");
       await contains(other, "offline-status", "not fully available offline");
       if (gate) await gate.start();

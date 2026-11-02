@@ -16,5 +16,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run check
+      - run: npm run verify:existence
       - run: npx playwright install --with-deps chromium firefox
       - run: npm run test:browser
+      - run: npm run test:existence
+      - run: npm run test:conditionals
+      - run: npm run test:portable
+      - run: npm run test:notebook-links
