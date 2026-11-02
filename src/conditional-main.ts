@@ -44,14 +44,6 @@ const history = new NotebookHistory<ConditionalNotebook>();
 let revision = 0;
 let importRequest = 0;
 let exporter: AbortController | null = null;
-if (location.hash.startsWith("#conditional=")) {
-  try {
-    notebook = readConditionalLink(location.hash);
-    message("The shared conditional notebook is open. Save a copy to keep it.");
-  } catch (error) {
-    message(errorText(error));
-  }
-}
 
 el("case-rows").innerHTML = CASES.map(
   (c) =>
@@ -475,6 +467,24 @@ el("source-viewport").addEventListener("keydown", (event) => {
   el("source-viewport").scrollBy(delta[0], delta[1]);
 });
 
+function readHash(): void {
+  if (!location.hash.startsWith("#conditional=")) return;
+  try {
+    const next = readConditionalLink(location.hash);
+    // A deliberate shared-link navigation supersedes a pending local import,
+    // even when the shared record is identical to the currently shown one.
+    importRequest++;
+    el<HTMLInputElement>("open-file").value = "";
+    change("opening a shared notebook", (n) => Object.assign(n, next));
+    message(
+      "Shared conditional notebook opened. Results were recomputed; undo restores your previous experiment.",
+    );
+  } catch (error) {
+    message(errorText(error));
+  }
+}
+window.addEventListener("hashchange", readHash);
 render();
 showReading("philo");
+readHash();
 installOffline(el("offline-status"));
