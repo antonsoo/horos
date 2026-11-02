@@ -1,0 +1,133 @@
+{
+  "sourceCommit": "b89dc0d213a2ccdcf8b89d5963a08840a3baaaac",
+  "cleanNode": "v24.22.1",
+  "workspaceNode": "v26.7.0",
+  "identicalFiles": 25,
+  "files": [
+    {
+      "path": "LICENSE.txt",
+      "bytes": 4651,
+      "sha256": "dccef1f6195096362d411c57b722275e5b4ffd5df84cb719c1fe962c9770d6d0"
+    },
+    {
+      "path": "assets/conditionals-C3mfzwbR.js",
+      "bytes": 42994,
+      "sha256": "f0e07d3610d761cda44e8702f65d5f6af66f0a1cb251f5702e76a3fc0170da2f"
+    },
+    {
+      "path": "assets/conditionals-DFlinm-K.css",
+      "bytes": 9718,
+      "sha256": "40efdb85a09c107112657a07d0754f55c58b7f22865b85fbbc3de83ac6e4cc83"
+    },
+    {
+      "path": "assets/index-C8sWZH3y.js",
+      "bytes": 50356,
+      "sha256": "5cc228870ce70626fca4bfafaab48e9303c00d41cb4f512637c78091ec957c67"
+    },
+    {
+      "path": "assets/index-D0iTZpS4.css",
+      "bytes": 12519,
+      "sha256": "bdf8abb3ea0404f8e17eaa1eb36811b8ecfd705a4ac4f19787f3e31eb734c83f"
+    },
+    {
+      "path": "assets/offline-DOPf6Z92.js",
+      "bytes": 11449,
+      "sha256": "f7f80b5fce953d4683cc6e64dc098f9aff9b6f2c74b346882a5500e6079c48cd"
+    },
+    {
+      "path": "conditionals.html",
+      "bytes": 13528,
+      "sha256": "a4240d81e55025167f5da301f39b2fc71266ed91c511d8a5b62a08efae5415a0"
+    },
+    {
+      "path": "favicon.svg",
+      "bytes": 399,
+      "sha256": "b743fbd2d73b8cae622aa658af6176359bb4a5fdaf318784f75f189c68842add"
+    },
+    {
+      "path": "fonts/literata-OFL.txt",
+      "bytes": 4389,
+      "sha256": "8742963604cd89dc81437811a850018fc03b2bfad686d7422c8235967c87614e"
+    },
+    {
+      "path": "fonts/literata.woff2",
+      "bytes": 396664,
+      "sha256": "99efd2b91637e922059a38d459abeceade161dc868b47318fa3b9c99137293db"
+    },
+    {
+      "path": "fonts/provenance.json",
+      "bytes": 637,
+      "sha256": "a33529cd8d64a41671cbfa367a56f0180d399810f3434f8c00b6e0e07e3115a2"
+    },
+    {
+      "path": "fonts/sourcesans3-OFL.txt",
+      "bytes": 4579,
+      "sha256": "09746787287a289323b0ec3cff4d1a4a801331b82b7207c1e186f5d26619a392"
+    },
+    {
+      "path": "fonts/sourcesans3.woff2",
+      "bytes": 170188,
+      "sha256": "5f16566f7a40d39b339ad26be151fa5a1ab1f0c2574c7a2e619765584a1acbd8"
+    },
+    {
+      "path": "index.html",
+      "bytes": 14755,
+      "sha256": "9935758f3c8d3f28ea5ccf8989d779f92171d6e5f849ea6f76d95842eb987c97"
+    },
+    {
+      "path": "sources/NOTICE.txt",
+      "bytes": 1747,
+      "sha256": "37c2495b93e22fe3e065e38b5e4a1351f3c19c15da83901d44cf6d6c0738d83c"
+    },
+    {
+      "path": "sources/bekker-p24.jpg",
+      "bytes": 863245,
+      "sha256": "acb61feb74c9a7e5c532708ee1826fc6054d82e294aeef539a4a315fbe6f109a"
+    },
+    {
+      "path": "sources/bekker-p25.jpg",
+      "bytes": 974737,
+      "sha256": "7ee0106dc32eb37e32477d9e62f433b2ca14a64118a9fe3bfe1fffbf91f25d2d"
+    },
+    {
+      "path": "sources/bekker-p26.jpg",
+      "bytes": 935958,
+      "sha256": "13ce538bb4c850041e77f3672fe7228587a90cfbc1497c49190bd28f9e4d6048"
+    },
+    {
+      "path": "sources/bekker-p28.jpg",
+      "bytes": 999080,
+      "sha256": "a93760f9e0f3bc05114cc6e50e2e6dbd6b04d325baba2241cf0f2bd6801f4c9b"
+    },
+    {
+      "path": "sources/conditionals/NOTICE.txt",
+      "bytes": 2508,
+      "sha256": "4a932f5dfbd0e9fbbc2dd41c3f39f1b172c29328e04b323200f96fc68746c3ff"
+    },
+    {
+      "path": "sources/conditionals/manifest.json",
+      "bytes": 2024,
+      "sha256": "dabd83b23eeab4aedd0323c31e856a9babb5f934fc7b20ca8711cfb847fca00c"
+    },
+    {
+      "path": "sources/conditionals/mutschmann-p92.jpg",
+      "bytes": 695470,
+      "sha256": "c9ac0eac6934f6b537f25d35e320f1e67d0db3e6e9e9fb77e1e14c607e7ddfed"
+    },
+    {
+      "path": "sources/conditionals/mutschmann-p93.jpg",
+      "bytes": 749017,
+      "sha256": "e48fc4b73dea853b8009454ae1a20cc19ffc9d4dd8728b9f9f14dc9e9cc5bbd1"
+    },
+    {
+      "path": "sources/manifest.json",
+      "bytes": 2665,
+      "sha256": "52f1e9bb706e5198e6bddbeae6b14fe8a7b94961736d94738870eb864b016c0f"
+    },
+    {
+      "path": "sw.js",
+      "bytes": 7226,
+      "sha256": "c0f1b159afdc448f72b29214e99507f665d0374d4f8ef175263114e1f94a86a6"
+    }
+  ]
+}

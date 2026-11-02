@@ -111,6 +111,42 @@ assumptions need a witness. Inspect each exclusion, see exactly which requiremen
 has nowhere to go, or build a world from the available witnesses. The same
 explanation is preserved in the illustrated notebook.
 
+## Which inhabitant does the work?
+
+The class workshop now compares **all eight inhabitant requirements** for the
+current argument. It identifies the weakest sufficient settings and supplies a
+smallest counterexample for every setting that fails. Choosing a requirement
+keeps the objects fixed; choosing a refutation loads its world and requirements.
+Both actions support undo, saved notebooks and offline use.
+
+![The same world stays fixed while requiring C excludes it](docs/assets/existence-desktop.png)
+
+Try **Take one of the Cs**, then use **Compare all eight requirements** beside
+the inhabitant checkboxes. Load object 1 under **None**, then select **C**.
+The object stays outside all three classes. It is a counterexample under the
+first setting and inadmissible under the second. Requiring C makes the inference
+hold across permitted worlds; it does not turn this inadmissible example into
+a proof. Select **Read the related Greek passage** to inspect the taking of an
+instance at 28a22-26.
+
+| Current question                                      | Weakest sufficient inhabitant requirements |
+| ----------------------------------------------------- | ------------------------------------------ |
+| Every B is A; therefore some A is B                   | B                                          |
+| Every C is A and every C is B; therefore some B is A  | C                                          |
+| Every B is A and every C is B; therefore every C is A | None                                       |
+| Every B is A and every C is B; therefore some C is A  | C                                          |
+| Every B is A and no C is B; therefore every C is A    | No combination suffices                    |
+
+These are results in the explicitly modern membership model. They do not
+adjudicate Aristotle's historical treatment of empty terms. Sufficient settings
+must have satisfiable premises; contradictory requirements are never presented
+as a successful repair.
+
+The illustrated notebook includes the full comparison for both snapshots,
+with witness inventories. [Reopen an actual existence notebook](examples/existence.json)
+using **Reopen an editable notebook**, or follow the [source and browser review](docs/existence-review.md).
+The extension is locally verified; its publication boundary is recorded there.
+
 ## Read the argument, not just the answer
 
 In the class room, five readings pair Greek with new close English and **20 contextual phrase
@@ -128,13 +164,13 @@ a late response cannot replace the selected page.
 
 ## A notebook that leaves the website
 
-| Artifact               | Contents                                                                                                                                               |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| Editable JSON          | Both worlds, conclusion kinds, existence requirements, citations, and explanation; outcomes are recomputed                                             |
-| Explicit notebook link | The same record in a URL fragment, including the explanation; editing does not rewrite the address bar                                                 |
-| SVG                    | Current world, numbered objects, class membership, and an accessible description                                                                       |
-| Illustrated HTML       | Both arguments and diagrams, complete search results, all readings and word notes, four complete scans, fonts, licenses, and native JSON/SVG downloads |
-| PDF                    | Print the saved HTML; a browser-generated example is retained below                                                                                    |
+| Artifact               | Contents                                                                                                                                                                  |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Editable JSON          | Both worlds, conclusion kinds, existence requirements, citations, and explanation; outcomes are recomputed                                                                |
+| Explicit notebook link | The same record in a URL fragment, including the explanation; editing does not rewrite the address bar                                                                    |
+| SVG                    | Current world, numbered objects, class membership, and an accessible description                                                                                          |
+| Illustrated HTML       | Both arguments and diagrams, complete search and inhabitant comparisons, all readings and word notes, four complete scans, fonts, licenses, and native JSON/SVG downloads |
+| PDF                    | Print the saved HTML; a browser-generated example is retained below                                                                                                       |
 
 Undo and redo name the action they change. A continuous explanation edit is
 one action; importing a notebook is separately reversible. A slow file read

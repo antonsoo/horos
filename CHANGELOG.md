@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased - 2026-11-02
+
+- Compare all eight inhabitant requirements within every class investigation;
+  identify every weakest sufficient option and a smallest refutation for each
+  failing setting. Keep satisfiability separate from absence of counterexamples.
+- Keep board objects fixed when changing requirements. Load refutations explicitly,
+  preserve keyboard focus, and support undo, shared links and existing notebooks.
+- Include both snapshots' full inhabitant comparisons and witness inventories in
+  script-free illustrated readings, with distinct accessible table-region names.
+- Retain an independent set-based oracle and desktop/phone learner journeys with
+  source locating, native downloads and stopped-origin offline use.
+
 ## Unreleased — 2026-10-31
 
 - Keep both portable readings within narrow phone widths, with keyboard-scrollable

@@ -1,0 +1,20 @@
+{
+  "format": "horos",
+  "version": 1,
+  "current": {
+    "lesson": "inhabitant",
+    "kind": "some",
+    "existence": 4,
+    "world": 1
+  },
+  "pinned": {
+    "lesson": "inhabitant",
+    "kind": "some",
+    "existence": 0,
+    "world": 1
+  },
+  "note": "The same object outside all three classes refutes the particular conclusion when C may be empty. Requiring C excludes this world; it does not move its object or make this world prove the conclusion.",
+  "citations": [
+    "inhabitant"
+  ]
+}

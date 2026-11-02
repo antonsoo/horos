@@ -163,3 +163,36 @@ the browser and from the JPEGs; the viewer enlarges to the actual width.
 
 Neither agreement between transcriptions nor a passing test constitutes
 independent expert review of the ancient text or philosophical interpretation.
+
+## Weakest inhabitant requirements
+
+`src/core/existence.ts` compares the eight subsets of {A, B, C}, holding the
+premises and proposed conclusion fixed. A row is sufficient only when at least
+one world satisfies its premises and requirements and no such world refutes the
+conclusion. It never treats inconsistent assumptions as a successful repair.
+
+A sufficient set is inclusion-minimal if no proper subset is sufficient. Keep
+all such sets: two incomparable options can each suffice. This is different
+from choosing a single option with the fewest classes. Requiring inhabitants
+removes worlds; it never changes the truth of a proposition in a fixed world.
+Adding requirements to a sufficient set preserves the absence of counterexamples,
+but could leave no permitted world, which is reported separately.
+
+Each refutation uses the fewest occupied regions among that row's refutations;
+ties use ascending occupancy-mask order. This describes the displayed model's
+representatives, not the minimum number of real people in a historical example.
+The comparison cache is bounded by the sixteen lesson/conclusion questions. It
+is independent of placed objects, so moving an object does not repeat the search.
+
+`npm run verify:existence` pipes actual TypeScript results into an independent
+Python checker. That checker builds sets of Boolean membership triples and uses
+set inclusion, intersection and difference for the propositions. It checks all
+128 lesson/conclusion/requirement combinations, all pattern counts, the truth and
+minimum cardinality of each displayed refutation, and every minimal sufficient
+option. The unit suite separately checks incomparable sufficient options and an
+inconsistent requirement, neither of which is exposed by the four fixed lessons.
+
+The illustrated notebook recomputes this comparison from each snapshot's saved
+inputs. The version 1 JSON schema is unchanged; no displayed result is trusted
+on import. See [the review](existence-review.md) for an actual learner sequence,
+the retained source distinction, and the publication boundary.
