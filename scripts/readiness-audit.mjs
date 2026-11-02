@@ -4,6 +4,7 @@ import { cp, mkdir, readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { chromium, firefox } from "playwright";
 import { reviewServer } from "./review-server.mjs";
+import { waitForWaiting } from "./worker-state.mjs";
 
 const project = "horos";
 const views = [
@@ -226,10 +227,7 @@ try {
       await ready(old);
       server.use(b);
       await old.evaluate(async () => (await navigator.serviceWorker.getRegistration()).update());
-      await old.waitForFunction(
-        async () =>
-          (await navigator.serviceWorker.getRegistration()).waiting?.state === "installed",
-      );
+      await waitForWaiting(old);
       await old.reload();
       await old.locator("#offline-status").filter({ hasText: "close all Horos tabs" }).waitFor();
       assert.equal(

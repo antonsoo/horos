@@ -5,13 +5,21 @@ import { resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 import AxeBuilder from "@axe-core/playwright";
 import { chromium, firefox } from "playwright";
+import { networkGate } from "./network-gate.mjs";
 import { reviewServer } from "./review-server.mjs";
 
 const output = resolve(process.env.REVIEW_OUTPUT || "test-results/existence");
 await mkdir(output, { recursive: true });
 await rm(resolve(output, "review.json"), { force: true });
 const server = reviewServer("dist");
-const report = { date: new Date().toISOString(), delivery: "local production build", journeys: [] };
+const hosted = process.env.REVIEW_BASE;
+const gate = hosted ? networkGate(hosted) : null;
+await gate?.start();
+const report = {
+  date: new Date().toISOString(),
+  delivery: hosted || "local production build",
+  journeys: [],
+};
 const hash = (bytes) => createHash("sha256").update(bytes).digest("hex");
 async function text(page, selector, expected) {
   await page.locator(selector).filter({ hasText: expected }).waitFor();
@@ -45,10 +53,11 @@ try {
     ["chromium", chromium],
     ["firefox", firefox],
   ]) {
-    const browser = await launcher.launch();
+    const browser = await launcher.launch(gate ? { proxy: { server: gate.url } } : {});
     try {
       for (const width of [1440, 375]) {
-        await server.start();
+        if (gate) await gate.start();
+        else await server.start();
         const context = await browser.newContext({
           viewport: { width, height: 1000 },
           acceptDownloads: true,
@@ -56,7 +65,7 @@ try {
         const page = await context.newPage();
         const errors = [];
         page.on("pageerror", (e) => errors.push(e.message));
-        await page.goto(`${server.base}?investigation=conversion`);
+        await page.goto(`${hosted || server.base}?investigation=conversion`);
         await text(page, "#offline-status", "This edition is available offline");
         assert.equal(await page.locator("#existence-summary").isVisible(), false);
         await page.locator("#existence-disclosure > summary").focus();
@@ -171,7 +180,8 @@ try {
           "true",
         );
         await shared.close();
-        await server.stop();
+        if (gate) await gate.stop();
+        else await server.stop();
         await context.setOffline(true);
         await page.reload({ waitUntil: "domcontentloaded" });
         await text(page, "#offline-status", "This edition is available offline");
@@ -203,10 +213,13 @@ try {
           standaloneRequests: requests.length,
           notebookSha256: hash(html),
           jsonAndShareRoundTrips: true,
-          originStoppedOfflineReload: true,
+          offlineNetworkBoundary: gate
+            ? "Public HTTPS tunnel closed for page and worker traffic"
+            : "Local origin stopped and browser network disabled",
+          originStoppedOfflineReload: !gate,
           offlineExportIdentical: true,
         });
-        if (engine === "chromium" && width === 1440)
+        if (engine === "chromium" && width === 1440 && !hosted)
           await writeFile("examples/existence.json", json);
         await context.close();
         console.log(
@@ -219,5 +232,6 @@ try {
   }
   await writeFile(resolve(output, "review.json"), `${JSON.stringify(report, null, 2)}\n`);
 } finally {
+  await gate?.stop();
   await server.stop();
 }

@@ -4,6 +4,7 @@ import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 import { chromium, firefox } from "playwright";
 import { reviewServer } from "./review-server.mjs";
+import { waitForWaiting } from "./worker-state.mjs";
 
 const [oldBuild, output = "test-results/published-upgrade"] = process.argv.slice(2);
 assert.ok(oldBuild, "Pass the retained previous published build directory.");
@@ -30,10 +31,7 @@ try {
       await p.locator("#note").fill("Save this explanation before closing an old edition.");
       server.use("dist");
       await p.evaluate(async () => (await navigator.serviceWorker.getRegistration()).update());
-      await p.waitForFunction(
-        async () =>
-          (await navigator.serviceWorker.getRegistration()).waiting?.state === "installed",
-      );
+      await waitForWaiting(p);
       const next = await context.newPage();
       await next.goto(`${server.base}conditionals.html`);
       await next.locator("#offline-status").filter({ hasText: "close all Horos tabs" }).waitFor();
