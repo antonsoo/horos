@@ -23,4 +23,4 @@ A. J. Jenkinson's public-domain translation, available through
 https://classics.mit.edu/Aristotle/prior.1.i.html, was consulted for comparison.
 The workshop's English and teaching Latin are new, not copies of a historical
 translation. The Latin for 26a2-9 is explicitly abridged. Original translations,
-diagrams, and code: MIT, copyright (c) 2026 Anthony Mercer.
+diagrams, and code: PolyForm Noncommercial, copyright (c) 2026 Anthony Mercer.
